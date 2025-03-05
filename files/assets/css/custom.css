@@ -1,0 +1,26 @@
+/*CSS file for HamPUG website. 25-03-06*/
+
+/*Set height of logo*/
+#logo {
+    height: 50px;
+}    
+
+
+/* #386e7b is a dark green colour RGB(56, 110, 123) */
+.navbar {
+  background-color: #386e7b !important; 
+}
+
+/* Default colour of the text on the navigation bar
+b8f0fd = 186,240,253. A lighter version of 56,110,123 by 130 units for each colour
+Increase the font-size of nav buttons - 2025-03-06 Leave font-size */
+.nav-link, .dropdown-item {
+    color: #b8f0fd !important;
+    background-color: #386e7b !important;
+    /*font-size: 100%; */
+}
+
+/* Colour of the text on the navigation bar when hover and drop-down */
+.nav-link:hover, .dropdown-item:hover {
+    color: white !important;
+}
