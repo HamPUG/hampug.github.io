@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>step3 | HamPUG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+<link href="../assets/css/all.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="http://hampug.github.io/step3/">
+<link rel="icon" href="../images/pug_24x24.png" sizes="24x24">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta name="author" content="Hamilton Python Users Group">
+<meta property="og:site_name" content="HamPUG">
+<meta property="og:title" content="step3">
+<meta property="og:url" content="http://hampug.github.io/step3/">
+<meta property="og:description" content="3. Creating a Website
+
+Introduction
+At this stage you may have done the following in creating a website
+$ source venv1/bin/activate
+$ nikola init --quiet mywebsite
+$ cd mywebsite
+$ nikola build
+$ niko">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-05-01T16:58:11+12:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../images/logo.svg" alt="HamPUG" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../index.html" class="nav-link"><strong>Home</strong></a>
+                </li>
+<li class="nav-item">
+<a href="../map/" class="nav-link">Map</a>
+                </li>
+<li class="nav-item">
+<a href="../meetup/" class="nav-link">Meetup</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
+            <div class="dropdown-menu">
+                    <a href="../repository/repository_overview/" class="dropdown-item">Overview</a>
+                    <a href="../repository/ncea_code_examples/" class="dropdown-item">NCEA Code Examples</a>
+                    <a href="../repository/general_code_examples/" class="dropdown-item">General Code Examples</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meetings</a>
+            <div class="dropdown-menu">
+                    <a href="../meeting/meeting_overview/" class="dropdown-item">Overview</a>
+                    <a href="https://github.com/HamPUG/meetings#readme" class="dropdown-item">Summary of Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2014#2014-meetings" class="dropdown-item">2014 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2015#2015-meetings" class="dropdown-item">2015 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2016#2016-meetings" class="dropdown-item">2016 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2017#2017-meetings" class="dropdown-item">2017 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2018#2018-meetings" class="dropdown-item">2018 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2019#2019-meetings" class="dropdown-item">2019 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2020#2020-meetings" class="dropdown-item">2020 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2021#2021-meetings" class="dropdown-item">2021 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2022#2022-meetings" class="dropdown-item">2022 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2023#2023-meetings" class="dropdown-item">2023 Meetings</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../history/" class="nav-link">History</a>
+                </li>
+<li class="nav-item">
+<a href="../website-creation/" class="nav-link"><strong>Website Creation</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Steps</a>
+            <div class="dropdown-menu">
+                    <a href="../steps/" class="dropdown-item">Overview of Steps</a>
+                    <a href="../step1/" class="dropdown-item">1 PythonAnywhere Account</a>
+                    <a href="../step2/" class="dropdown-item">2 Nikola Installation</a>
+                    <a href="." class="dropdown-item active">3 Creating a Website <span class="sr-only">(active)</span></a>
+                    <a href="../step4/" class="dropdown-item">4 Website Tailoring</a>
+                    <a href="../step5/" class="dropdown-item">5 ReST Editor</a>
+                    <a href="../step6/" class="dropdown-item">6 Deploying to PythonAnywhere</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../rest_editor/" class="nav-link">reST Editor</a>
+                </li>
+<li class="nav-item">
+<a href="../rest_basics/" class="nav-link">reST Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../rest_directive/" class="nav-link">reST Directive</a>
+                </li>
+<li class="nav-item">
+<a href="../nikola_basics/" class="nav-link">Nikola Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../pythonanywhere/" class="nav-link">Python Anywhere</a>
+                </li>
+<li class="nav-item">
+<a href="../about-us/" class="nav-link">About Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <section id="creating-a-website"><span id="top"></span><h2>3. Creating a Website</h2>
+<section id="introduction"><h3>Introduction</h3>
+<p>At this stage you may have done the following in creating a website</p>
+<pre class="literal-block">$ source venv1/bin/activate
+$ nikola init --quiet mywebsite
+$ cd mywebsite
+$ nikola build
+$ nikola serve</pre>
+<p>You would then have used a web-browser to connect to 127.0.0.1:8000 and check the website works OK.</p>
+<p>Create some new pages for your web-site</p>
+<p>Each page needs to contain meta-data. You can choose to have the meta-data at the start of your web-page, or as a separate file with a .meta extension. If you opt for the default, then a reST page is created with the meta-data at the begining. For example the <em>About</em> page with default settings</p>
+<pre class="literal-block">(venv2) ian@X200:~/hampug1/static$ nikola new_page
+Creating New Page
+-----------------
+
+Title: About Us
+Scanning posts.....done!
+[2019-05-05T22:18:11Z] INFO: new_page: Your page's text is at: pages/about-us.rst</pre>
+<p>Now review the pages/about-us.rst file. The first 8 lines are composed of meta-data, followed by a blank line, and on the tenth line is the start of the page content, which is currently, <em>Write your text here</em>.</p>
+<div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-1"><code data-line-number=" 1"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-1" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-1"></a><span class="c">.. title: About Us</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-2"><code data-line-number=" 2"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-2" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-2"></a><span class="c">.. slug: about-us</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-3"><code data-line-number=" 3"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-3" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-3"></a><span class="c">.. date: 2019-05-06 10:18:11 UTC+12:00</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-4"><code data-line-number=" 4"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-4" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-4"></a><span class="c">.. tags:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-5"><code data-line-number=" 5"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-5" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-5"></a><span class="c">.. category:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-6"><code data-line-number=" 6"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-6" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-6"></a><span class="c">.. link:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-7"><code data-line-number=" 7"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-7" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-7"></a><span class="c">.. description:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-8"><code data-line-number=" 8"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-8" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-8"></a><span class="c">.. type: text</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-9"><code data-line-number=" 9"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-9" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-9"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_54ae40452fbc4c85878b5b571eb63d7c-10"><code data-line-number="10"></code></a></td>
+<td class="code"><code><a id="rest_code_54ae40452fbc4c85878b5b571eb63d7c-10" name="rest_code_54ae40452fbc4c85878b5b571eb63d7c-10"></a>Write your page here
+</code></td>
+</tr>
+</table></div>
+<p>What if the first line of the content contained a reST syntax error? For example instead of "<code class="docutils literal">Write your page here</code>" it was "<code class="docutils literal">Write your *page here</code>", with the syntax error of the word "page" starting with an asterisk for emphasis and not having an ending asterisk. When the page is displayed on the web-browser there will be a warning message:</p>
+<pre class="literal-block">Write your *page here.
+System Message: WARNING/2 (&lt;string&gt;, line 1); backlink
+Inline emphasis start-string without end-string.</pre>
+<p>Note that the above message states the issue is with line 1, when it is actually line 10 of the <em>about-us.rst</em> file.</p>
+<p>This could cause confusion when writing reST as the error message line numbers do not match the actual line numbers.</p>
+<p>One method of over-coming this confusing error information is to place the metadata in a separate file. When the new page is created with <code class="docutils literal">$ nikola new_page <span class="pre">--title="About</span> Us"</code> a <em>-2</em> is appended to the command. This will then create the page using the two file format where one page is the content and the other page is the meta-data. For example:</p>
+<pre class="literal-block">$ nikola new_page --title = "About Us" -2
+
+$ ls pages/about-us*
+pages/about-us.meta  pages/about-us.rst
+
+$ cat pages/about-us.rst
+Write your page here.
+
+$ cat pages/about-us.meta
+.. title: About Us
+.. slug: about-us
+.. date: 2019-05-06 12:14:47 UTC+12:00
+.. tags:
+.. link:
+.. description:
+.. type: text</pre>
+<p>If there is now the same syntax error, "<code class="docutils literal">Write your *page here</code>", then the error message will now have the correct line numbering for the .rst file:</p>
+<pre class="literal-block">Write your *page here.
+System Message: WARNING/2 (&lt;string&gt;, line 1); backlink
+Inline emphasis start-string without end-string.</pre>
+<p>It is your choice whether or not to have two page format or one page, but if you opt for the one page format then be aware that error message line numbering will not match the line numbering of the reST editor you are using to create the content of the page.</p>
+<p>From <code class="docutils literal">$ nikola help new_page</code> this is the information on the -1 and -2 options.</p>
+<pre class="literal-block">-1 Create the page with embedded metadata (single file format)  (config: onefile)
+-2 Create the page with separate metadata (two file format)  (config: twofile)</pre>
+</section><section id="creating-this-website"><h3>Creating this Website</h3>
+<p>The web-site generated with --quiet argument has the following folders in the top directory:</p>
+<pre class="literal-block">cache files  galleries  listings  output  pages  posts  __pycache__</pre>
+<p>The folders: files, galleries, listings, pages, and posts contain no files. These are the folders that are normally used to make a conventional web-site.</p>
+<p>The output folder has files in its galleries and listings folders and contains a index.html which becomes the home page of this web-site.</p>
+<p>To convert this to a conventional web-site, then, for demonstration purposes, we initial want to have a home page of index.html in the output folder with one tab for an "About Us". To do so, the following editing of conf.py and new_page creation is performed.</p>
+<p>In the pages folder we want to create the index.rst file as the home page. This will end up in the output folder as index.html. Plus an about-us.rst file which will end up in an about-us folder in the output folder as the file index.html. Thus we have 4 files in pages, nothing in the other folders files, galleries, images and posts, and the output file structure will be the home page index file in output and the folder.</p>
+<pre class="literal-block">hampug
+    ├── pages
+    │   ├── about-us.meta
+    │   ├── about-us.rst
+    │   ├── index.meta
+    │   └── index.rst
+    ├── files
+    ├── galleries
+    ├── images
+    ├── posts
+    └── output
+        ├── index.html
+        ├── index.rst
+        └── about-us
+            ├── index.html
+            └── index.rst</pre>
+<p>Commence editing conf.py. Change the following Data about this site:</p>
+<pre class="literal-block">BLOG_AUTHOR = "Your Name"  # (translatable)
+BLOG_TITLE = "Demo Site"  # (translatable)
+SITE_URL = "https://example.com/"
+BLOG_EMAIL = "joe@demo.site"
+BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)</pre>
+<p>changed to:</p>
+<pre class="literal-block">BLOG_AUTHOR = "HamPUG Team"  # (translatable)
+BLOG_TITLE = "HamPUG"  # (translatable)
+SITE_URL = "http://hampug1.pythonanywhere.com/"
+BLOG_EMAIL = "hampug@gmail.com"
+BLOG_DESCRIPTION = "Demonstrations of reST, Nikola, and a static website."  # (translatable)</pre>
+<p>Now change the navigation link from:</p>
+<pre class="literal-block">NAVIGATION_LINKS = {
+    DEFAULT_LANG: (
+        ("/archive.html", "Archives"),
+        ("/categories/index.html", "Tags"),
+        ("/rss.xml", "RSS feed"),
+    ),
+}</pre>
+<p>To the two initial link that will be created to get started:</p>
+<pre class="literal-block">NAVIGATION_LINKS = {
+    DEFAULT_LANG: (
+        ("/index.html", "Home"),
+        ("/about-us/", "About Us"),
+    ),
+}</pre>
+<p>Next change the POSTS and PAGES from this:</p>
+<pre class="literal-block">POSTS = (
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.html", "posts", "post.tmpl"),
+)
+PAGES = (
+    ("pages/*.rst", "pages", "page.tmpl"),
+    ("pages/*.md", "pages", "page.tmpl"),
+    ("pages/*.txt", "pages", "page.tmpl"),
+    ("pages/*.html", "pages", "page.tmpl"),
+)</pre>
+<p>To the following. We don't want to support posts on the web-site and for pages the the tuple (wildcard, destination, template) the destination is changed from "pages" to "":</p>
+<pre class="literal-block">POSTS = ()
+PAGES = (
+    ("pages/*.rst", "", "page.tmpl"),
+    ("pages/*.md", "", "page.tmpl"),
+    ("pages/*.txt", "", "page.tmpl"),
+    ("pages/*.html", "", "page.tmpl"),
+)</pre>
+<p>As Nikola defaults to creating a blog site, then by default it will have a blog page as an index.html in the top level directory, instead of the home page you create a part of building a regualr web-site. Therefore locate the following:</p>
+<pre class="literal-block"># Final location for the main blog page and sibling paginated pages is
+# output / TRANSLATION[lang] / INDEX_PATH / index-*.html
+# (translatable)
+# INDEX_PATH = ""</pre>
+<p>Remove the comment and point the index page for the blog to not be in the top level directory, but in its own directory called "blog". If we don't do this we get an attempt to have two index.html files in the top directory:</p>
+<pre class="literal-block">INDEX_PATH = "blog"</pre>
+<p>Plus ensure that PRETTY_URLS is set to True:</p>
+<pre class="literal-block"># Instead of putting files in &lt;slug&gt;.html, put them in &lt;slug&gt;/index.html.
+# No web server configuration is required. Also enables STRIP_INDEXES.
+# This can be disabled on a per-page/post basis by adding
+#    .. pretty_url: False
+# to the metadata.
+PRETTY_URLS = True</pre>
+<p>Now create an index page and an about page using the nikola <em>new_page</em> command. Start by cleaning out the existing output file:</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_quiet$ nikola clean
+Scanning posts....done!
+create_bundles:output/assets/js/all.js - removing file 'output/assets/js/all.js'
+create_bundles:output/assets/js/all-nocdn.js - removing file 'output/assets/js/all-nocdn.js'
+create_bundles:output/assets/css/all.css - removing file 'output/assets/css/all.css'
+create_bundles:output/assets/css/all-nocdn.css - removing file 'output/assets/css/all-nocdn.css'
+robots_file:output/robots.txt - removing file 'output/robots.txt'
+sitemap:output/sitemapindex.xml - removing file 'output/sitemapindex.xml'
+sitemap:output/sitemap.xml - removing file 'output/sitemap.xml'
+copy_assets:output/assets/js/fancydates.min.js - removing file 'output/assets/js/fancydates.min.js'
+copy_assets:output/assets/css/code.css - removing file 'output/assets/css/code.css'
+copy_assets:output/assets/xml/rss.xsl - removing file 'output/assets/xml/rss.xsl'
+copy_assets:output/assets/xml/atom.xsl - removing file 'output/assets/xml/atom.xsl'
+copy_assets:output/assets/js/justified-layout.min.js - removing file 'output/assets/js/justified-layout.min.js'
+copy_assets:output/assets/js/gallery.js - removing file 'output/assets/js/gallery.js'
+copy_assets:output/assets/js/html5shiv-printshiv.min.js - removing file 'output/assets/js/html5shiv-printshiv.min.js'
+copy_assets:output/assets/js/moment-with-locales.min.js - removing file 'output/assets/js/moment-with-locales.min.js'
+copy_assets:output/assets/js/baguetteBox.min.js - removing file 'output/assets/js/baguetteBox.min.js'
+copy_assets:output/assets/js/gallery.min.js - removing file 'output/assets/js/gallery.min.js'
+copy_assets:output/assets/js/fancydates.js - removing file 'output/assets/js/fancydates.js'
+copy_assets:output/assets/js/html5.js - removing file 'output/assets/js/html5.js'
+copy_assets:output/assets/css/nikola_rst.css - removing file 'output/assets/css/nikola_rst.css'
+copy_assets:output/assets/css/baguetteBox.min.css - removing file 'output/assets/css/baguetteBox.min.css'
+copy_assets:output/assets/css/html4css1.css - removing file 'output/assets/css/html4css1.css'
+copy_assets:output/assets/css/ipython.min.css - removing file 'output/assets/css/ipython.min.css'
+copy_assets:output/assets/css/nikola_ipython.css - removing file 'output/assets/css/nikola_ipython.css'
+copy_assets:output/assets/css/rst_base.css - removing file 'output/assets/css/rst_base.css'
+copy_assets:output/assets/css/rst.css - removing file 'output/assets/css/rst.css'
+copy_assets:output/assets/js/jquery.min.js - removing file 'output/assets/js/jquery.min.js'
+copy_assets:output/assets/js/popper.min.js - removing file 'output/assets/js/popper.min.js'
+copy_assets:output/assets/js/bootstrap.min.js - removing file 'output/assets/js/bootstrap.min.js'
+copy_assets:output/assets/css/bootstrap.min.css - removing file 'output/assets/css/bootstrap.min.css'
+copy_assets:output/assets/css/theme.css - removing file 'output/assets/css/theme.css'
+copy_assets:output/assets/css/bootblog.css - removing file 'output/assets/css/bootblog.css'
+render_galleries:output/galleries/rss.xml - removing file 'output/galleries/rss.xml'
+render_galleries:output/galleries/index.html - removing file 'output/galleries/index.html'
+render_galleries:output/galleries - removing dir 'output/galleries'
+render_taxonomies:output/categories/index.html - removing file 'output/categories/index.html'
+render_taxonomies:output/rss.xml - removing file 'output/rss.xml'
+render_taxonomies:output/archive.html - removing file 'output/archive.html'
+render_listings:output/listings/index.html - removing file 'output/listings/index.html'</pre>
+<p>There are still some folders and the index.html file in output:</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_quiet$ ls output
+assets  categories  index.html  listings</pre>
+<p>To really clean out the output folder then:</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_quiet$ rm -R output
+
+(venv2) username@host:~/hampug_quiet$ ls
+conf.py  files  galleries  listings  pages  posts  __pycache__</pre>
+<p>Now create an index page and an about page with</p>
+<ul class="simple">
+<li><p>nikola new_page --title = "Index" -2</p></li>
+<li><p>nikola new_page --title = "About Us" -2</p></li>
+</ul>
+<pre class="literal-block">(venv2) ian@X200:~/hampug_quiet$ nikola new_page --title = "Index" -2
+Creating New Page
+-----------------
+
+Title: Index
+Scanning posts....done!
+[2019-05-08T01:12:55Z] INFO: new_page: Your page's metadata is at: pages/index.meta
+[2019-05-08T01:12:55Z] INFO: new_page: Your page's text is at: pages/index.rst
+
+(venv2) ian@X200:~/hampug_quiet$ nikola new_page --title = "About Us" -2
+Creating New Page
+-----------------
+
+Title: About Us
+Scanning posts....done!
+[2019-05-08T01:13:34Z] INFO: new_page: Your page's metadata is at: pages/about-us.meta
+[2019-05-08T01:13:34Z] INFO: new_page: Your page's text is at: pages/about-us.rst
+(venv2) ian@X200:~/hampug_quiet$</pre>
+<p>Ready to build and serve the web-site:</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_quiet$ nikola build
+Scanning posts....done!
+.  render_galleries:output/galleries
+.  render_galleries:output/galleries/index.html
+.  render_galleries:output/galleries/rss.xml
+.  copy_assets:output/assets/css/bootblog.css
+.  copy_assets:output/assets/css/theme.css
+.  copy_assets:output/assets/css/bootstrap.min.css
+.  copy_assets:output/assets/js/bootstrap.min.js
+.  copy_assets:output/assets/js/popper.min.js
+.  copy_assets:output/assets/js/jquery.min.js
+.  copy_assets:output/assets/css/rst.css
+.  copy_assets:output/assets/css/rst_base.css
+.  copy_assets:output/assets/css/nikola_ipython.css
+.  copy_assets:output/assets/css/ipython.min.css
+.  copy_assets:output/assets/css/html4css1.css
+.  copy_assets:output/assets/css/baguetteBox.min.css
+.  copy_assets:output/assets/css/nikola_rst.css
+.  copy_assets:output/assets/js/html5.js
+.  copy_assets:output/assets/js/fancydates.js
+.  copy_assets:output/assets/js/gallery.min.js
+.  copy_assets:output/assets/js/baguetteBox.min.js
+.  copy_assets:output/assets/js/moment-with-locales.min.js
+.  copy_assets:output/assets/js/html5shiv-printshiv.min.js
+.  copy_assets:output/assets/js/fancydates.min.js
+.  copy_assets:output/assets/js/gallery.js
+.  copy_assets:output/assets/js/justified-layout.min.js
+.  copy_assets:output/assets/xml/atom.xsl
+.  copy_assets:output/assets/xml/rss.xsl
+.  copy_assets:output/assets/css/code.css
+.  render_taxonomies:output/blog/index.html
+.  render_taxonomies:output/archive.html
+.  render_taxonomies:output/categories/index.html
+.  render_sources:output/about-us/index.rst
+.  render_sources:output/index.rst
+.  render_listings:output/listings/index.html
+.  render_posts:timeline_changes
+.  render_posts:cache/pages/about-us.html
+.  render_posts:cache/pages/index.html
+.  render_pages:output/about-us/index.html
+.  render_pages:output/index.html
+.  render_taxonomies:output/rss.xml
+.  create_bundles:output/assets/css/all-nocdn.css
+.  create_bundles:output/assets/css/all.css
+.  create_bundles:output/assets/js/all-nocdn.js
+.  create_bundles:output/assets/js/all.js
+.  sitemap:output/sitemap.xml
+.  sitemap:output/sitemapindex.xml
+.  robots_file:output/robots.txt
+
+(venv2) username@host:~/hampug_quiet$ nikola serve -b
+[2019-05-08T01:18:05Z] INFO: serve: Serving on http://127.0.0.1:8000/ ...
+[2019-05-08T01:18:05Z] INFO: serve: Opening http://127.0.0.1:8000/ in the default web browser...
+127.0.0.1 - - [08/May/2019 13:18:06] "GET / HTTP/1.1" 200 -</pre>
+<p>The website now launches. If we look at the output folder, which is the web-site, we now see the index.html that is the home page and the folder about-us that contains its own index.html for the about webpage:</p>
+<pre class="literal-block">username@host:~/hampug_quiet/output$ ls -R
+.:
+about-us      assets  categories  index.html  listings    rss.xml           sitemap.xml
+archive.html  blog    galleries   index.rst   robots.txt  sitemapindex.xml
+
+
+./about-us:
+index.html  index.rst</pre>
+<p>The about-us, and all other web-pages we create, have their own folders as conf.py has <code class="docutils literal">PRETTY_URLS = True</code>. This is the default in conf.py:</p>
+<pre class="literal-block"># Instead of putting files in &lt;slug&gt;.html, put them in &lt;slug&gt;/index.html.
+# No web server configuration is required. Also enables STRIP_INDEXES.
+# This can be disabled on a per-page/post basis by adding
+#    .. pretty_url: False
+# to the metadata.
+PRETTY_URLS = True</pre>
+<p>From a browser the web-site appears as follows, with two tabs, the Home/Index tab and the About Us tab.</p>
+<figure class="align-center"><img alt="nikola_demo" src="../images/HamPUG_initial_index_page.png"><figcaption><p>Home page of HamPUG website, where the URL ends with /index.html</p>
+</figcaption></figure><figure class="align-center"><img alt="nikola_demo" src="../images/HamPUG_initial_about_page.png"><figcaption><p>About Us page of HamPUG website, where the Pretty URL ends with /about-us/</p>
+</figcaption></figure><p>Note that both pages display their titles in a blue font as links. i.e. Index and About Us. You might want to hide these titles and have your own headings for the pages. In this case you edit the /pages/index.meta and the /pages/about-us.meta files and add <em>.. hidetitle: True</em> The following is the website after adding the hidetitle: True meta data and placing a heading and a line of text into the .reST files.</p>
+<figure class="align-center"><img alt="nikola_demo" src="../images/HamPUG_hidetitle_index.png"><figcaption><p>Home page of HamPUG website with <code class="docutils literal">hidetitle: True</code> in meta-data. Commenced editing index.rst file.</p>
+</figcaption></figure><figure class="align-center"><img alt="nikola_demo" src="../images/HamPUG_hidetitle_about.png"><figcaption><p>About Us page of HamPUG website with <code class="docutils literal">hidetitle: True</code> in meta-data. Commenced editing about-us.rst file.</p>
+</figcaption></figure><p>The folder that contains your static web-site pages will default to being off the top level folder called "output":</p>
+<pre class="literal-block"># Where the output site should be located
+# If you don't use an absolute path, it will be considered as relative
+# to the location of conf.py
+# OUTPUT_FOLDER = 'output'</pre>
+<p>You may wish to change this to another name, for example <em>static</em>, or place it in a folder outside of your default top level folder:</p>
+<pre class="literal-block"># Place in folder named static off the top level folder
+OUTPUT_FOLDER = 'static'
+
+# OR: place in folder in separate path relative to the top level folder
+OUTPUT_FOLDER = '.. my_website'</pre>
+<p><a class="reference external" href="#top">[Top]</a></p>
+</section></section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            © 2025 - Hamilton Python Users Group - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="float: right; margin: 0px 0px 5px 5px; border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script><script src="../assets/js/all.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

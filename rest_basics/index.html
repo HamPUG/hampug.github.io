@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Introduce reST">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rest Basics | HamPUG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+<link href="../assets/css/all.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="http://hampug.github.io/rest_basics/">
+<link rel="icon" href="../images/pug_24x24.png" sizes="24x24">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta name="author" content="Hamilton Python Users Group">
+<meta property="og:site_name" content="HamPUG">
+<meta property="og:title" content="Rest Basics">
+<meta property="og:url" content="http://hampug.github.io/rest_basics/">
+<meta property="og:description" content="Introduce reST">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-04-27T22:12:22+12:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../images/logo.svg" alt="HamPUG" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../index.html" class="nav-link"><strong>Home</strong></a>
+                </li>
+<li class="nav-item">
+<a href="../map/" class="nav-link">Map</a>
+                </li>
+<li class="nav-item">
+<a href="../meetup/" class="nav-link">Meetup</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
+            <div class="dropdown-menu">
+                    <a href="../repository/repository_overview/" class="dropdown-item">Overview</a>
+                    <a href="../repository/ncea_code_examples/" class="dropdown-item">NCEA Code Examples</a>
+                    <a href="../repository/general_code_examples/" class="dropdown-item">General Code Examples</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meetings</a>
+            <div class="dropdown-menu">
+                    <a href="../meeting/meeting_overview/" class="dropdown-item">Overview</a>
+                    <a href="https://github.com/HamPUG/meetings#readme" class="dropdown-item">Summary of Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2014#2014-meetings" class="dropdown-item">2014 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2015#2015-meetings" class="dropdown-item">2015 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2016#2016-meetings" class="dropdown-item">2016 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2017#2017-meetings" class="dropdown-item">2017 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2018#2018-meetings" class="dropdown-item">2018 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2019#2019-meetings" class="dropdown-item">2019 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2020#2020-meetings" class="dropdown-item">2020 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2021#2021-meetings" class="dropdown-item">2021 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2022#2022-meetings" class="dropdown-item">2022 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2023#2023-meetings" class="dropdown-item">2023 Meetings</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../history/" class="nav-link">History</a>
+                </li>
+<li class="nav-item">
+<a href="../website-creation/" class="nav-link"><strong>Website Creation</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Steps</a>
+            <div class="dropdown-menu">
+                    <a href="../steps/" class="dropdown-item">Overview of Steps</a>
+                    <a href="../step1/" class="dropdown-item">1 PythonAnywhere Account</a>
+                    <a href="../step2/" class="dropdown-item">2 Nikola Installation</a>
+                    <a href="../step3/" class="dropdown-item">3 Creating a Website</a>
+                    <a href="../step4/" class="dropdown-item">4 Website Tailoring</a>
+                    <a href="../step5/" class="dropdown-item">5 ReST Editor</a>
+                    <a href="../step6/" class="dropdown-item">6 Deploying to PythonAnywhere</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../rest_editor/" class="nav-link">reST Editor</a>
+                </li>
+<li class="nav-item active">
+<a href="." class="nav-link">reST Basics <span class="sr-only">(active)</span></a>
+                </li>
+<li class="nav-item">
+<a href="../rest_directive/" class="nav-link">reST Directive</a>
+                </li>
+<li class="nav-item">
+<a href="../nikola_basics/" class="nav-link">Nikola Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../pythonanywhere/" class="nav-link">Python Anywhere</a>
+                </li>
+<li class="nav-item">
+<a href="../about-us/" class="nav-link">About Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <!-- A rest_basic.meta file is being used. -->
+<!-- Comment: Introduce reST. -->
+<section id="restructuredtext"><span id="top"></span><h2>reStructuredText</h2>
+<section id="introduction"><h3>Introduction</h3>
+<p>Introducing <strong>reStructuredText</strong> <em>reST</em> as a method of creating web-pages. While
+reST is a markup language it is considered to be <em>light-weight</em>. It is easy to
+read a reST document as the markup has minimal interference with the content of
+the document.</p>
+<p>The Nikola application will convert a document in the reST format to a hyper-
+text markup language ~ version 5 <em>HTML5</em> file. The HTML5 file will later reside
+in the web-servers directories. When a web-browser is used to retrieve the web-
+page over the internet, the HTML5 file is transmitted from the web-server to the
+web-browser. A role of the web-browser is to interpret the HTML5 file and render
+the data so it is displayed in the web-browser window.</p>
+<p>This is an introduction to the basic reST features, which should provide enough
+details to create a simple web-page.</p>
+</section><section id="links-to-external-rest-documentation"><h3>Links to External reST Documentation</h3>
+<p>The reST wikipedia <a class="reference external" href="https://en.wikipedia.org/wiki/ReStructuredText">entry</a>.</p>
+<p>The reST <a class="reference external" href="http://docutils.sourceforge.net/rst.html">web-site</a> provides detailed information, and there are links to web-pages that provide a quick reference <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">guide</a>, a one page <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt">cheat-sheet</a> and a reference document for <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">directives</a>.</p>
+<p>Files created in this lightweight markup language are normally given a <em>.rst</em>
+extension.</p>
+</section><section id="headings-and-sub-headings"><h3>Headings and Sub-headings</h3>
+<p>Most text in the document will be displayed by the web-browser at the default font-size. There are larger font sizes that are used for headings and sub-headings.</p>
+<p>A heading with a large font-size is created by under-lining the heading text with equal signs.</p>
+<pre class="literal-block">A Main Heading
+==============</pre>
+<p>A sub-heading with a smaller font-size is created by underlining the sub-heading with hypens.</p>
+<pre class="literal-block">A Sub-Heading
+-------------</pre>
+</section><section id="emphasis"><h3>Emphasis</h3>
+<p>Words or a group of words may have emphasis applied. By surrounding a word with single asterisks will result in emphasis applied which a web-browser will normally render as italics. For example:</p>
+<p>This is normal text and <em>this is with emphasis</em>.</p>
+<pre class="literal-block">This is normal text and *this is with emphasis*.</pre>
+<p>If double asterisks are placed around a word or group of words, then stronger emphasis is applied. This is normally rendered by web-browsers by using a bold font.</p>
+<p>This is normal text and <strong>this is strong emphasis text</strong>.</p>
+</section><section id="literal-text"><h3>Literal Text</h3>
+<p>Often literal text is desired to be displayed. If double grave marks are placed around a word or group of words then this will normally result in being rendered by the web-browser in a mono-spaced font.</p>
+<p>This is normal text and <code class="docutils literal">this is literal text</code>.</p>
+<pre class="literal-block">This is normal text and ``this is literal text``.</pre>
+</section><section id="user-defined"><h3>User Defined</h3>
+<p>Single graves around a word or group of words will depend on the current definition. The default definition will be the same as with using single asterisk for emphasis.</p>
+<p>This is normal text and <cite>this text is bounded by single graves</cite>.</p>
+<pre class="literal-block">This is normal text and `this text is bounded by single graves`.</pre>
+<p>If the default role is changed to strong, then a word or group of words surrounded by single graves will be strong</p>
+<p>This is normal text and after setting the default role <strong>this is text is surrounded by single graves</strong>.</p>
+<pre class="literal-block">.. default-role:: strong
+
+This is normal text and after setting the default role `this is text surrounded by single graves`.</pre>
+<p>After resetting the default role the text surrounded by graves <cite>returns to normal emphasis</cite>.</p>
+<pre class="literal-block">.. default-role::</pre>
+<p>The way that the default role is changed with <code class="docutils literal">.. <span class="pre">default-role::</span></code> is known in reST as using a <strong>Directive</strong>.</p>
+</section><section id="paragraphs-and-horizontal-white-space"><h3>Paragraphs and Horizontal White-space</h3>
+<p>The web-browser provides compliance with the HTML5 specifications. Thus it performs rendering of text in each paragraph it displays. One aspect of the rendering is with regard to the <em>white-space</em> between words. Normally there is only one space character between words in a paragraph. If you increase the number of spaces or insert horizontal tabs, then the additional spaces are removed and the paragraph is displayed with only one space character between each word.</p>
+<p>Also there is a new-line character, which is inserted by typing the <em>Enter</em> key, is of importance in the HTML5 specification. If a paragraph is being typed, then often the typist will type the Enter key at about the 80th character position on a line so the next word typed is at the beginning of the  next line. The browser will remove this single newline character and replace it with a single space character. When the browser displays a paragraph then it determines how long a line of text may be before reaching the right-hand margin. It is the browser that decides what is the last word on a line and to insert a wrap around so the next word is at the start of the next line. This is especially useful when adjusting the width of a display. The amount of text in each line will be adjusted to fit within the boundaries of the width of the display.</p>
+<p>In summary, when you enter the text of a paragraph into a reST document it does not matter if you have additional spaces, or tabs, or at what character position you wrap one line to the next as this will all be over-ridden by the web-browser adhering to the HTML5 rules.</p>
+<p>For example, this is sentence one of a paragraph. The paragraph    contains     multiple
+spaces    between some words and also    tabs    between words.
+It  also     contains        lines
+of  text    that    only
+contain four words. When
+this paragraph is converted from reST to an HTML file the spacing will be adjusted. If
+for some reason it isn't then the web-browser will perform the adjustment.</p>
+<pre class="literal-block">For example, this is sentence one of a paragraph. The paragraph    contains     multiple
+spaces    between some words and also    tabs    between words.
+It  also     contains        lines
+of  text    that    only
+contain four words. When
+this paragraph is converted from reST to an HTML file the spacing will be adjusted. If
+for some reason it is not then the web-browser will perform the adjustment.</pre>
+<p>Be careful with punctuation marks. For example a full-stop or question mark should be the next character after the last letter of a word. Do not complete the word and add a space and then add the punctuation mark. This is because the single punctuation mark may be treated as a single character word and be wrapped at the end of a line. This could result in having a line starting with a full-stop or question mark.</p>
+</section><section id="paragraphs-and-vertical-white-space"><h3>Paragraphs and Vertical White-space</h3>
+<p>A paragraph in a reST document normally ends by typing the Enter key twice. The next paragraph begins and there is one blank line between the paragraphs. If the Enter key is pressed more than twice, it will create multiple blank lines between the paragraphs in the reST document. In converting the reST document to HTML5 the multiple blank lines will be reduced to one blank line.</p>
+<p>For example this is a paragraph of one sentence and it's followed by three blank lines.</p>
+<p>This is the next paragraph, which in the reST document starts after three blank lines, however
+it is displayed with only one blank line between paragraphs.</p>
+<pre class="literal-block">For example this is a paragraph of one sentence and its followed by three blank lines.
+
+
+
+This is the next paragraph, which in the reST document starts after three blank lines, however
+it is displayed with only one blank line between paragraphs.</pre>
+<p>In summary, when creating a reST document it doesn't matter how many blank lines are placed between paragraphs, the web-browser will only display one blank line.</p>
+</section><section id="links"><h3>Links</h3>
+<p>A link is automatically created if its full address is entered. For example <a class="reference external" href="https://google.com">https://google.com</a> and <a class="reference external" href="https://stuff.co.nz">https://stuff.co.nz</a> is as follows:</p>
+<pre class="literal-block">For example https://google.com and https://stuff.co.nz</pre>
+</section><section id="named-links"><h3>Named Links</h3>
+<p>A sentence with links to <a class="reference external" href="https://www.wikipedia.org/">Wikipedia</a> and the <a class="reference external" href="https://www.kernel.org/">Linux kernel archive</a> is
+created as follows:</p>
+<pre class="literal-block">A sentence with links to `Wikipedia`_ and the `Linux kernel archive`_ is
+created as follows:
+
+.. _Wikipedia: https://www.wikipedia.org/
+.. _Linux kernel archive: https://www.kernel.org/</pre>
+</section><section id="anonymous-links"><h3>Anonymous Links</h3>
+<p>Another sentence, but with an <a class="reference external" href="https://www.python.org/">anonymous link to the Python website</a> is as
+follows:</p>
+<pre class="literal-block">Another sentence, but with an `anonymous link to the Python website`__ is as
+follows:
+
+__ https://www.python.org/</pre>
+</section><section id="comments"><h3>Comments</h3>
+<p>Comments may be embedded into the reST document. They will not be displayed.
+To insert a comment place two dots at the beginning of one line. On the next
+line or lines, indent and then write the comment.</p>
+<!-- This is a comment. It wont be displayed in the rendered html.
+
+The comment can extend over multiple lines. Just so long as
+    indentations continue to be applied. -->
+<p>The comment as it appears in the .rst document is as follows:</p>
+<pre class="literal-block">Comments may be embedded into the reST document. They will not be displayed.
+To insert a comment place two dots at the beginning of one line. On the next
+line or lines, indent and then write the comment.
+
+..
+    This is a comment. It wont be displayed in the rendered html.
+
+    The comment can extend over multiple lines. Just so long as
+        indentations continue to be applied.</pre>
+<p>It is a bad practice to put a comment on the same line as the double dots. E.g.</p>
+<pre class="literal-block">.. This is a comment.</pre>
+<p>Any comment defined in this way whose first line matches the syntax of any
+existing explicit markup construct (e.g., citation, directive, footnote,
+substitution) will be silently reinterpreted as that construct rather than as
+a comment.</p>
+</section><section id="bullet-lists"><h3>Bullet Lists</h3>
+<p>Bullets are "-", "*" or "+". A blank line is required before the first item
+and after the last, but is optional between items.</p>
+<ul class="simple">
+<li><p>This is item 1</p></li>
+<li><p>This is item 2</p></li>
+<li><p>This is item 3</p></li>
+<li><p>This is item 4. Note that
+continuing text must be aligned
+after the bullet and whitespace.</p></li>
+</ul>
+<ul class="simple">
+<li><p>This is item 1 with the plus sign bullet</p></li>
+<li><p>This is item 2 with the plus sign bullet</p></li>
+</ul>
+<ul class="simple">
+<li><p>This is item 1 with the asterisk bullet</p></li>
+<li><p>This is item 2 with the asterisk bullet</p></li>
+</ul>
+<p>The bullet list is as follows:</p>
+<pre class="literal-block">- This is item 1
+- This is item 2
+- This is item 3
+
+- This is item 4. Note that
+  continuing text must be aligned
+  after the bullet and whitespace.
+
++ This is item 1 with the plus sign bullet
++ This is item 2 with the plus sign bullet
+
+* This is item 1 with the asterisk bullet
+* This is item 2 with the asterisk bullet</pre>
+<p>Bullet list with sub-lists. Strong emphasis automatically gets added to a
+list that has a sub-list.</p>
+<p><strong>List and sub-lists of Items</strong></p>
+<ul class="simple">
+<li><p>Item 1</p></li>
+<li><dl class="simple">
+<dt>Item 2</dt>
+<dd><ul>
+<li><dl class="simple">
+<dt>Item 2-a</dt>
+<dd><ul>
+<li><p>Item 2-a-x</p></li>
+<li><p>Item 2-a-y</p></li>
+<li><p>Item 2-a-z</p></li>
+</ul></dd>
+</dl></li>
+<li><dl class="simple">
+<dt>Item 2-b</dt>
+<dd><ul>
+<li><p>Item 2-b-x</p></li>
+<li><p>Item 2-b-y</p></li>
+</ul></dd>
+</dl></li>
+</ul></dd>
+</dl></li>
+<li><dl class="simple">
+<dt>Item 3</dt>
+<dd><ul>
+<li><p>Item 3-a</p></li>
+</ul></dd>
+</dl></li>
+</ul>
+<p>The lists and sub-list is as follows:</p>
+<pre class="literal-block">**List and sub-lists of Items**
+
+- Item 1
+- Item 2
+    - Item 2-a
+        - Item 2-a-x
+        - Item 2-a-y
+        - Item 2-a-z
+    - Item 2-b
+        - Item 2-b-x
+        - Item 2-b-y
+- Item 3
+    - Item 3-a</pre>
+</section><section id="enumerated-lists"><h3>Enumerated Lists</h3>
+<p>This is an enumerated list. Placing a "#" in place of a number, will invoke
+auto-enumeration.</p>
+<ol class="arabic simple">
+<li><p>An enumerated list item.</p></li>
+<li><p>Second item.</p></li>
+<li><p>Third item is auto-enumerated.</p></li>
+<li><p>Another auto-enumerated list item.</p></li>
+<li><p>Yet another auto-enumerated list item.</p></li>
+</ol>
+<p>The above is as follows:</p>
+<pre class="literal-block">1. An enumerated list item.
+2. Second item.
+#. Third item is auto-enumerated.
+#. Another auto-enumerated list item.
+#. Yet another auto-enumerated list item.</pre>
+<p>The same list but with a blank line between each item and using a right
+parenthesis, which is converted to a dot.</p>
+<ol class="arabic simple">
+<li><p>An enumerated list item.</p></li>
+<li><p>Second item.</p></li>
+<li><p>Third item is auto-enumerated.</p></li>
+<li><p>Another auto-enumerated list item.</p></li>
+<li><p>Yet another auto-enumerated list item.</p></li>
+</ol>
+<p>The above is as follows:</p>
+<pre class="literal-block">1) An enumerated list item.
+
+2) Second item.
+
+#) Third item is auto-enumerated.
+
+#) Another auto-enumerated list item.
+
+#) Yet another auto-enumerated list item.</pre>
+<p>Enumerated list and sub-list.</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>An enumerated list item with sub-items.</dt>
+<dd><ol class="loweralpha simple">
+<li><p>Sub item that goes on at length and thus needs
+to be wrapped. Note the indentation that must
+match the beginning of the text, not the
+enumerator.</p></li>
+<li><p>This should be auto-enumerated to be sub-item b.</p></li>
+</ol></dd>
+</dl></li>
+<li><dl class="simple">
+<dt>Main Item 2.</dt>
+<dd><ol class="arabic simple">
+<li><p>Sub item a of item 2. Auto-enumerated, thus it defaults to a number.</p></li>
+<li><p>Sub item b of 2.</p></li>
+</ol></dd>
+</dl></li>
+<li><p>Main Item 3 with no sub-items.</p></li>
+</ol>
+<p>The above is as follows:</p>
+<pre class="literal-block">Enumerated list and sub-list.
+
+1) An enumerated list item.
+    a) Sub item that goes on at length and thus needs
+       to be wrapped. Note the indentation that must
+       match the beginning of the text, not the
+       enumerator.
+
+    #) This should be auto-enumerated to be sub-item b.
+#) Main Item 2.
+    #) Sub item a of item 2. Auto-enumerated, thus it defaults to a number.
+    #) Sub item b of 2.
+#) Main Item 3 with no sub-items.</pre>
+<p>Enumerated list with two sub-levels.</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>First enumerated list item.</dt>
+<dd><ol class="loweralpha simple">
+<li><dl class="simple">
+<dt>Sub item a</dt>
+<dd><ol class="lowerroman simple">
+<li><p>Sub-sub-item</p></li>
+<li><p>Another sub-sub-item which is auto-enumerated.</p></li>
+<li><p>Yet another sub-sub-item which is auto-enumerated.</p></li>
+</ol></dd>
+</dl></li>
+<li><dl class="simple">
+<dt>This should be auto-enumerated to be sub-item b.</dt>
+<dd><ol class="lowerroman simple">
+<li><p>sub-sub item of b</p></li>
+</ol></dd>
+</dl></li>
+</ol></dd>
+</dl></li>
+<li><dl class="simple">
+<dt>Second enumerated list item.</dt>
+<dd><ol class="loweralpha simple">
+<li><dl class="simple">
+<dt>Sub item 2-a</dt>
+<dd><ol class="lowerroman simple">
+<li><p>sub-sub-item 2-a-i</p></li>
+<li><p>sub-sub-item 2-a-ii</p></li>
+</ol></dd>
+</dl></li>
+</ol></dd>
+</dl></li>
+</ol>
+<p>The above is as follows:</p>
+<pre class="literal-block">Enumerated list with two sub-levels.
+
+1. First enumerated list item.
+    a. Sub item a
+        i. Sub-sub-item
+        #. Another sub-sub-item which is auto-enumerated.
+        #. Yet another sub-sub-item which is auto-enumerated.
+
+    #. This should be auto-enumerated to be sub-item b.
+        i. sub-sub item of b
+2. Second enumerated list item.
+    a. Sub item 2-a
+        i. sub-sub-item 2-a-i
+        #. sub-sub-item 2-a-ii</pre>
+</section><section id="literal-blocks"><h3>Literal blocks</h3>
+<p>To create a literal block, commence a line with two colons and make the next
+line blank. After that place indented lines of text. These indented lines of
+text will normally be displayed via HTML5 as being in a box and using a
+mono-spaced font.</p>
+<pre class="literal-block">A line of literal text
+Another line of literal text.</pre>
+<p>The above is as follows:</p>
+<pre class="literal-block">::
+
+    A line of literal text
+    Another line of literal text.</pre>
+<p>This may also be used inline at the end of a paragraph. i.e. Place two colons
+at the end of the paragraph. One is displayed, like so:</p>
+<pre class="literal-block">some more literal text</pre>
+</section><section id="definition-list"><h3>Definition List</h3>
+<p>A list that associates a term with a definition.</p>
+<dl class="simple">
+<dt>Hello</dt>
+<dd>
+<p>Word used when you meet someone.</p>
+</dd>
+<dt>Goodbye</dt>
+<dd>
+<p>Word used when you farewell someone.</p>
+</dd>
+<dt>Bon Voyage</dt>
+<dd>
+<p>Words used when someone leaves for a holiday.</p>
+</dd>
+</dl>
+<p>The above is as follows:</p>
+<pre class="literal-block">A list that associates a term with a definition.
+
+Hello
+    Word used when you meet someone.
+
+Goodbye
+    Word used when you farewell someone.
+
+Bon Voyage
+    Words used when someone leaves for a holiday.</pre>
+</section><section id="field-lists"><h3>Field Lists</h3>
+<p>Field lists are used as part of an extension syntax, such as options for directives, or database-like records meant for further processing. Field lists may also be used as generic two-column table constructs in documents.</p>
+<dl class="field-list">
+<dt>Authors<span class="colon">:</span>
+</dt>
+<dd>
+<p>Joe Bloggs,
+Fred Fish</p>
+<p>(and a very long list of many other good folks)</p>
+</dd>
+<dt>Version<span class="colon">:</span>
+</dt>
+<dd>
+<p>1.0 of 2019-04-28</p>
+</dd>
+<dt>Dedication<span class="colon">:</span>
+</dt>
+<dd>
+<p>To my father.</p>
+</dd>
+</dl>
+<p>The above is as follows:</p>
+<pre class="literal-block">:Authors:
+    Joe Bloggs,
+    Fred Fish
+
+    (and a very long list of many other good folks)
+
+:Version: 1.0 of 2019-04-28
+:Dedication: To my father.</pre>
+</section><section id="line-blocks"><h3>Line Blocks</h3>
+<div class="line-block">
+<div class="line">Line blocks are useful for addresses,</div>
+<div class="line">verse, and adornment-free lists.</div>
+<div class="line"><br></div>
+<div class="line">Each new line begins with a</div>
+<div class="line">vertical bar ("|").</div>
+<div class="line-block">
+<div class="line">Line breaks and initial indents</div>
+<div class="line">are preserved.</div>
+</div>
+<div class="line">Continuation lines are wrapped
+portions of long lines; they begin
+with spaces in place of vertical bars.</div>
+</div>
+<p>The above is as follows:</p>
+<pre class="literal-block">| Line blocks are useful for addresses,
+| verse, and adornment-free lists.
+|
+| Each new line begins with a
+| vertical bar ("|").
+|     Line breaks and initial indents
+|     are preserved.
+| Continuation lines are wrapped
+  portions of long lines; they begin
+  with spaces in place of vertical bars.</pre>
+</section><section id="tables"><h3>Tables</h3>
+<p>There are two syntax's for tables in reStructuredText. Grid tables are complete but cumbersome to create. Simple tables are easy to create but limited (no row spans, etc.).</p>
+<p>Grid table:</p>
+<table>
+<thead><tr>
+<th class="head"><p>Header 1</p></th>
+<th class="head"><p>Header 2</p></th>
+<th class="head"><p>Header 3</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>body row 1</p></td>
+<td><p>column 2</p></td>
+<td><p>column 3</p></td>
+</tr>
+<tr>
+<td><p>body row 2</p></td>
+<td colspan="2"><p>Cells may span columns.</p></td>
+</tr>
+<tr>
+<td><p>body row 3</p></td>
+<td rowspan="2"><p>Cells may
+span rows.</p></td>
+<td rowspan="2"><ul class="simple">
+<li><p>Cells</p></li>
+<li><p>contain</p></li>
+<li><p>blocks.</p></li>
+</ul></td>
+</tr>
+<tr>
+<td><p>body row 4</p></td>
+</tr>
+</tbody>
+</table>
+<p>Simple table:</p>
+<table>
+<thead>
+<tr>
+<th class="head" colspan="2"><p>Inputs</p></th>
+<th class="head"><p>Output</p></th>
+</tr>
+<tr>
+<th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr>
+<td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr>
+<td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr>
+<td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<p>The above is as follows:</p>
+<pre class="literal-block">+------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
+
+
+Simple table:
+
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======</pre>
+</section><section id="transitions"><h3>Transitions</h3>
+<p>A transition marker is a horizontal line
+of 4 or more repeated punctuation
+characters.</p>
+<hr class="docutils">
+<p>A transition should not begin or end a
+section or document, nor should two
+transitions be immediately adjacent.</p>
+<p>The above is as follows:</p>
+<pre class="literal-block">A transition marker is a horizontal line
+of 4 or more repeated punctuation
+characters.
+
+------------
+
+A transition should not begin or end a
+section or document, nor should two
+transitions be immediately adjacent.</pre>
+</section><section id="inline-alternatives"><h3>Inline Alternatives</h3>
+<p>This sentence contains <strong>strong text</strong> with inline use of strong instead of using <strong>two</strong> asterisks.</p>
+<p>This sentence contains <em>emphasis text</em> with inline use of emphasis instead of using <em>single</em> asterisks.</p>
+<pre class="literal-block">This sentence contains :strong:`strong text` with inline use of strong instead of using **two** asterisks.
+
+This sentence contains :emphasis:`emphasis text` with inline use of emphasis instead of using *single* asterisks.</pre>
+<p><a class="reference external" href="#top">[Top]</a></p>
+</section></section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            © 2025 - Hamilton Python Users Group - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="float: right; margin: 0px 0px 5px 5px; border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script><script src="../assets/js/all.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

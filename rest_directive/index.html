@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Describe the reST directives">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reST Directive | HamPUG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+<link href="../assets/css/all.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="http://hampug.github.io/rest_directive/">
+<link rel="icon" href="../images/pug_24x24.png" sizes="24x24">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta name="author" content="Hamilton Python Users Group">
+<meta property="og:site_name" content="HamPUG">
+<meta property="og:title" content="reST Directive">
+<meta property="og:url" content="http://hampug.github.io/rest_directive/">
+<meta property="og:description" content="Describe the reST directives">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-04-28T17:51:53+12:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../images/logo.svg" alt="HamPUG" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../index.html" class="nav-link"><strong>Home</strong></a>
+                </li>
+<li class="nav-item">
+<a href="../map/" class="nav-link">Map</a>
+                </li>
+<li class="nav-item">
+<a href="../meetup/" class="nav-link">Meetup</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
+            <div class="dropdown-menu">
+                    <a href="../repository/repository_overview/" class="dropdown-item">Overview</a>
+                    <a href="../repository/ncea_code_examples/" class="dropdown-item">NCEA Code Examples</a>
+                    <a href="../repository/general_code_examples/" class="dropdown-item">General Code Examples</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meetings</a>
+            <div class="dropdown-menu">
+                    <a href="../meeting/meeting_overview/" class="dropdown-item">Overview</a>
+                    <a href="https://github.com/HamPUG/meetings#readme" class="dropdown-item">Summary of Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2014#2014-meetings" class="dropdown-item">2014 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2015#2015-meetings" class="dropdown-item">2015 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2016#2016-meetings" class="dropdown-item">2016 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2017#2017-meetings" class="dropdown-item">2017 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2018#2018-meetings" class="dropdown-item">2018 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2019#2019-meetings" class="dropdown-item">2019 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2020#2020-meetings" class="dropdown-item">2020 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2021#2021-meetings" class="dropdown-item">2021 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2022#2022-meetings" class="dropdown-item">2022 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2023#2023-meetings" class="dropdown-item">2023 Meetings</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../history/" class="nav-link">History</a>
+                </li>
+<li class="nav-item">
+<a href="../website-creation/" class="nav-link"><strong>Website Creation</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Steps</a>
+            <div class="dropdown-menu">
+                    <a href="../steps/" class="dropdown-item">Overview of Steps</a>
+                    <a href="../step1/" class="dropdown-item">1 PythonAnywhere Account</a>
+                    <a href="../step2/" class="dropdown-item">2 Nikola Installation</a>
+                    <a href="../step3/" class="dropdown-item">3 Creating a Website</a>
+                    <a href="../step4/" class="dropdown-item">4 Website Tailoring</a>
+                    <a href="../step5/" class="dropdown-item">5 ReST Editor</a>
+                    <a href="../step6/" class="dropdown-item">6 Deploying to PythonAnywhere</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../rest_editor/" class="nav-link">reST Editor</a>
+                </li>
+<li class="nav-item">
+<a href="../rest_basics/" class="nav-link">reST Basics</a>
+                </li>
+<li class="nav-item active">
+<a href="." class="nav-link">reST Directive <span class="sr-only">(active)</span></a>
+                </li>
+<li class="nav-item">
+<a href="../nikola_basics/" class="nav-link">Nikola Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../pythonanywhere/" class="nav-link">Python Anywhere</a>
+                </li>
+<li class="nav-item">
+<a href="../about-us/" class="nav-link">About Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <section id="restructuredtext-directives"><span id="top"></span><h2>reStructuredText Directives</h2>
+<p>Directives are a general-purpose extension mechanism, a way of adding support
+for new constructs without adding new syntax. For a description of all
+standard directives, see <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">reStructuredText Directives</a>.</p>
+<section id="inline-directives"><h3>Inline Directives</h3>
+<p>This sentence contains <strong>strong text</strong> with inline use of strong instead of using <strong>two</strong> asterisks.</p>
+<p>This sentence contains <em>emphasis text</em> with inline use of emphasis instead of using <em>single</em> asterisks.</p>
+<p>This sentence contains <code class="docutils literal">literal text</code> with inline use of literal instead of using <code class="docutils literal">two</code> graves.</p>
+<pre class="literal-block">This sentence contains :strong:`strong text` with inline use of strong instead of using **two** asterisks.
+
+This sentence contains :emphasis:`emphasis text` with inline use of emphasis instead of using *single* asterisks.
+
+This sentence contains :literal:`literal text` with inline use of literal instead of using ``two`` graves.</pre>
+</section><section id="directives"><h3>Directives</h3>
+</section><section id="default-role"><h3>Default-role</h3>
+<p>This sentence uses single graves and the <cite>default role</cite> in the sentence results in emphasis. The default role will be set to subscript.</p>
+<p>The <sub>default role</sub> has been set to subscript. Now reset the default role</p>
+<p>The <cite>default role</cite> of single graves is now back to emphasis.</p>
+<pre class="literal-block">.. default-role:: subscript
+
+The `default role` has been set to subscript. Now reset the default role
+
+.. default-role::
+
+The `default role` of single graves is now back to emphasis.</pre>
+</section><section id="replace"><h3>Replace</h3>
+<p>Replace text and in this case apply inline sub-scripting to the replacement text.</p>
+<p>The chemical formula for pure water is H<sub>2</sub>O.</p>
+<pre class="literal-block">The chemical formula for pure water is |H2O|.
+
+.. |H2O| replace:: H\ :sub:`2`\ O</pre>
+</section><section id="math"><h3>Math</h3>
+<p>In order to display mathematical equations on a page the Nikola meta-data must
+have enabled maths with: <code class="docutils literal">.. has_math: True</code></p>
+<p>Mathematical Equations may be display as inline or by using the directive</p>
+<p>Inline mathematics are produced using the reST math role or the LaTeX backslash-parentheses delimiters:</p>
+<p>Euler’s formula is <span class="math">\(e^{ix} = \cos x + i\sin x\)</span></p>
+<p>The area of a circle is <span class="math">\(A_\text{c} = (\pi/4) d^2\)</span>.</p>
+<p>Directive use examples:</p>
+<div class="math">
+\begin{equation*}
+\alpha _t(i) = P(O_1, O_2, \ldots  O_t, q_t = S_i \lambda )
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+\int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C
+\end{equation*}
+</div>
+<p>The above is as follows:</p>
+<pre class="literal-block">Inline mathematics are produced using the reST math role or the LaTeX backslash-parentheses delimiters:
+
+Euler’s formula is :math:`e^{ix} = \cos x + i\sin x`
+
+The area of a circle is :math:`A_\text{c} = (\pi/4) d^2`.
+
+Directive use examples:
+
+.. math::
+    α_t(i) = P(O_1, O_2, … O_t, q_t = S_i λ)
+
+.. math::
+
+   \int \frac{dx}{1+ax}=\frac{1}{a}\ln(1+ax)+C</pre>
+</section><section id="code"><h3>Code</h3>
+<div class="code"><pre class="code python"><a id="rest_code_e64494e81bea4ba3864f4b559033fd7c-1" name="rest_code_e64494e81bea4ba3864f4b559033fd7c-1" href="#rest_code_e64494e81bea4ba3864f4b559033fd7c-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"A literal block directive explicitly marked as python code"</span><span class="p">)</span>
+</pre></div>
+<p>The code directive has been included in docutils since version 0.9 and now
+replaces Nikola's code-block directive. To ease the transition, two aliases
+for code directive are provided: code-block and sourcecode:</p>
+<div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_10d99207cb3d431fae91237388f96648-1"><code data-line-number="1"></code></a></td>
+<td class="code"><code><a id="rest_code_10d99207cb3d431fae91237388f96648-1" name="rest_code_10d99207cb3d431fae91237388f96648-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#rest_code_10d99207cb3d431fae91237388f96648-2"><code data-line-number="2"></code></a></td>
+<td class="code"><code><a id="rest_code_10d99207cb3d431fae91237388f96648-2" name="rest_code_10d99207cb3d431fae91237388f96648-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</code></td>
+</tr>
+</table></div>
+<div class="code"><table class="codetable"><tr>
+<td class="linenos linenodiv"><a href="#rest_code_55e0abc219914c7f977040e5a6123d3e-1"><code data-line-number="1"></code></a></td>
+<td class="code"><code><a id="rest_code_55e0abc219914c7f977040e5a6123d3e-1" name="rest_code_55e0abc219914c7f977040e5a6123d3e-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>paragraph<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> of html<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></td>
+</tr></table></div>
+<p>The above is as follows:</p>
+<pre class="literal-block">.. code:: python
+
+    print("A literal block directive explicitly marked as python code")
+
+.. code-block:: python
+    :number-lines:
+
+    for i in range(10):
+        print(i, i**2)
+
+.. sourcecode:: html
+    :number-lines:
+
+    &lt;p&gt;A &lt;strong&gt;paragraph&lt;/strong&gt; of html&lt;/p&gt;</pre>
+</section><section id="images-and-figures"><h3>Images and Figures</h3>
+<img alt="For blind people this, just letting you know this is a photo of Clinton and Obama" class="align-right" src="../images/clinton_obama.jpg" style="width: 400px;"><!-- :scale: 100 % - With Nikola v8.3.1 this erropr occurs...
+This code is giving: System Message: WARNING/2 (<string>, line 157) Cannot scale image!
+Could not get size from "/images/clinton_obama.jpg":
+[Errno 2] No such file or directory: '/images/clinton_obama.jpg' --><p>An image is normally a photograph that has been saved as a file of a type like, jpg, png, etc. The text will wrap around the image. In this case the image is aligned to the right, so the text will be displayed down the left hand side of the image.</p>
+<p>This image has had its width set to 400 pixels and with a scale of 100% then it will display at a width of 400 pixels. If the width had been set to 800 pixels and a scale of 50% then the same sized image would be displayed.</p>
+<p>No height has been specified so the image keeps its original aspect ratio.</p>
+<p>The directive is <code class="docutils literal">.. image:: /images/clinton_obama.jpg</code>. Under Nikola an <em>images</em> folder has been dedicated to store all images:</p>
+<pre class="literal-block">.. image:: /images/clinton_obama.jpg
+       :width: 400 px
+       :alt: Blind people. This is a photo of Clinton and Obama.
+       :align: right</pre>
+<p>With Nikola V8.3.1 the reST comand (above) delivers a warning during the build phase if <em>scale</em> is used and embeds a warning message in the html.</p>
+<p>An image can also be displayed by embedding html in the reST document:</p>
+<pre class="literal-block">.. raw:: html
+
+    &lt;img alt="For blind people this, just letting you know this is a photo of Clinton and Obama using html"
+        class="align-right"
+        src="../images/clinton_obama.jpg"
+        style="width: 400.0px;"&gt;</pre>
+<!-- The following would display the same size image
+/scale/ not working with nikola v8.3.1...
+
+.. image:: /images/clinton_obama.jpg
+       :width: 800 px
+       :scale: 50 %
+       :alt: Blind people. This is a photo of Clinton and Obama
+       :align: right -->
+</section></section><section id="restructuredtext-extensions"><h2>reStructuredText Extensions</h2>
+<section id="thumbnail"><h3>Thumbnail</h3>
+<p>Thumbnail allows an image to be clicked on and it will expand to a full page display. To include an image placed in the images folder (or other folders defined by IMAGE_FOLDERS), use the thumbnail directive, like this:</p>
+<pre class="literal-block">.. thumbnail:: /images/clinton_obama.jpg
+    :alt: Hill and Bazza
+    :align: center
+    :width: 100 px</pre>
+<p>Which produces an image like this, that can be clicked on to fill the browser window:</p>
+<!-- .. thumbnail:: /images/clinton_obama.jpg
+    :scale: 50 %
+    :alt: Hill and Bazza
+
+With Nikola v8.3.1 there seems to be an issue using the reST image feature. It can be done with::
+
+.. raw:: html
+
+    <a class="reference external image-reference" href="../images/clinton_obama.jpg">
+    <img alt="Hill and Bazza" src="../images/clinton_obama.thumbnail.jpg">
+
+.. raw:: html
+
+<a class="reference external image-reference";
+    href="../images/clinton_obama.jpg";>
+<img alt="Hill and Barry";
+    src="../images/clinton_obama.thumbnail.jpg";
+    class="align-left";
+    title= "Hill and Bazzer."> -->
+<a class="reference external image-reference" href="../images/clinton_obama.jpg">
+<img alt="Hill and Barry" class="align-center" src="../images/clinton_obama.thumbnail.jpg" style="width: 100px;"></a>
+<!-- .. class:: center  - didn't work -->
+<center>Clinton and Obama at CNN.</center>
+<!-- html of a thumbnail with link...
+
+.. raw:: html
+
+    <center> A thumbnail link </center>
+
+    <figure class="align-center">
+        <a class="reference external image-reference" href="../images/clinton_obama.jpg">
+            <img alt="Hill and Barry"
+                src="../images/clinton_obama.thumbnail.jpg"
+                style="width: 100.0px">
+        </a>
+        <figcaption>
+            <p>Clinton and Obama at CNN.</p>
+        </figcaption>
+    </figure> -->
+<p>A small thumbnail will be placed in the page, and it will be linked to the bigger version of the image when clicked, using baguetteBox by default.</p>
+<p>All options supported by the reST image directive are supported (except target). Providing alt is recommended, as this is the image caption which a blind person using text to speech would hear. If a body element is provided, the thumbnail will mimic the behavior of the figure directive instead.</p>
+<p>The html generated for the above thumbnail is:</p>
+<pre class="literal-block">&lt;a class="reference external image-reference" href="../images/clinton_obama.jpg"&gt;
+&lt;img alt="Hill and Barry" class="align-center" src="../images/clinton_obama.thumbnail.jpg" style="width: 100px;"&gt;&lt;/a&gt;
+
+&lt;center&gt;Clinton and Obama at CNN.&lt;/center&gt;</pre>
+</section><section id="figure-directive"><h3>Figure Directive</h3>
+<p>A figure directive is similar to image, but allows a caption to insert underneath it.</p>
+<figure class="align-center"><img alt="Hill and Bazza" src="../images/clinton_obama.jpg" style="width: 200px;"><figcaption><p>Hillary Clinton and Barack Obama during an election debate at a CNN studio.</p>
+</figcaption></figure><p><a class="reference external" href="#top">[Top]</a></p>
+<!-- According to: https://docutils.sourceforge.io/docs/ref/rst/directives.html#image
+the following options are recognized: alt, height, width, scale, align, target, class, and name.
+However with nikola v8.3.1 :scale: has an error.
+
+For more information see: https://docutils.sourceforge.io/rst.html
+
+List of files: https://docutils.sourceforge.io/docs/ref/rst/ -->
+</section></section>
+</div>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article><!--End of body content--><footer id="footer">
+            © 2025 - Hamilton Python Users Group - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="float: right; margin: 0px 0px 5px 5px; border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script><script src="../assets/js/all.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

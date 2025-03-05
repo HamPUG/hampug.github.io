@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>step2 | HamPUG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+<link href="../assets/css/all.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="http://hampug.github.io/step2/">
+<link rel="icon" href="../images/pug_24x24.png" sizes="24x24">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta name="author" content="Hamilton Python Users Group">
+<meta property="og:site_name" content="HamPUG">
+<meta property="og:title" content="step2">
+<meta property="og:url" content="http://hampug.github.io/step2/">
+<meta property="og:description" content="2. Download and Install Nikola
+We now switch to using your PC or Laptop as a development environment for the static website creation. This section describes the steps to take to install Nikola. More i">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-05-01T16:58:05+12:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../images/logo.svg" alt="HamPUG" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../index.html" class="nav-link"><strong>Home</strong></a>
+                </li>
+<li class="nav-item">
+<a href="../map/" class="nav-link">Map</a>
+                </li>
+<li class="nav-item">
+<a href="../meetup/" class="nav-link">Meetup</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
+            <div class="dropdown-menu">
+                    <a href="../repository/repository_overview/" class="dropdown-item">Overview</a>
+                    <a href="../repository/ncea_code_examples/" class="dropdown-item">NCEA Code Examples</a>
+                    <a href="../repository/general_code_examples/" class="dropdown-item">General Code Examples</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meetings</a>
+            <div class="dropdown-menu">
+                    <a href="../meeting/meeting_overview/" class="dropdown-item">Overview</a>
+                    <a href="https://github.com/HamPUG/meetings#readme" class="dropdown-item">Summary of Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2014#2014-meetings" class="dropdown-item">2014 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2015#2015-meetings" class="dropdown-item">2015 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2016#2016-meetings" class="dropdown-item">2016 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2017#2017-meetings" class="dropdown-item">2017 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2018#2018-meetings" class="dropdown-item">2018 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2019#2019-meetings" class="dropdown-item">2019 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2020#2020-meetings" class="dropdown-item">2020 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2021#2021-meetings" class="dropdown-item">2021 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2022#2022-meetings" class="dropdown-item">2022 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2023#2023-meetings" class="dropdown-item">2023 Meetings</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../history/" class="nav-link">History</a>
+                </li>
+<li class="nav-item">
+<a href="../website-creation/" class="nav-link"><strong>Website Creation</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Steps</a>
+            <div class="dropdown-menu">
+                    <a href="../steps/" class="dropdown-item">Overview of Steps</a>
+                    <a href="../step1/" class="dropdown-item">1 PythonAnywhere Account</a>
+                    <a href="." class="dropdown-item active">2 Nikola Installation <span class="sr-only">(active)</span></a>
+                    <a href="../step3/" class="dropdown-item">3 Creating a Website</a>
+                    <a href="../step4/" class="dropdown-item">4 Website Tailoring</a>
+                    <a href="../step5/" class="dropdown-item">5 ReST Editor</a>
+                    <a href="../step6/" class="dropdown-item">6 Deploying to PythonAnywhere</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../rest_editor/" class="nav-link">reST Editor</a>
+                </li>
+<li class="nav-item">
+<a href="../rest_basics/" class="nav-link">reST Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../rest_directive/" class="nav-link">reST Directive</a>
+                </li>
+<li class="nav-item">
+<a href="../nikola_basics/" class="nav-link">Nikola Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../pythonanywhere/" class="nav-link">Python Anywhere</a>
+                </li>
+<li class="nav-item">
+<a href="../about-us/" class="nav-link">About Us</a>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <section id="download-and-install-nikola"><span id="top"></span><h2>2. Download and Install Nikola</h2>
+<p>We now switch to using your PC or Laptop as a development environment for the static website creation. This section describes the steps to take to install Nikola. More in-depth details may be found in the Nikola <a class="reference external" href="https://getnikola.com/getting-started.html">documentation</a></p>
+<section id="create-a-virtual-environment"><h3>Create a Virtual Environment</h3>
+<p>It is recommended that you create and use a virtual environment. This provides a python environment that you can launch each time you login after starting up your computer. If the venv application is not installed then...</p>
+<pre class="literal-block">$ sudo apt-get install python3-venv
+...
+The following NEW packages will be installed:
+  python3-venv python3.6-venv
+...
+Do you want to continue? [Y/n] y
+...</pre>
+<p>Check what was installed...</p>
+<pre class="literal-block">$ ls /usr/lib/python3.6/venv/ -l
+total 32
+-rw-r--r-- 1 root root 19459 Oct 23  2018 __init__.py
+-rw-r--r-- 1 root root   145 Oct 23  2018 __main__.py
+drwxr-xr-x 2 root root  4096 Feb 10 13:15 __pycache__
+drwxr-xr-x 4 root root  4096 Feb 10 13:14 scripts</pre>
+<p>Create a virtual environment, in this case it will be in the directory off the home folder and be called <em>venv1</em>. With the python module venv the argument <em>--copies</em> is used to try to use copies rather than symlinks, even when symlinks are the default for the platform.</p>
+<pre class="literal-block">$ python3.6 -m venv --copies venv1</pre>
+<p>In this case a total of 346 files were installed into 48 directories. The directory structure of the venv1 is as follows:</p>
+<pre class="literal-block">$ tree -d venv1
+venv1
+├── bin
+├── include
+├── lib
+│   └── python3.6
+│       └── site-packages
+│           ├── pip
+│           │   ├── commands
+│           │   │   └── __pycache__
+│           │   ├── compat
+│           │   │   └── __pycache__
+│           │   ├── models
+│           │   │   └── __pycache__
+│           │   ├── operations
+│           │   │   └── __pycache__
+│           │   ├── __pycache__
+│           │   ├── req
+│           │   │   └── __pycache__
+│           │   ├── utils
+│           │   │   └── __pycache__
+│           │   ├── vcs
+│           │   │   └── __pycache__
+│           │   └── _vendor
+│           │       └── __pycache__
+│           ├── pip-9.0.1.dist-info
+│           ├── pkg_resources
+│           │   ├── extern
+│           │   │   └── __pycache__
+│           │   ├── __pycache__
+│           │   └── _vendor
+│           │       ├── packaging
+│           │       │   └── __pycache__
+│           │       └── __pycache__
+│           ├── pkg_resources-0.0.0.dist-info
+│           ├── __pycache__
+│           ├── setuptools
+│           │   ├── command
+│           │   │   └── __pycache__
+│           │   ├── extern
+│           │   │   └── __pycache__
+│           │   ├── __pycache__
+│           │   └── _vendor
+│           │       ├── packaging
+│           │       │   └── __pycache__
+│           │       └── __pycache__
+│           └── setuptools-39.0.1.dist-info
+├── lib64 -&gt; lib
+└── share
+    └── python-wheels
+
+48 directories</pre>
+<p>Note that there are directories for <em>Pip Installs Packages</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Pip_(package_manager)">PIP</a>) and <a class="reference external" href="https://github.com/pypa/setuptools/blob/master/docs/setuptools.txt">setuptools</a> in this virtual environment tree.</p>
+<p>To enter the virtual environment whenever you bootup your computer to develop Nikola web-sites, open a terminal window and from your home directory enter:</p>
+<div class="code"><pre class="code bash"><a id="rest_code_72557b03cd63490e97da0b330bcb42e9-1" name="rest_code_72557b03cd63490e97da0b330bcb42e9-1" href="#rest_code_72557b03cd63490e97da0b330bcb42e9-1"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv1/bin/activate
+</pre></div>
+<p>Your prompt will now have venv1 in parenthesis to indicate that you are in a virtual environment.</p>
+<pre class="literal-block">(venv1) username@host:~$</pre>
+<p>Note that to exit the venv enter: <code class="docutils literal">$ deactivate</code></p>
+</section><section id="use-pip-to-install-nikola"><h3>Use PIP to Install Nikola</h3>
+<p>Before using <em>Pip Installs Packages</em>, check you have PIP available by checking its version number.</p>
+<pre class="literal-block">(venv1) username@host:~$ pip -V
+pip 9.0.1 from /home/&lt;username&gt;/venv1/lib/python3.6/site-packages (python 3.6)</pre>
+<p>PIP is used to install Nikola plus extra optional features into the venv1 from the Python Package Index (<a class="reference external" href="https://pypi.org/project/Nikola/">PyPI</a>). The --upgrade argument ensures all specified packages to be the newest available version.</p>
+<pre class="literal-block">(venv1) username@host:~$ pip install --upgrade "Nikola[extras]"</pre>
+<p>The venv1 directory tree has now increased from 48 directories with 346 files, to 1314 directories with 9819 files. If Nikola had been installed without the extras <code class="docutils literal">pip install <span class="pre">--upgrade</span> Nikola</code> then venv1 would be 321 directories with 4518 files.</p>
+<!-- Comment: The following tables were created from the console output that occurred during
+the pip install.
+A python program was written to take the list and convert it to a reST table layout.
+Can add to the table directive the option :widths: auto -->
+<table class="align-left">
+<caption>Nikola base packages from <code class="docutils literal">$ pip install <span class="pre">--upgrade</span> Nikola</code>
+</caption>
+<tbody>
+<tr>
+<td><p>Babel</p></td>
+<td><p>Markdown</p></td>
+<td><p>MarkupSafe</p></td>
+<td><p>Nikola</p></td>
+</tr>
+<tr>
+<td><p>Pillow</p></td>
+<td><p>PyRSS2Gen</p></td>
+<td><p>Pygments</p></td>
+<td><p>Yapsy</p></td>
+</tr>
+<tr>
+<td><p>blinker</p></td>
+<td><p>certifi</p></td>
+<td><p>chardet</p></td>
+<td><p>cloudpickle</p></td>
+</tr>
+<tr>
+<td><p>docutils</p></td>
+<td><p>doit</p></td>
+<td><p>idna</p></td>
+<td><p>logbook</p></td>
+</tr>
+<tr>
+<td><p>lxml</p></td>
+<td><p>mako</p></td>
+<td><p>natsort</p></td>
+<td><p>piexif</p></td>
+</tr>
+<tr>
+<td><p>pyinotify</p></td>
+<td><p>python-dateutil</p></td>
+<td><p>pytz</p></td>
+<td><p>requests</p></td>
+</tr>
+<tr>
+<td><p>setuptools</p></td>
+<td><p>six</p></td>
+<td><p>unidecode</p></td>
+<td><p>urllib3</p></td>
+</tr>
+</tbody>
+</table>
+<table class="align-left">
+<caption>Nikola[Extras] adds these packages to the base packages from <code class="docutils literal">$ pip install <span class="pre">--upgrade</span> "Nikola[extras]"</code>
+</caption>
+<tbody>
+<tr>
+<td><p>Jinja2</p></td>
+<td><p>PyYAML</p></td>
+<td><p>Send2Trash</p></td>
+<td><p>aiohttp</p></td>
+</tr>
+<tr>
+<td><p>argh</p></td>
+<td><p>async-timeout</p></td>
+<td><p>attrs</p></td>
+<td><p>backcall</p></td>
+</tr>
+<tr>
+<td><p>bleach</p></td>
+<td><p>decorator</p></td>
+<td><p>defusedxml</p></td>
+<td><p>entrypoints</p></td>
+</tr>
+<tr>
+<td><p>ghp-import2</p></td>
+<td><p>husl</p></td>
+<td><p>idna-ssl</p></td>
+<td><p>ipykernel</p></td>
+</tr>
+<tr>
+<td><p>ipython</p></td>
+<td><p>ipython-genutils</p></td>
+<td><p>jedi</p></td>
+<td><p>jsonschema</p></td>
+</tr>
+<tr>
+<td><p>jupyter-client</p></td>
+<td><p>jupyter-core</p></td>
+<td><p>micawber</p></td>
+<td><p>mistune</p></td>
+</tr>
+<tr>
+<td><p>multidict</p></td>
+<td><p>nbconvert</p></td>
+<td><p>nbformat</p></td>
+<td><p>notebook</p></td>
+</tr>
+<tr>
+<td><p>pandocfilters</p></td>
+<td><p>parso</p></td>
+<td><p>pathtools</p></td>
+<td><p>pexpect</p></td>
+</tr>
+<tr>
+<td><p>phpserialize</p></td>
+<td><p>pickleshare</p></td>
+<td><p>prometheus-client</p></td>
+<td><p>prompt-toolkit</p></td>
+</tr>
+<tr>
+<td><p>ptyprocess</p></td>
+<td><p>pygal</p></td>
+<td><p>pyphen</p></td>
+<td><p>pyrsistent</p></td>
+</tr>
+<tr>
+<td><p>pyzmq</p></td>
+<td><p>ruamel.yaml</p></td>
+<td><p>smartypants</p></td>
+<td><p>terminado</p></td>
+</tr>
+<tr>
+<td><p>testpath</p></td>
+<td><p>toml</p></td>
+<td><p>tornado</p></td>
+<td><p>traitlets</p></td>
+</tr>
+<tr>
+<td><p>typing-extensions</p></td>
+<td><p>typogrify</p></td>
+<td><p>watchdog</p></td>
+<td><p>wcwidth</p></td>
+</tr>
+<tr>
+<td><p>webencodings</p></td>
+<td><p>yarl</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section id="starting-nikola"><h3>Starting Nikola</h3>
+<p>Check that Nikola retrieves its version number without errors.</p>
+<pre class="literal-block">(venv1) username@host:~$ nikola version
+Nikola v8.0.2</pre>
+<p>Review the Nikola on-line help</p>
+<pre class="literal-block">(venv1) username@host:~$ nikola help
+Nikola is a tool to create static websites and blogs. For full documentation and more information, please visit https://getnikola.com/
+
+Available commands:
+  nikola auto                 builds and serves a site; automatically detects site changes, rebuilds, and optionally refreshes a browser
+  nikola build                run tasks
+  nikola check                check links and files in the generated site
+  nikola clean                clean action / remove targets
+  nikola console              start an interactive Python console with access to your site
+  nikola default_config       Print the default Nikola configuration.
+  nikola deploy               deploy the site
+  nikola doit_auto            automatically execute tasks when a dependency changes
+  nikola dumpdb               dump dependency DB
+  nikola forget               clear successful run status from internal DB
+  nikola github_deploy        deploy the site to GitHub Pages
+  nikola help                 show help
+  nikola ignore               ignore task (skip) on subsequent runs
+  nikola import_wordpress     import a WordPress dump
+  nikola info                 show info about a task
+  nikola init                 create a Nikola site in the specified folder
+  nikola list                 list tasks from dodo file
+  nikola new_page             create a new page in the site
+  nikola new_post             create a new blog post or site page
+  nikola orphans              list all orphans
+  nikola plugin               manage plugins
+  nikola reset-dep            recompute and save the state of file dependencies without executing actions
+  nikola rst2html             compile reStructuredText to HTML files
+  nikola serve                start the test webserver
+  nikola status               display site status
+  nikola strace               use strace to list file_deps and targets
+  nikola subtheme             given a swatch name from bootswatch.com or hackerthemes.com and a parent theme, creates a custom theme
+  nikola tabcompletion        generate script for tab-completion
+  nikola theme                manage themes
+  nikola version              print the Nikola version number
+
+  nikola help                 show help / reference
+  nikola help &lt;command&gt;       show command usage
+  nikola help &lt;task-name&gt;     show task usage</pre>
+<p>How to check if Nikola has plugins.</p>
+<pre class="literal-block">(venv1) username@host:~$ nikola help plugin
+Purpose: manage plugins
+Usage:   nikola plugin [-u url] [--user] [-i name] [-r name] [--upgrade] [-l] [--list-installed]
+
+Options:
+  -i ARG, --install=ARG     Install a plugin.  (config: install)
+  -r ARG, --uninstall=ARG   Uninstall a plugin.  (config: uninstall)
+  -l, --list                Show list of available plugins.  (config: list)
+  -u ARG, --url=ARG         URL for the plugin repository (default: https://plugins.getnikola.com/v8/plugins.json)  (config: url)
+  --user                    Install user-wide, available for all sites.  (config: user)
+  --upgrade                 Upgrade all installed plugins.  (config: upgrade)
+  --list-installed          List the installed plugins with their location.  (config: list_installed)</pre>
+<p>Nikola Plugin list of available plugins. Total of 96.</p>
+<pre class="literal-block">(venv1) username@host:~$ nikola plugin --list
+Available Plugins:
+------------------
+asciidoc
+babeldates
+bbcode
+book_figure
+category_prevnext
+commonmark
+contentful
+continuous_import
+datocms
+deploy_hooks
+emoji
+errorpages
+forms
+gallery_directive
+gallery_shortcode
+german_slugify
+graphviz
+helloworld
+hierarchical_pages
+html_roles
+iarchiver
+ical
+import_blogger
+import_feed
+import_goodreads
+import_gplus
+import_jekyll
+import_page
+import_tumblr
+import_twitpic
+irclogs
+issue_role
+jade
+jsonfeed
+kramdown
+latex
+latex_formula_renderer
+less
+link_figure
+localkatex
+localsearch
+markmin
+mediawiki
+medium
+meta_template
+microdata
+mincss
+misaka
+mistune
+mustache
+navstories
+notebook_shortcode
+odt
+opentimestamps
+orgmode
+pdoc
+ping
+pkgindex
+pkgindex_compiler
+pkgindex_scan
+pkgindex_zip
+planetoid
+postcast
+pretty_breadcrumbs
+projectpages
+publication_list
+pyplots
+recent_posts_json
+rest_html5
+rss_ogg
+rstdiff
+sass
+section_prevnext
+series
+sidebar
+similarity
+slides
+slimish
+speechsynthesizednetcast
+spell_check
+sphinx_roles
+static_comments
+static_tag_cloud
+subindexes
+tagcloud
+tags
+textile
+tx3_tag_cloud
+txt2tags
+upgrade_metadata
+upgrade_metadata_v8
+vcs
+webapp
+wiki
+windows_live_tiles
+wordpress_compiler</pre>
+<p>Nikola plugins that are installed and their location. Total of 67</p>
+<pre class="literal-block">(venv1) username@host:~$ nikola plugin --list-installed
+Installed Plugins:
+------------------
+auto                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/auto/
+chart                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/chart.py
+check                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/check.py
+classify_archive     at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/archive.py
+classify_authors     at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/authors.py
+classify_categories  at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/categories.py
+classify_indexes     at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/indexes.py
+classify_page_index  at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/page_index.py
+classify_tags        at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/tags.py
+classify_taxonomies  at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/misc/taxonomies_classifier.py
+console              at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/console.py
+copy_assets          at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/copy_assets.py
+copy_files           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/copy_files.py
+create_bundles       at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/bundles.py
+default_config       at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/default_config.py
+deploy               at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/deploy.py
+emoji                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/emoji/
+gist                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/gist.py
+github_deploy        at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/github_deploy.py
+gzip                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/gzip.py
+html                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/html.py
+import_wordpress     at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/import_wordpress.py
+init                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/init.py
+ipynb                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/ipynb.py
+jinja                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/template/jinja.py
+listing_shortcode    at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/listing.py
+mako                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/template/mako.py
+markdown             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/markdown/
+mdx_gist             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/markdown/mdx_gist.py
+mdx_nikola           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/markdown/mdx_nikola.py
+mdx_podcast          at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/markdown/mdx_podcast.py
+new_page             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/new_page.py
+new_post             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/new_post.py
+orphans              at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/orphans.py
+pandoc               at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/pandoc.py
+php                  at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/php.py
+plugin               at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/plugin.py
+post_list            at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/post_list.py
+redirect             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/redirect.py
+render_galleries     at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/galleries.py
+render_listings      at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/listings.py
+render_pages         at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/pages.py
+render_posts         at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/posts.py
+render_sources       at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/sources.py
+render_taxonomies    at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/taxonomies.py
+rest                 at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/
+rest_chart           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/chart.py
+rest_doc             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/doc.py
+rest_gist            at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/gist.py
+rest_listing         at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/listing.py
+rest_media           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/media.py
+rest_post_list       at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/post_list.py
+rest_soundcloud      at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/soundcloud.py
+rest_thumbnail       at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/thumbnail.py
+rest_vimeo           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/vimeo.py
+rest_youtube         at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/compile/rest/youtube.py
+robots               at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/robots.py
+rst2html             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/rst2html/
+scale_images         at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/scale_images.py
+scan_posts           at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/misc/scan_posts.py
+serve                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/serve.py
+sitemap              at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/task/sitemap/
+status               at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/status.py
+subtheme             at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/subtheme.py
+theme                at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/theme.py
+thumbnail            at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/shortcode/thumbnail.py
+version              at /home/&lt;username&gt;/venv1/lib/python3.6/site-packages/nikola/plugins/command/version.py</pre>
+</section><section id="website-development-and-testing"><h3>Website Development and Testing</h3>
+<p>After installing Nikola, you should create a site. A site is a collection of all assets needed to create your site: a configuration file, posts, pages, images, and all other files and customizations. This is the important data, so put it where you put that kind of thing.</p>
+<p>To create a site, you need to run <code class="docutils literal">nikola init <span class="pre">--demo</span> &lt;directory_name&gt;</code>. A wizard will be launched, letting you configure your site easily. The <code class="docutils literal"><span class="pre">--demo</span></code> option is used to fill your site with some demo content. If you do not want this complex web-site, you can make a more simplistic web-site using the <code class="docutils literal"><span class="pre">--quiet</span></code> argument, <code class="docutils literal">nikola init <span class="pre">--quiet</span> &lt;directory_name&gt;</code>.</p>
+<pre class="literal-block">(venv2) username@host:~$ nikola init --demo hampug_demo
+Creating Nikola Site
+====================
+
+This is Nikola v8.0.2.  We will now ask you a few easy questions about your new site.
+If you do not want to answer and want to go with the defaults instead, simply restart with the `-q` parameter.
+--- Questions about the site ---
+Site title [My Nikola Site]:
+Site author [Nikola Tesla]:
+Site author's e-mail [n.tesla@example.com]:
+Site description [This is a demo site for Nikola.]:
+Site URL [https://example.com/]:
+Enable pretty URLs (/page/ instead of /page.html) that don't need web server configuration? [Y/n] y
+--- Questions about languages and locales ---
+We will now ask you to provide the list of languages you want to use.
+Please list all the desired languages, comma-separated, using ISO 639-1 codes.  The first language will be used as the default.
+Type '?' (a question mark, sans quotes) to list available languages.
+Language(s) to use [en]:
+
+Please choose the correct time zone for your blog. Nikola uses the tz database.
+You can find your time zone here:
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+Time zone [Pacific/Auckland]:
+    Current time in Pacific/Auckland: 12:00:53
+Use this time zone? [Y/n]
+--- Questions about comments ---
+You can configure comments now.  Type '?' (a question mark, sans quotes) to list available comment systems.  If you do not want any comments, just leave the field blank.
+Comment system:
+
+That's it, Nikola is now configured.  Make sure to edit conf.py to your liking.
+If you are looking for themes and addons, check out https://themes.getnikola.com/ and https://plugins.getnikola.com/.
+Have fun!
+[2019-05-02T00:01:06Z] INFO: init: A new site with example data has been created at hampug_demo.
+[2019-05-02T00:01:06Z] INFO: init: See README.txt in that folder for more information.</pre>
+<p>The hampug_demo directory is created and it contains 7 folders, a README.txt and the conf.py file. Note that there is no <em>output</em> folder. When the website is built it defaults to residing in a the folder <em>output</em>.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ ls -l
+total 84
+-rw-rw-r-- 1 ian ian 53216 May  2 12:01 conf.py
+drwxrwxr-x 3 ian ian  4096 May  2 08:51 files
+drwxrwxr-x 3 ian ian  4096 May  2 08:51 galleries
+drwxrwxr-x 2 ian ian  4096 May  2 08:51 images
+drwxrwxr-x 3 ian ian  4096 May  2 08:51 listings
+drwxrwxr-x 2 ian ian  4096 May  2 08:51 pages
+drwxrwxr-x 2 ian ian  4096 May  2 08:51 posts
+-rw-rw-r-- 1 ian ian   309 May  2 08:50 README.txt
+drwxrwxr-x 2 ian ian  4096 May  2 08:51 templates</pre>
+<p>The pages folder contains all the webpages for the website as 14 x reStructuredText files with .rst extensions.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ ls pages/
+1.rst               creating-a-theme.rst     internals.rst      path_handlers.rst  social_buttons.rst
+bootstrap-demo.rst  dr-nikolas-vendetta.rst  listings-demo.rst  quickref.rst       theming.rst
+charts.rst          extending.rst            manual.rst         quickstart.rst</pre>
+<p>The posts folder contains only one reST file.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ ls posts/
+1.rst</pre>
+<p>The README.txt states:</p>
+<pre class="literal-block">This folder contains the source used to generate a static site using Nikola.
+
+Installation and documentation at https://getnikola.com/
+
+Configuration file for the site is ``conf.py``.
+
+To build the site::
+
+    nikola build
+
+To see it::
+
+    nikola serve -b
+
+To check all available commands::
+
+    nikola help</pre>
+<p>Note that the nikola command <em>auto</em> builds and serves a site; automatically detects site changes, rebuilds, and optionally refreshes a browser</p>
+<p>Nikola <strong>build</strong> command.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ nikola build
+Scanning posts........done!
+.  copy_files:output/favicon.ico
+.  copy_files:output/images/nikola.png
+.  render_listings:output/listings/index.html
+.  render_listings:output/listings/hello.py.html
+.  render_listings:output/listings/hello.py
+.  render_listings:output/listings/__pycache__/index.html
+.  render_taxonomies:output/archive.html
+.  render_taxonomies:output/categories/index.html
+.  render_posts:timeline_changes
+.  render_posts:cache/pages/path_handlers.html
+.  render_posts:cache/pages/dr-nikolas-vendetta.html
+.  render_posts:cache/pages/creating-a-theme.html
+.  render_posts:cache/pages/charts.html
+.  render_posts:cache/pages/social_buttons.html
+.  render_posts:cache/pages/listings-demo.html
+.  render_posts:cache/pages/1.html
+.  render_posts:cache/pages/bootstrap-demo.html
+.  render_posts:cache/pages/extending.html
+.  render_posts:cache/pages/internals.html
+.  render_posts:cache/pages/manual.html
+.  render_posts:cache/pages/quickref.html
+.  render_posts:cache/pages/quickstart.html
+.  render_posts:cache/posts/1.html
+.  render_posts:cache/pages/theming.html
+.  copy_assets:output/assets/css/bootblog.css
+.  copy_assets:output/assets/css/theme.css
+.  copy_assets:output/assets/css/bootstrap.min.css
+.  copy_assets:output/assets/js/bootstrap.min.js
+.  copy_assets:output/assets/js/popper.min.js
+.  copy_assets:output/assets/js/jquery.min.js
+.  copy_assets:output/assets/css/rst.css
+.  copy_assets:output/assets/css/rst_base.css
+.  copy_assets:output/assets/css/nikola_ipython.css
+.  copy_assets:output/assets/css/ipython.min.css
+.  copy_assets:output/assets/css/html4css1.css
+.  copy_assets:output/assets/css/baguetteBox.min.css
+.  copy_assets:output/assets/css/nikola_rst.css
+.  copy_assets:output/assets/js/html5.js
+.  copy_assets:output/assets/js/fancydates.js
+.  copy_assets:output/assets/js/gallery.min.js
+.  copy_assets:output/assets/js/baguetteBox.min.js
+.  copy_assets:output/assets/js/moment-with-locales.min.js
+.  copy_assets:output/assets/js/html5shiv-printshiv.min.js
+.  copy_assets:output/assets/js/fancydates.min.js
+.  copy_assets:output/assets/js/gallery.js
+.  copy_assets:output/assets/js/justified-layout.min.js
+.  copy_assets:output/assets/xml/atom.xsl
+.  copy_assets:output/assets/xml/rss.xsl
+.  copy_assets:output/assets/css/code.css
+.  scale_images:output/images/illus_001.jpg
+.  scale_images:output/images/frontispiece.jpg
+.  render_sources:output/pages/path-handlers/index.rst
+.  render_sources:output/pages/dr-nikolas-vendetta/index.rst
+.  render_sources:output/pages/creating-a-theme/index.rst
+.  render_sources:output/pages/charts/index.rst
+.  render_sources:output/pages/social_buttons/index.rst
+.  render_sources:output/pages/listings-demo/index.rst
+.  render_sources:output/pages/about-nikola/index.rst
+.  render_sources:output/pages/bootstrap-demo/index.rst
+.  render_sources:output/pages/extending/index.rst
+.  render_sources:output/pages/internals/index.rst
+.  render_sources:output/pages/handbook/index.rst
+.  render_sources:output/pages/quickref/index.rst
+.  render_sources:output/pages/quickstart/index.rst
+.  render_sources:output/posts/welcome-to-nikola/index.rst
+.  render_sources:output/pages/theming/index.rst
+.  render_galleries:output/galleries
+.  render_galleries:output/galleries/demo
+.  render_galleries:output/galleries/index.html
+.  render_galleries:output/galleries/rss.xml
+.  render_galleries:output/galleries/demo/tesla4_lg.thumbnail.jpg
+.  render_galleries:output/galleries/demo/tesla4_lg.jpg
+.  render_galleries:output/galleries/demo/tesla_tower1_lg.thumbnail.jpg
+.  render_galleries:output/galleries/demo/tesla_tower1_lg.jpg
+.  render_galleries:output/galleries/demo/tesla_lightning1_lg.thumbnail.jpg
+.  render_galleries:output/galleries/demo/tesla_lightning1_lg.jpg
+.  render_galleries:output/galleries/demo/tesla_lightning2_lg.thumbnail.jpg
+.  render_galleries:output/galleries/demo/tesla_lightning2_lg.jpg
+.  render_galleries:output/galleries/demo/tesla_conducts_lg.thumbnail.jpg
+.  render_galleries:output/galleries/demo/tesla_conducts_lg.jpg
+.  render_galleries:cache/galleries/demo/index.html
+.  render_galleries:output/galleries/demo/index.html
+.  render_galleries:output/galleries/demo/rss.xml
+.  render_taxonomies:output/categories/blog/index.html
+.  render_taxonomies:output/categories/nikola/index.html
+.  render_taxonomies:output/2012/index.html
+.  render_taxonomies:output/index.html
+.  render_taxonomies:output/categories/python/index.html
+.  render_taxonomies:output/categories/demo/index.html
+.  render_taxonomies:output/categories/cat_nikola/index.html
+.  render_pages:output/pages/creating-a-theme/index.html
+.  render_taxonomies:output/categories/nikola.xml
+.  render_pages:output/pages/about-nikola/index.html
+.  render_taxonomies:output/categories/demo.xml
+.  render_pages:output/pages/internals/index.html
+.  render_pages:output/pages/quickref/index.html
+.  render_pages:output/pages/quickstart/index.html
+.  render_taxonomies:output/rss.xml
+.  render_pages:output/pages/dr-nikolas-vendetta/index.html
+.  render_pages:output/pages/handbook/index.html
+.  render_pages:output/pages/theming/index.html
+.  render_pages:output/pages/extending/index.html
+.  render_taxonomies:output/categories/python.xml
+.  render_pages:output/pages/bootstrap-demo/index.html
+.  render_pages:output/pages/listings-demo/index.html
+.  render_taxonomies:output/categories/cat_nikola.xml
+.  render_pages:output/pages/charts/index.html
+.  render_pages:output/pages/social_buttons/index.html
+.  render_pages:output/pages/path-handlers/index.html
+.  render_pages:output/posts/welcome-to-nikola/index.html
+.  render_taxonomies:output/categories/blog.xml
+.  create_bundles:output/assets/css/all-nocdn.css
+.  create_bundles:output/assets/css/all.css
+.  create_bundles:output/assets/js/all-nocdn.js
+.  create_bundles:output/assets/js
+.  sitemap:output/sitemap.xml
+.  sitemap:output/sitemapindex.xml
+.  robots_file:output/robots.txt</pre>
+<p>Note that the <em>output</em> folder has now been created. It contains all the html files to be provided by the webserver. Also created are a <em>cache</em> folder for the website and a __pycache__ folder from  running the conf.py which contains conf.cpython-36.pyc.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ ls
+cache  conf.py  files  galleries  images  listings  output  pages  posts  __pycache__  README.txt  templates</pre>
+<p>Nikola <strong>serve</strong> command. The <em>-b</em> argument launches your web-browser.</p>
+<pre class="literal-block">(venv2) username@host:~/hampug_demo$ nikola serve -b
+[2019-05-02T00:28:02Z] INFO: serve: Serving on http://127.0.0.1:8000/ ...
+[2019-05-02T00:28:02Z] INFO: serve: Opening http://127.0.0.1:8000/ in the default web browser...
+127.0.0.1 - - [02/May/2019 12:28:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/May/2019 12:28:03] "GET /assets/css/all-nocdn.css HTTP/1.1" 200 -
+127.0.0.1 - - [02/May/2019 12:28:03] "GET /assets/js/all-nocdn.js HTTP/1.1" 200 -
+127.0.0.1 - - [02/May/2019 12:28:04] "GET /posts/welcome-to-nikola/ HTTP/1.1" 200 -</pre>
+<p>You can compare the contents of the .rst files in the pages folder with their .html files in the output folder to gain an appreciation of how reStructuredText is converted to html.</p>
+<p>This demo will have created <em>My Nikola Site</em>. It is recommended that checkout the <strong>Read the manual</strong> webpage, and also the other demo pages.</p>
+</section><section id="common-nikola-commands"><h3>Common Nikola commands</h3>
+</section><section id="running-the-nikola-application"><h3>Running the nikola application</h3>
+<p>In creating a virtual environment the path for looking up the execution of bash commands is appended to include <code class="docutils literal"><span class="pre">/home/&lt;username&gt;/venv1/bin/</span></code>. This can be determined with the <code class="docutils literal">$ echo $PATH</code> command.</p>
+<pre class="literal-block">$ echo $PATH
+/home/&lt;username&gt;/venv1/bin:
+/home/&lt;username&gt;/bin:
+/usr/local/sbin:
+/usr/local/bin:
+/usr/sbin:
+/usr/bin:
+/sbin:
+/bin:
+/usr/games:
+/usr/local/games:
+/snap/bin</pre>
+<p>In the virtual environment the <code class="docutils literal">$ pip install "nikola[Extras]"</code> command was executed and as part of this installation of Nikola the python file "nikola" was copied to <code class="docutils literal"><span class="pre">/home/&lt;username&gt;/venv1/bin/</span></code>. This nikola file is as follows</p>
+<div class="code"><pre class="code python"><a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-1" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-1" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-1"></a><span class="ch">#!/home/&lt;username&gt;/venv1/bin/python3.6</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-2" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-2" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-2"></a>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-3" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-3" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-3"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-4" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-4" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-5" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-5" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-6" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-6" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-6"></a>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-7" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-7" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">nikola.__main__</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-8" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-8" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-8"></a>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-9" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-9" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-10" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-10" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-10"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">'(-script\.pyw?|\.exe)?$'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a id="rest_code_562ba556217d4d57a9aa1bad2e23cb45-11" name="rest_code_562ba556217d4d57a9aa1bad2e23cb45-11" href="#rest_code_562ba556217d4d57a9aa1bad2e23cb45-11"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+<p>The line of code <code class="docutils literal">from nikola.__main__ import main</code>, finds the file <code class="docutils literal"><span class="pre">~/venv1/lib/python3.6/site-packages/nikola/__main__.py</span></code> and executes loading of 22 x python modules. It also initializes a dictionary <code class="docutils literal">config = {}</code> and loads the <code class="docutils literal">def main(args=None):</code> function. The main() function is then executed with the line <code class="docutils literal"><span class="pre">sys.exit(main())</span></code>.</p>
+<p>The <code class="docutils literal">main()</code> function includes setting up a variable for the nikola configuration file with <code class="docutils literal">conf_filename = 'conf.py'</code>. This conf.py file resides in the root of your web-site development folders.</p>
+<div class="code"><pre class="code python"><a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-1" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-1" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-1"></a><span class="k">try</span><span class="p">:</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-2" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-2" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-2"></a>    <span class="n">loader</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">machinery</span><span class="o">.</span><span class="n">SourceFileLoader</span><span class="p">(</span><span class="s2">"conf"</span><span class="p">,</span> <span class="n">conf_filename</span><span class="p">)</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-3" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-3" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-3"></a>    <span class="n">conf</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load_module</span><span class="p">()</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-4" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-4" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-4"></a>    <span class="n">config</span> <span class="o">=</span> <span class="n">conf</span><span class="o">.</span><span class="vm">__dict__</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-5" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-5" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-5"></a>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-6" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-6" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-7" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-7" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">importlib</span><span class="p">)</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-8" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-8" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-8"></a><span class="p">[</span><span class="s1">'_RELOADING'</span><span class="p">,</span> <span class="s1">'__all__'</span><span class="p">,</span> <span class="s1">'__builtins__'</span><span class="p">,</span> <span class="s1">'__cached__'</span><span class="p">,</span> <span class="s1">'__doc__'</span><span class="p">,</span> <span class="s1">'__file__'</span><span class="p">,</span> <span class="s1">'__import__'</span><span class="p">,</span> <span class="s1">'__loader__'</span><span class="p">,</span> <span class="s1">'__name__'</span><span class="p">,</span> <span class="s1">'__package__'</span><span class="p">,</span> <span class="s1">'__path__'</span><span class="p">,</span> <span class="s1">'__spec__'</span><span class="p">,</span> <span class="s1">'_bootstrap'</span><span class="p">,</span> <span class="s1">'_bootstrap_external'</span><span class="p">,</span> <span class="s1">'_imp'</span><span class="p">,</span> <span class="s1">'_r_long'</span><span class="p">,</span> <span class="s1">'_w_long'</span><span class="p">,</span> <span class="s1">'abc'</span><span class="p">,</span> <span class="s1">'find_loader'</span><span class="p">,</span> <span class="s1">'import_module'</span><span class="p">,</span> <span class="s1">'invalidate_caches'</span><span class="p">,</span> <span class="s1">'machinery'</span><span class="p">,</span> <span class="s1">'reload'</span><span class="p">,</span> <span class="s1">'sys'</span><span class="p">,</span> <span class="s1">'types'</span><span class="p">,</span> <span class="s1">'util'</span><span class="p">,</span> <span class="s1">'warnings'</span><span class="p">]</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-9" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-9" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-9"></a>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-10" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-10" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">machinery</span><span class="p">)</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-11" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-11" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-11"></a><span class="p">[</span><span class="s1">'BYTECODE_SUFFIXES'</span><span class="p">,</span> <span class="s1">'BuiltinImporter'</span><span class="p">,</span> <span class="s1">'DEBUG_BYTECODE_SUFFIXES'</span><span class="p">,</span> <span class="s1">'EXTENSION_SUFFIXES'</span><span class="p">,</span> <span class="s1">'ExtensionFileLoader'</span><span class="p">,</span> <span class="s1">'FileFinder'</span><span class="p">,</span> <span class="s1">'FrozenImporter'</span><span class="p">,</span> <span class="s1">'ModuleSpec'</span><span class="p">,</span> <span class="s1">'OPTIMIZED_BYTECODE_SUFFIXES'</span><span class="p">,</span> <span class="s1">'PathFinder'</span><span class="p">,</span> <span class="s1">'SOURCE_SUFFIXES'</span><span class="p">,</span> <span class="s1">'SourceFileLoader'</span><span class="p">,</span> <span class="s1">'SourcelessFileLoader'</span><span class="p">,</span> <span class="s1">'WindowsRegistryFinder'</span><span class="p">,</span> <span class="s1">'__builtins__'</span><span class="p">,</span> <span class="s1">'__cached__'</span><span class="p">,</span> <span class="s1">'__doc__'</span><span class="p">,</span> <span class="s1">'__file__'</span><span class="p">,</span> <span class="s1">'__loader__'</span><span class="p">,</span> <span class="s1">'__name__'</span><span class="p">,</span> <span class="s1">'__package__'</span><span class="p">,</span> <span class="s1">'__spec__'</span><span class="p">,</span> <span class="s1">'_imp'</span><span class="p">,</span> <span class="s1">'all_suffixes'</span><span class="p">]</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-12" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-12" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-12"></a>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-13" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-13" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">machinery</span><span class="o">.</span><span class="n">SourceFileLoader</span><span class="p">)</span>
+<a id="rest_code_de4fec32fcf3482d9c14d6eb18ade785-14" name="rest_code_de4fec32fcf3482d9c14d6eb18ade785-14" href="#rest_code_de4fec32fcf3482d9c14d6eb18ade785-14"></a><span class="p">[</span><span class="s1">'__class__'</span><span class="p">,</span> <span class="s1">'__delattr__'</span><span class="p">,</span> <span class="s1">'__dict__'</span><span class="p">,</span> <span class="s1">'__dir__'</span><span class="p">,</span> <span class="s1">'__doc__'</span><span class="p">,</span> <span class="s1">'__eq__'</span><span class="p">,</span> <span class="s1">'__format__'</span><span class="p">,</span> <span class="s1">'__ge__'</span><span class="p">,</span> <span class="s1">'__getattribute__'</span><span class="p">,</span> <span class="s1">'__gt__'</span><span class="p">,</span> <span class="s1">'__hash__'</span><span class="p">,</span> <span class="s1">'__init__'</span><span class="p">,</span> <span class="s1">'__init_subclass__'</span><span class="p">,</span> <span class="s1">'__le__'</span><span class="p">,</span> <span class="s1">'__lt__'</span><span class="p">,</span> <span class="s1">'__module__'</span><span class="p">,</span> <span class="s1">'__ne__'</span><span class="p">,</span> <span class="s1">'__new__'</span><span class="p">,</span> <span class="s1">'__reduce__'</span><span class="p">,</span> <span class="s1">'__reduce_ex__'</span><span class="p">,</span> <span class="s1">'__repr__'</span><span class="p">,</span> <span class="s1">'__setattr__'</span><span class="p">,</span> <span class="s1">'__sizeof__'</span><span class="p">,</span> <span class="s1">'__str__'</span><span class="p">,</span> <span class="s1">'__subclasshook__'</span><span class="p">,</span> <span class="s1">'__weakref__'</span><span class="p">,</span> <span class="s1">'_cache_bytecode'</span><span class="p">,</span> <span class="s1">'create_module'</span><span class="p">,</span> <span class="s1">'exec_module'</span><span class="p">,</span> <span class="s1">'get_code'</span><span class="p">,</span> <span class="s1">'get_data'</span><span class="p">,</span> <span class="s1">'get_filename'</span><span class="p">,</span> <span class="s1">'get_source'</span><span class="p">,</span> <span class="s1">'is_package'</span><span class="p">,</span> <span class="s1">'load_module'</span><span class="p">,</span> <span class="s1">'path_mtime'</span><span class="p">,</span> <span class="s1">'path_stats'</span><span class="p">,</span> <span class="s1">'set_data'</span><span class="p">,</span> <span class="s1">'source_to_code'</span><span class="p">]</span>
+</pre></div>
+<p>Using Help for more information</p>
+<pre class="literal-block">&gt;&gt;&gt; help(importlib.machinery.SourceFileLoader)
+
+Help on class SourceFileLoader in module importlib._bootstrap_external:
+
+class SourceFileLoader(FileLoader, SourceLoader)
+ |  Concrete implementation of SourceLoader using the file system.
+ |
+ |  Method resolution order:
+ |      SourceFileLoader
+ |      FileLoader
+ |      SourceLoader
+ |      _LoaderBasics
+ |      builtins.object
+ |
+ |  Methods defined here:
+ |
+ |  path_stats(self, path)
+ |      Return the metadata for the path.
+ |
+ |  set_data(self, path, data, *, _mode=438)
+ |      Write bytes data to a file.
+
+
+&gt;&gt;&gt; help(importlib.machinery.SourceFileLoader.load_module)
+
+Help on function load_module in module importlib._bootstrap_external:
+
+load_module(self, name=None, *args, **kwargs)
+    Load a module from a file.
+
+    This method is deprecated.  Use exec_module() instead.
+
+&gt;&gt;&gt; help(importlib.machinery.SourceFileLoader.exec_module)
+
+Help on function exec_module in module importlib._bootstrap_external:
+
+exec_module(self, module)
+    Execute the module.</pre>
+<p>TODO: What role does __init__.py in <code class="docutils literal"><span class="pre">~/venv1/lib/python3.6/site-packages/nikola/</span></code> pay?</p>
+</section><section id="introducing-conf-py"><h3>Introducing conf.py</h3>
+<p>The configuration file <em>conf.py</em> contains constants. These constants in the conf.py file are in uppercase. For example <code class="docutils literal">BLOG_AUTHOR = "Joe Blogs"</code>. Through editing this file and changing values assigned to these constants then you manage the look and operation of your web-site. This file is around 1400 lines in length. There are almost 200 constants that can have values applied to them in conf.py. In many cases the default value will match your website requirements, so you won't be needing to set all the constants. You will get to know the contents of conf.py file very well, but it's the only file you need to get to know.</p>
+<p>The Nikola application has dictionaries with keys that are normally the same as the names of the constants in conf.py. However the keys are in lower-case. The values of the constants obtained from conf.py become values in dictionaries that Nikola uses to tailor the application.</p>
+<p>It may be worthwhile to look through the list of the names of the constants you will find in conf.py.</p>
+<table>
+<caption>Table of conf.py variables</caption>
+<tbody>
+<tr>
+<td><p>ADDITIONAL_METADATA</p></td>
+<td><p>ARCHIVES_ARE_INDEXES</p></td>
+<td><p>ARCHIVE_FILENAME</p></td>
+<td><p>ARCHIVE_PATH</p></td>
+</tr>
+<tr>
+<td><p>ATOM_EXTENSION</p></td>
+<td><p>ATOM_FILENAME_BASE</p></td>
+<td><p>ATOM_PATH</p></td>
+<td><p>AUTHOR_PAGES_ARE_INDEXES</p></td>
+</tr>
+<tr>
+<td><p>AUTHOR_PAGES_DESCRIPTIONS</p></td>
+<td><p>AUTHOR_PATH</p></td>
+<td><p>BASE_URL</p></td>
+<td><p>BLOG_AUTHOR</p></td>
+</tr>
+<tr>
+<td><p>BLOG_DESCRIPTION</p></td>
+<td><p>BLOG_EMAIL</p></td>
+<td><p>BLOG_TITLE</p></td>
+<td><p>BODY_END</p></td>
+</tr>
+<tr>
+<td><p>CACHE_FOLDER</p></td>
+<td><p>CATEGORIES_INDEX_PATH</p></td>
+<td><p>CATEGORY_ALLOW_HIERARCHIES</p></td>
+<td><p>CATEGORY_DESCRIPTIONS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESTPATH_AS_DEFAULT</p></td>
+<td><p>CATEGORY_DESTPATH_FIRST_DIRECTORY_ONLY</p></td>
+<td><p>CATEGORY_DESTPATH_NAMES</p></td>
+<td><p>CATEGORY_DESTPATH_TRIM_PREFIX</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_OUTPUT_FLAT_HIERARCHY</p></td>
+<td><p>CATEGORY_PAGES_ARE_INDEXES</p></td>
+<td><p>CATEGORY_PAGES_FOLLOW_DESTPATH</p></td>
+<td><p>CATEGORY_PATH</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PREFIX</p></td>
+<td><p>CATEGORY_PREFIX.</p></td>
+<td><p>CATEGORY_TITLES</p></td>
+<td><p>CATEGORY_TRANSLATIONS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_TRANSLATIONS_ADD_DEFAULTS</p></td>
+<td><p>CLOSURE_COMPILER_EXECUTABLE</p></td>
+<td><p>CODE_COLOR_SCHEME</p></td>
+<td><p>COMMENTS_IN_GALLERIES</p></td>
+</tr>
+<tr>
+<td><p>COMMENTS_IN_PAGES</p></td>
+<td><p>COMMENT_SYSTEM</p></td>
+<td><p>COMMENT_SYSTEM_ID</p></td>
+<td><p>COMPILERS</p></td>
+</tr>
+<tr>
+<td><p>CONTENT_FOOTER</p></td>
+<td><p>CONTENT_FOOTER_FORMATS</p></td>
+<td><p>COPY_SOURCES</p></td>
+<td><p>CREATE_ARCHIVE_NAVIGATION</p></td>
+</tr>
+<tr>
+<td><p>CREATE_DAILY_ARCHIVE</p></td>
+<td><p>CREATE_FULL_ARCHIVES</p></td>
+<td><p>CREATE_MONTHLY_ARCHIVE</p></td>
+<td><p>CREATE_SINGLE_ARCHIVE</p></td>
+</tr>
+<tr>
+<td><p>DATE_FANCINESS</p></td>
+<td><p>DATE_FORMAT</p></td>
+<td><p>DEFAULT_LANG</p></td>
+<td><p>DEMOTE_HEADERS</p></td>
+</tr>
+<tr>
+<td><p>DEPLOY_COMMANDS</p></td>
+<td><p>DEPLOY_DRAFTS</p></td>
+<td><p>DEPLOY_FUTURE</p></td>
+<td><p>DISABLED_PLUGINS</p></td>
+</tr>
+<tr>
+<td><p>DISABLE_INDEXES</p></td>
+<td><p>DISABLE_MAIN_ATOM_FEED</p></td>
+<td><p>DISABLE_MAIN_RSS_FEED</p></td>
+<td><p>ENABLE_AUTHOR_PAGES</p></td>
+</tr>
+<tr>
+<td><p>EXIF_WHITELIST</p></td>
+<td><p>EXTRA_HEAD_DATA</p></td>
+<td><p>EXTRA_IMAGE_EXTENSIONS</p></td>
+<td><p>EXTRA_PLUGINS_DIRS</p></td>
+</tr>
+<tr>
+<td><p>EXTRA_THEMES_DIRS</p></td>
+<td><p>FAVICONS</p></td>
+<td><p>FEED_LENGTH</p></td>
+<td><p>FEED_LINKS_APPEND_QUERY</p></td>
+</tr>
+<tr>
+<td><p>FEED_PLAIN</p></td>
+<td><p>FEED_READ_MORE_LINK</p></td>
+<td><p>FEED_TEASER</p></td>
+<td><p>FEED_TEASERS</p></td>
+</tr>
+<tr>
+<td><p>FILES_FOLDERS</p></td>
+<td><p>FILE_METADATA_REGEXP</p></td>
+<td><p>FILE_METADATA_UNSLUGIFY_TITLES</p></td>
+<td><p>FILTERS</p></td>
+</tr>
+<tr>
+<td><p>FORCE_ISO8601</p></td>
+<td><p>FRONT_INDEX_HEADER</p></td>
+<td><p>FUTURE_IS_NOW</p></td>
+<td><p>GALLERY_FOLDERS</p></td>
+</tr>
+<tr>
+<td><p>GALLERY_SORT_BY_DATE</p></td>
+<td><p>GENERATE_ATOM</p></td>
+<td><p>GENERATE_RSS</p></td>
+<td><p>GITHUB_COMMIT_SOURCE</p></td>
+</tr>
+<tr>
+<td><p>GITHUB_DEPLOY_BRANCH</p></td>
+<td><p>GITHUB_REMOTE_NAME</p></td>
+<td><p>GITHUB_SOURCE_BRANCH</p></td>
+<td><p>GLOBAL_CONTEXT</p></td>
+</tr>
+<tr>
+<td><p>GLOBAL_CONTEXT_FILLER</p></td>
+<td><p>GZIP_COMMAND</p></td>
+<td><p>GZIP_EXTENSIONS</p></td>
+<td><p>GZIP_FILES</p></td>
+</tr>
+<tr>
+<td><p>HEADER_PERMALINKS_FILE_BLACKLIST</p></td>
+<td><p>HEADER_PERMALINKS_XPATH_LIST</p></td>
+<td><p>HIDDEN_AUTHORS</p></td>
+<td><p>HIDDEN_CATEGORIES</p></td>
+</tr>
+<tr>
+<td><p>HIDDEN_TAGS</p></td>
+<td><p>HIDE_REST_DOCINFO</p></td>
+<td><p>HTML</p></td>
+<td><p>HTML_TIDY_EXECUTABLE</p></td>
+</tr>
+<tr>
+<td><p>HYPHENATE</p></td>
+<td><p>IMAGE_FOLDERS</p></td>
+<td><p>IMAGE_THUMBNAIL_FORMAT</p></td>
+<td><p>IMAGE_THUMBNAIL_SIZE</p></td>
+</tr>
+<tr>
+<td><p>INDEXES_PAGES</p></td>
+<td><p>INDEXES_PAGES_MAIN</p></td>
+<td><p>INDEXES_PRETTY_PAGE_URL</p></td>
+<td><p>INDEXES_STATIC</p></td>
+</tr>
+<tr>
+<td><p>INDEXES_TITLE</p></td>
+<td><p>INDEX_DISPLAY_POST_COUNT</p></td>
+<td><p>INDEX_FILE</p></td>
+<td><p>INDEX_PATH</p></td>
+</tr>
+<tr>
+<td><p>INDEX_READ_MORE_LINK</p></td>
+<td><p>INDEX_TEASERS</p></td>
+<td><p>IPYNB_CONFIG</p></td>
+<td><p>JPEGOPTIM_EXECUTABLE</p></td>
+</tr>
+<tr>
+<td><p>JS_DATE_FORMAT</p></td>
+<td><p>KATEX_AUTO_RENDER</p></td>
+<td><p>LANG</p></td>
+<td><p>LICENSE</p></td>
+</tr>
+<tr>
+<td><p>LINK_CHECK_WHITELIST</p></td>
+<td><p>LISTINGS_FOLDERS</p></td>
+<td><p>LOCALES</p></td>
+<td><p>LOGO_URL</p></td>
+</tr>
+<tr>
+<td><p>MARKDOWN_EXTENSIONS</p></td>
+<td><p>MARKDOWN_EXTENSION_CONFIGS</p></td>
+<td><p>MATHJAX_CONFIG</p></td>
+<td><p>MAX_IMAGE_SIZE</p></td>
+</tr>
+<tr>
+<td><p>METADATA_FORMAT</p></td>
+<td><p>METADATA_MAPPING</p></td>
+<td><p>METADATA_VALUE_MAPPING</p></td>
+<td><p>META_GENERATOR_TAG</p></td>
+</tr>
+<tr>
+<td><p>NAVIGATION_ALT_LINKS</p></td>
+<td><p>NAVIGATION_LINKS</p></td>
+<td><p>NEW_POST_DATE_PATH</p></td>
+<td><p>NEW_POST_DATE_PATH_FORMAT</p></td>
+</tr>
+<tr>
+<td><p>ONE_FILE_POSTS</p></td>
+<td><p>OPTIPNG_EXECUTABLE</p></td>
+<td><p>OUTPUT_FOLDER</p></td>
+<td><p>PAGES</p></td>
+</tr>
+<tr>
+<td><p>PAGE_INDEX</p></td>
+<td><p>PANDOC_OPTIONS</p></td>
+<td><p>POSTS</p></td>
+<td><p>PRESERVE_EXIF_DATA</p></td>
+</tr>
+<tr>
+<td><p>PRESERVE_ICC_PROFILES</p></td>
+<td><p>PRETTY_URLS</p></td>
+<td><p>REDIRECTIONS</p></td>
+<td><p>ROBOTS_EXCLUSIONS</p></td>
+</tr>
+<tr>
+<td><p>RSS_COPYRIGHT</p></td>
+<td><p>RSS_COPYRIGHT_FORMATS</p></td>
+<td><p>RSS_COPYRIGHT_PLAIN</p></td>
+<td><p>RSS_EXTENSION</p></td>
+</tr>
+<tr>
+<td><p>RSS_FILENAME_BASE</p></td>
+<td><p>RSS_LINK</p></td>
+<td><p>RSS_PATH</p></td>
+<td><p>SCHEDULE_ALL</p></td>
+</tr>
+<tr>
+<td><p>SCHEDULE_RULE</p></td>
+<td><p>SEARCH_FORM</p></td>
+<td><p>SHOW_BLOG_TITLE</p></td>
+<td><p>SHOW_INDEX_PAGE_NAVIGATION</p></td>
+</tr>
+<tr>
+<td><p>SHOW_SOURCELINK</p></td>
+<td><p>SHOW_UNTRANSLATED_POSTS</p></td>
+<td><p>SITE_URL</p></td>
+<td><p>SLUG_AUTHOR_PATH</p></td>
+</tr>
+<tr>
+<td><p>SLUG_TAG_PATH</p></td>
+<td><p>SOCIAL_BUTTONS_CODE</p></td>
+<td><p>STRIP_INDEXES</p></td>
+<td><p>TAGLIST_MINIMUM_POSTS</p></td>
+</tr>
+<tr>
+<td><p>TAGS_INDEX_PATH</p></td>
+<td><p>TAG_DESCRIPTIONS</p></td>
+<td><p>TAG_PAGES_ARE_INDEXES</p></td>
+<td><p>TAG_PATH</p></td>
+</tr>
+<tr>
+<td><p>TAG_TITLES</p></td>
+<td><p>TAG_TRANSLATIONS</p></td>
+<td><p>TAG_TRANSLATIONS_ADD_DEFAULTS</p></td>
+<td><p>TEMPLATE_FILTERS</p></td>
+</tr>
+<tr>
+<td><p>THEME</p></td>
+<td><p>THEME_COLOR</p></td>
+<td><p>THEME_CONFIG</p></td>
+<td><p>THUMBNAIL_SIZE</p></td>
+</tr>
+<tr>
+<td><p>TIMEZONE</p></td>
+<td><p>TRANSLATIONS</p></td>
+<td><p>TRANSLATIONS_PATTERN</p></td>
+<td><p>TWITTER_CARD</p></td>
+</tr>
+<tr>
+<td><p>URL_TYPE</p></td>
+<td><p>USE_BUNDLES</p></td>
+<td><p>USE_CDN</p></td>
+<td><p>USE_CDN_WARNING</p></td>
+</tr>
+<tr>
+<td><p>USE_FILENAME_AS_TITLE</p></td>
+<td><p>USE_KATEX</p></td>
+<td><p>USE_REST_DOCINFO_METADATA</p></td>
+<td><p>USE_SLUGIFY</p></td>
+</tr>
+<tr>
+<td><p>USE_TAG_METADATA</p></td>
+<td><p>WARN_ABOUT_TAG_METADATA</p></td>
+<td><p>YUI_COMPRESSOR_EXECUTABLE</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table of conf.py variables. Columns alphabetical.</caption>
+<tbody>
+<tr>
+<td><p>ADDITIONAL_METADATA</p></td>
+<td><p>DATE_FORMAT</p></td>
+<td><p>HTML</p></td>
+<td><p>ROBOTS_EXCLUSIONS</p></td>
+</tr>
+<tr>
+<td><p>ARCHIVES_ARE_INDEXES</p></td>
+<td><p>DEFAULT_LANG</p></td>
+<td><p>HTML_TIDY_EXECUTABLE</p></td>
+<td><p>RSS_COPYRIGHT</p></td>
+</tr>
+<tr>
+<td><p>ARCHIVE_FILENAME</p></td>
+<td><p>DEMOTE_HEADERS</p></td>
+<td><p>HYPHENATE</p></td>
+<td><p>RSS_COPYRIGHT_FORMATS</p></td>
+</tr>
+<tr>
+<td><p>ARCHIVE_PATH</p></td>
+<td><p>DEPLOY_COMMANDS</p></td>
+<td><p>IMAGE_FOLDERS</p></td>
+<td><p>RSS_COPYRIGHT_PLAIN</p></td>
+</tr>
+<tr>
+<td><p>ATOM_EXTENSION</p></td>
+<td><p>DEPLOY_DRAFTS</p></td>
+<td><p>IMAGE_THUMBNAIL_FORMAT</p></td>
+<td><p>RSS_EXTENSION</p></td>
+</tr>
+<tr>
+<td><p>ATOM_FILENAME_BASE</p></td>
+<td><p>DEPLOY_FUTURE</p></td>
+<td><p>IMAGE_THUMBNAIL_SIZE</p></td>
+<td><p>RSS_FILENAME_BASE</p></td>
+</tr>
+<tr>
+<td><p>ATOM_PATH</p></td>
+<td><p>DISABLED_PLUGINS</p></td>
+<td><p>INDEXES_PAGES</p></td>
+<td><p>RSS_LINK</p></td>
+</tr>
+<tr>
+<td><p>AUTHOR_PAGES_ARE_INDEXES</p></td>
+<td><p>DISABLE_INDEXES</p></td>
+<td><p>INDEXES_PAGES_MAIN</p></td>
+<td><p>RSS_PATH</p></td>
+</tr>
+<tr>
+<td><p>AUTHOR_PAGES_DESCRIPTIONS</p></td>
+<td><p>DISABLE_MAIN_ATOM_FEED</p></td>
+<td><p>INDEXES_PRETTY_PAGE_URL</p></td>
+<td><p>SCHEDULE_ALL</p></td>
+</tr>
+<tr>
+<td><p>AUTHOR_PATH</p></td>
+<td><p>DISABLE_MAIN_RSS_FEED</p></td>
+<td><p>INDEXES_STATIC</p></td>
+<td><p>SCHEDULE_RULE</p></td>
+</tr>
+<tr>
+<td><p>BASE_URL</p></td>
+<td><p>ENABLE_AUTHOR_PAGES</p></td>
+<td><p>INDEXES_TITLE</p></td>
+<td><p>SEARCH_FORM</p></td>
+</tr>
+<tr>
+<td><p>BLOG_AUTHOR</p></td>
+<td><p>EXIF_WHITELIST</p></td>
+<td><p>INDEX_DISPLAY_POST_COUNT</p></td>
+<td><p>SHOW_BLOG_TITLE</p></td>
+</tr>
+<tr>
+<td><p>BLOG_DESCRIPTION</p></td>
+<td><p>EXTRA_HEAD_DATA</p></td>
+<td><p>INDEX_FILE</p></td>
+<td><p>SHOW_INDEX_PAGE_NAVIGATION</p></td>
+</tr>
+<tr>
+<td><p>BLOG_EMAIL</p></td>
+<td><p>EXTRA_IMAGE_EXTENSIONS</p></td>
+<td><p>INDEX_PATH</p></td>
+<td><p>SHOW_SOURCELINK</p></td>
+</tr>
+<tr>
+<td><p>BLOG_TITLE</p></td>
+<td><p>EXTRA_PLUGINS_DIRS</p></td>
+<td><p>INDEX_READ_MORE_LINK</p></td>
+<td><p>SHOW_UNTRANSLATED_POSTS</p></td>
+</tr>
+<tr>
+<td><p>BODY_END</p></td>
+<td><p>EXTRA_THEMES_DIRS</p></td>
+<td><p>INDEX_TEASERS</p></td>
+<td><p>SITE_URL</p></td>
+</tr>
+<tr>
+<td><p>CACHE_FOLDER</p></td>
+<td><p>FAVICONS</p></td>
+<td><p>IPYNB_CONFIG</p></td>
+<td><p>SLUG_AUTHOR_PATH</p></td>
+</tr>
+<tr>
+<td><p>CATEGORIES_INDEX_PATH</p></td>
+<td><p>FEED_LENGTH</p></td>
+<td><p>JPEGOPTIM_EXECUTABLE</p></td>
+<td><p>SLUG_TAG_PATH</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_ALLOW_HIERARCHIES</p></td>
+<td><p>FEED_LINKS_APPEND_QUERY</p></td>
+<td><p>JS_DATE_FORMAT</p></td>
+<td><p>SOCIAL_BUTTONS_CODE</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESCRIPTIONS</p></td>
+<td><p>FEED_PLAIN</p></td>
+<td><p>KATEX_AUTO_RENDER</p></td>
+<td><p>STRIP_INDEXES</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESTPATH_AS_DEFAULT</p></td>
+<td><p>FEED_READ_MORE_LINK</p></td>
+<td><p>LANG</p></td>
+<td><p>TAGLIST_MINIMUM_POSTS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESTPATH_FIRST_DIRECTORY_ONLY</p></td>
+<td><p>FEED_TEASER</p></td>
+<td><p>LICENSE</p></td>
+<td><p>TAGS_INDEX_PATH</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESTPATH_NAMES</p></td>
+<td><p>FEED_TEASERS</p></td>
+<td><p>LINK_CHECK_WHITELIST</p></td>
+<td><p>TAG_DESCRIPTIONS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_DESTPATH_TRIM_PREFIX</p></td>
+<td><p>FILES_FOLDERS</p></td>
+<td><p>LISTINGS_FOLDERS</p></td>
+<td><p>TAG_PAGES_ARE_INDEXES</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_OUTPUT_FLAT_HIERARCHY</p></td>
+<td><p>FILE_METADATA_REGEXP</p></td>
+<td><p>LOCALES</p></td>
+<td><p>TAG_PATH</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PAGES_ARE_INDEXES</p></td>
+<td><p>FILE_METADATA_UNSLUGIFY_TITLES</p></td>
+<td><p>LOGO_URL</p></td>
+<td><p>TAG_TITLES</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PAGES_FOLLOW_DESTPATH</p></td>
+<td><p>FILTERS</p></td>
+<td><p>MARKDOWN_EXTENSIONS</p></td>
+<td><p>TAG_TRANSLATIONS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PATH</p></td>
+<td><p>FORCE_ISO8601</p></td>
+<td><p>MARKDOWN_EXTENSION_CONFIGS</p></td>
+<td><p>TAG_TRANSLATIONS_ADD_DEFAULTS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PREFIX</p></td>
+<td><p>FRONT_INDEX_HEADER</p></td>
+<td><p>MATHJAX_CONFIG</p></td>
+<td><p>TEMPLATE_FILTERS</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_PREFIX.</p></td>
+<td><p>FUTURE_IS_NOW</p></td>
+<td><p>MAX_IMAGE_SIZE</p></td>
+<td><p>THEME</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_TITLES</p></td>
+<td><p>GALLERY_FOLDERS</p></td>
+<td><p>METADATA_FORMAT</p></td>
+<td><p>THEME_COLOR</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_TRANSLATIONS</p></td>
+<td><p>GALLERY_SORT_BY_DATE</p></td>
+<td><p>METADATA_MAPPING</p></td>
+<td><p>THEME_CONFIG</p></td>
+</tr>
+<tr>
+<td><p>CATEGORY_TRANSLATIONS_ADD_DEFAULTS</p></td>
+<td><p>GENERATE_ATOM</p></td>
+<td><p>METADATA_VALUE_MAPPING</p></td>
+<td><p>THUMBNAIL_SIZE</p></td>
+</tr>
+<tr>
+<td><p>CLOSURE_COMPILER_EXECUTABLE</p></td>
+<td><p>GENERATE_RSS</p></td>
+<td><p>META_GENERATOR_TAG</p></td>
+<td><p>TIMEZONE</p></td>
+</tr>
+<tr>
+<td><p>CODE_COLOR_SCHEME</p></td>
+<td><p>GITHUB_COMMIT_SOURCE</p></td>
+<td><p>NAVIGATION_ALT_LINKS</p></td>
+<td><p>TRANSLATIONS</p></td>
+</tr>
+<tr>
+<td><p>COMMENTS_IN_GALLERIES</p></td>
+<td><p>GITHUB_DEPLOY_BRANCH</p></td>
+<td><p>NAVIGATION_LINKS</p></td>
+<td><p>TRANSLATIONS_PATTERN</p></td>
+</tr>
+<tr>
+<td><p>COMMENTS_IN_PAGES</p></td>
+<td><p>GITHUB_REMOTE_NAME</p></td>
+<td><p>NEW_POST_DATE_PATH</p></td>
+<td><p>TWITTER_CARD</p></td>
+</tr>
+<tr>
+<td><p>COMMENT_SYSTEM</p></td>
+<td><p>GITHUB_SOURCE_BRANCH</p></td>
+<td><p>NEW_POST_DATE_PATH_FORMAT</p></td>
+<td><p>URL_TYPE</p></td>
+</tr>
+<tr>
+<td><p>COMMENT_SYSTEM_ID</p></td>
+<td><p>GLOBAL_CONTEXT</p></td>
+<td><p>ONE_FILE_POSTS</p></td>
+<td><p>USE_BUNDLES</p></td>
+</tr>
+<tr>
+<td><p>COMPILERS</p></td>
+<td><p>GLOBAL_CONTEXT_FILLER</p></td>
+<td><p>OPTIPNG_EXECUTABLE</p></td>
+<td><p>USE_CDN</p></td>
+</tr>
+<tr>
+<td><p>CONTENT_FOOTER</p></td>
+<td><p>GZIP_COMMAND</p></td>
+<td><p>OUTPUT_FOLDER</p></td>
+<td><p>USE_CDN_WARNING</p></td>
+</tr>
+<tr>
+<td><p>CONTENT_FOOTER_FORMATS</p></td>
+<td><p>GZIP_EXTENSIONS</p></td>
+<td><p>PAGES</p></td>
+<td><p>USE_FILENAME_AS_TITLE</p></td>
+</tr>
+<tr>
+<td><p>COPY_SOURCES</p></td>
+<td><p>GZIP_FILES</p></td>
+<td><p>PAGE_INDEX</p></td>
+<td><p>USE_KATEX</p></td>
+</tr>
+<tr>
+<td><p>CREATE_ARCHIVE_NAVIGATION</p></td>
+<td><p>HEADER_PERMALINKS_FILE_BLACKLIST</p></td>
+<td><p>PANDOC_OPTIONS</p></td>
+<td><p>USE_REST_DOCINFO_METADATA</p></td>
+</tr>
+<tr>
+<td><p>CREATE_DAILY_ARCHIVE</p></td>
+<td><p>HEADER_PERMALINKS_XPATH_LIST</p></td>
+<td><p>POSTS</p></td>
+<td><p>USE_SLUGIFY</p></td>
+</tr>
+<tr>
+<td><p>CREATE_FULL_ARCHIVES</p></td>
+<td><p>HIDDEN_AUTHORS</p></td>
+<td><p>PRESERVE_EXIF_DATA</p></td>
+<td><p>USE_TAG_METADATA</p></td>
+</tr>
+<tr>
+<td><p>CREATE_MONTHLY_ARCHIVE</p></td>
+<td><p>HIDDEN_CATEGORIES</p></td>
+<td><p>PRESERVE_ICC_PROFILES</p></td>
+<td><p>WARN_ABOUT_TAG_METADATA</p></td>
+</tr>
+<tr>
+<td><p>CREATE_SINGLE_ARCHIVE</p></td>
+<td><p>HIDDEN_TAGS</p></td>
+<td><p>PRETTY_URLS</p></td>
+<td><p>YUI_COMPRESSOR_EXECUTABLE</p></td>
+</tr>
+<tr>
+<td><p>DATE_FANCINESS</p></td>
+<td><p>HIDE_REST_DOCINFO</p></td>
+<td><p>REDIRECTIONS</p></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section id="create-a-quiet-web-site"><h3>Create a --quiet web-site</h3>
+<p>Create a web-site with the <code class="docutils literal"><span class="pre">--quiet</span></code> option. This may be more suitable than the <code class="docutils literal"><span class="pre">--demo</span></code> website as a template for modification and building your own website.</p>
+<div class="code"><pre class="code bash"><a id="rest_code_de3fd8a459bb4017b8702446caca0ded-1" name="rest_code_de3fd8a459bb4017b8702446caca0ded-1" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-1"></a><span class="o">(</span>venv1<span class="o">)</span><span class="w"> </span>ian@X200:~$<span class="w"> </span>nikola<span class="w"> </span>init<span class="w"> </span>--quiet<span class="w"> </span>hampug_quiet
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-2" name="rest_code_de3fd8a459bb4017b8702446caca0ded-2" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-2"></a><span class="o">[</span><span class="m">2019</span>-05-05T10:14:39Z<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>init:<span class="w"> </span>Created<span class="w"> </span>empty<span class="w"> </span>site<span class="w"> </span>at<span class="w"> </span>hampug_quiet.
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-3" name="rest_code_de3fd8a459bb4017b8702446caca0ded-3" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-3"></a>
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-4" name="rest_code_de3fd8a459bb4017b8702446caca0ded-4" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-4"></a><span class="o">(</span>venv1<span class="o">)</span><span class="w"> </span>ian@X200:~$<span class="w"> </span>ls<span class="w"> </span>hampug_quiet<span class="w"> </span>-l
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-5" name="rest_code_de3fd8a459bb4017b8702446caca0ded-5" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-5"></a>total<span class="w"> </span><span class="m">72</span>
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-6" name="rest_code_de3fd8a459bb4017b8702446caca0ded-6" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-6"></a>-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w"> </span><span class="m">53216</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>conf.py
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-7" name="rest_code_de3fd8a459bb4017b8702446caca0ded-7" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-7"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w">  </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>files
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-8" name="rest_code_de3fd8a459bb4017b8702446caca0ded-8" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-8"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w">  </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>galleries
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-9" name="rest_code_de3fd8a459bb4017b8702446caca0ded-9" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-9"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w">  </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>listings
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-10" name="rest_code_de3fd8a459bb4017b8702446caca0ded-10" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-10"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w">  </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>pages
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-11" name="rest_code_de3fd8a459bb4017b8702446caca0ded-11" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-11"></a>drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ian<span class="w"> </span>ian<span class="w">  </span><span class="m">4096</span><span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">22</span>:14<span class="w"> </span>posts
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-12" name="rest_code_de3fd8a459bb4017b8702446caca0ded-12" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-12"></a>
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-13" name="rest_code_de3fd8a459bb4017b8702446caca0ded-13" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-13"></a><span class="nb">cd</span><span class="w"> </span>hampug_quiet
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-14" name="rest_code_de3fd8a459bb4017b8702446caca0ded-14" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-14"></a>
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-15" name="rest_code_de3fd8a459bb4017b8702446caca0ded-15" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-15"></a><span class="o">(</span>venv1<span class="o">)</span><span class="w"> </span>ian@X200:~/hampug_quiet$<span class="w"> </span>nikola<span class="w"> </span>auto
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-16" name="rest_code_de3fd8a459bb4017b8702446caca0ded-16" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-16"></a><span class="o">[</span><span class="m">2019</span>-05-05T10:17:42Z<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>auto:<span class="w"> </span>Rebuilding<span class="w"> </span>the<span class="w"> </span>site...
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-17" name="rest_code_de3fd8a459bb4017b8702446caca0ded-17" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-17"></a>Scanning<span class="w"> </span>posts........done!
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-18" name="rest_code_de3fd8a459bb4017b8702446caca0ded-18" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-18"></a>.<span class="w">  </span>render_listings:output/listings/index.html
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-19" name="rest_code_de3fd8a459bb4017b8702446caca0ded-19" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-19"></a>.<span class="w">  </span>copy_assets:output/assets/css/bootblog.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-20" name="rest_code_de3fd8a459bb4017b8702446caca0ded-20" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-20"></a>.<span class="w">  </span>copy_assets:output/assets/css/theme.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-21" name="rest_code_de3fd8a459bb4017b8702446caca0ded-21" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-21"></a>.<span class="w">  </span>copy_assets:output/assets/css/bootstrap.min.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-22" name="rest_code_de3fd8a459bb4017b8702446caca0ded-22" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-22"></a>.<span class="w">  </span>copy_assets:output/assets/js/bootstrap.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-23" name="rest_code_de3fd8a459bb4017b8702446caca0ded-23" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-23"></a>.<span class="w">  </span>copy_assets:output/assets/js/popper.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-24" name="rest_code_de3fd8a459bb4017b8702446caca0ded-24" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-24"></a>.<span class="w">  </span>copy_assets:output/assets/js/jquery.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-25" name="rest_code_de3fd8a459bb4017b8702446caca0ded-25" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-25"></a>.<span class="w">  </span>copy_assets:output/assets/css/rst.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-26" name="rest_code_de3fd8a459bb4017b8702446caca0ded-26" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-26"></a>.<span class="w">  </span>copy_assets:output/assets/css/rst_base.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-27" name="rest_code_de3fd8a459bb4017b8702446caca0ded-27" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-27"></a>.<span class="w">  </span>copy_assets:output/assets/css/nikola_ipython.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-28" name="rest_code_de3fd8a459bb4017b8702446caca0ded-28" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-28"></a>.<span class="w">  </span>copy_assets:output/assets/css/ipython.min.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-29" name="rest_code_de3fd8a459bb4017b8702446caca0ded-29" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-29"></a>.<span class="w">  </span>copy_assets:output/assets/css/html4css1.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-30" name="rest_code_de3fd8a459bb4017b8702446caca0ded-30" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-30"></a>.<span class="w">  </span>copy_assets:output/assets/css/baguetteBox.min.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-31" name="rest_code_de3fd8a459bb4017b8702446caca0ded-31" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-31"></a>.<span class="w">  </span>copy_assets:output/assets/css/nikola_rst.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-32" name="rest_code_de3fd8a459bb4017b8702446caca0ded-32" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-32"></a>.<span class="w">  </span>copy_assets:output/assets/js/html5.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-33" name="rest_code_de3fd8a459bb4017b8702446caca0ded-33" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-33"></a>.<span class="w">  </span>copy_assets:output/assets/js/fancydates.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-34" name="rest_code_de3fd8a459bb4017b8702446caca0ded-34" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-34"></a>.<span class="w">  </span>copy_assets:output/assets/js/gallery.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-35" name="rest_code_de3fd8a459bb4017b8702446caca0ded-35" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-35"></a>.<span class="w">  </span>copy_assets:output/assets/js/baguetteBox.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-36" name="rest_code_de3fd8a459bb4017b8702446caca0ded-36" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-36"></a>.<span class="w">  </span>copy_assets:output/assets/js/moment-with-locales.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-37" name="rest_code_de3fd8a459bb4017b8702446caca0ded-37" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-37"></a>.<span class="w">  </span>copy_assets:output/assets/js/html5shiv-printshiv.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-38" name="rest_code_de3fd8a459bb4017b8702446caca0ded-38" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-38"></a>.<span class="w">  </span>copy_assets:output/assets/js/fancydates.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-39" name="rest_code_de3fd8a459bb4017b8702446caca0ded-39" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-39"></a>.<span class="w">  </span>copy_assets:output/assets/js/gallery.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-40" name="rest_code_de3fd8a459bb4017b8702446caca0ded-40" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-40"></a>.<span class="w">  </span>copy_assets:output/assets/js/justified-layout.min.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-41" name="rest_code_de3fd8a459bb4017b8702446caca0ded-41" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-41"></a>.<span class="w">  </span>copy_assets:output/assets/xml/atom.xsl
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-42" name="rest_code_de3fd8a459bb4017b8702446caca0ded-42" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-42"></a>.<span class="w">  </span>copy_assets:output/assets/xml/rss.xsl
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-43" name="rest_code_de3fd8a459bb4017b8702446caca0ded-43" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-43"></a>.<span class="w">  </span>copy_assets:output/assets/css/code.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-44" name="rest_code_de3fd8a459bb4017b8702446caca0ded-44" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-44"></a>.<span class="w">  </span>render_posts:timeline_changes
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-45" name="rest_code_de3fd8a459bb4017b8702446caca0ded-45" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-45"></a>.<span class="w">  </span>render_galleries:output/galleries
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-46" name="rest_code_de3fd8a459bb4017b8702446caca0ded-46" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-46"></a>.<span class="w">  </span>render_galleries:output/galleries/index.html
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-47" name="rest_code_de3fd8a459bb4017b8702446caca0ded-47" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-47"></a>.<span class="w">  </span>render_galleries:output/galleries/rss.xml
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-48" name="rest_code_de3fd8a459bb4017b8702446caca0ded-48" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-48"></a>.<span class="w">  </span>render_taxonomies:output/archive.html
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-49" name="rest_code_de3fd8a459bb4017b8702446caca0ded-49" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-49"></a>.<span class="w">  </span>render_taxonomies:output/index.html
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-50" name="rest_code_de3fd8a459bb4017b8702446caca0ded-50" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-50"></a>.<span class="w">  </span>render_taxonomies:output/categories/index.html
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-51" name="rest_code_de3fd8a459bb4017b8702446caca0ded-51" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-51"></a>.<span class="w">  </span>render_taxonomies:output/rss.xml
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-52" name="rest_code_de3fd8a459bb4017b8702446caca0ded-52" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-52"></a>.<span class="w">  </span>create_bundles:output/assets/css/all-nocdn.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-53" name="rest_code_de3fd8a459bb4017b8702446caca0ded-53" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-53"></a>.<span class="w">  </span>create_bundles:output/assets/css/all.css
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-54" name="rest_code_de3fd8a459bb4017b8702446caca0ded-54" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-54"></a>.<span class="w">  </span>create_bundles:output/assets/js/all-nocdn.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-55" name="rest_code_de3fd8a459bb4017b8702446caca0ded-55" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-55"></a>.<span class="w">  </span>create_bundles:output/assets/js/all.js
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-56" name="rest_code_de3fd8a459bb4017b8702446caca0ded-56" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-56"></a>.<span class="w">  </span>sitemap:output/sitemap.xml
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-57" name="rest_code_de3fd8a459bb4017b8702446caca0ded-57" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-57"></a>.<span class="w">  </span>sitemap:output/sitemapindex.xml
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-58" name="rest_code_de3fd8a459bb4017b8702446caca0ded-58" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-58"></a>.<span class="w">  </span>robots_file:output/robots.txt
+<a id="rest_code_de3fd8a459bb4017b8702446caca0ded-59" name="rest_code_de3fd8a459bb4017b8702446caca0ded-59" href="#rest_code_de3fd8a459bb4017b8702446caca0ded-59"></a><span class="o">[</span><span class="m">2019</span>-05-05T10:17:46Z<span class="o">]</span><span class="w"> </span>INFO:<span class="w"> </span>auto:<span class="w"> </span>Serving<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:8000/<span class="w"> </span>...
+</pre></div>
+<p>Proceed to make your own website by using this <code class="docutils literal"><span class="pre">--quiet</span></code> generated website as your template. Edit the conf.py, created an images folder and adding your images, and creating your own web-pages in the pages folder.</p>
+<p>Review and follow the directions on the Nikola website on <a class="reference external" href="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html">Creating a web-site - not a blog</a></p>
+<p>Nikola web-pages may be created from html, markdown and reStructuredText. Other options may be available, so to check use the command <code class="docutils literal">$ nikola new_page <span class="pre">--available-formats</span></code>.</p>
+<p>The Nikola preference is to create the pages using reStructuredText. There are tabs on this website to provide an introduction to reST and how to creating web-pages using reST.</p>
+<p>The following screen-shots are of the home page of websites created using <code class="docutils literal">$ nikola init <span class="pre">--demo</span> hampug_demo</code> and <code class="docutils literal">$ nikola init <span class="pre">--quiet</span> hampug_quiet</code></p>
+<figure class="align-center"><img alt="nikola_demo_1" src="../images/nikola_demo_website.png"><figcaption><p>Nikola --demo website home page</p>
+</figcaption></figure><figure class="align-center"><img alt="nikola_demo_2" src="../images/nikola_quiet_website.png"><figcaption><p>Nikola --quiet website home page</p>
+</figcaption></figure><p><a class="reference external" href="#top">[Top]</a></p>
+</section></section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            © 2025 - Hamilton Python Users Group - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="float: right; margin: 0px 0px 5px 5px; border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script><script src="../assets/js/all.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
