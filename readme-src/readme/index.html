@@ -129,14 +129,15 @@ bg-dark
 <article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
     <p><a id="Top"></a></p>
 <h2>Nikola Static Website Generator on Github</h2>
-<p>This website has been created using Github's ability to provide and run the Nikola 
-application, and also run up to 120+ other applications that may be required by Nikola.</p>
+<p>As this website is in Github, then you may make use of Github's ability to provide and run the Nikola 
+application, and also run up to 120+ other applications that may be required by Nikola. This is
+done by Github using the <code>.github/workflow/main.yml</code> file.</p>
 <p>It does not require a PC to have Nikola software installed and for the PC to <em>push</em> and 
-<em>pull</em> files to Github.</p>
+<em>pull</em> / <em>nikola github_deploy</em> files to Github.</p>
 <p>The documents in the <em>src</em> (source) branch are the only ones that are edited to modifiy the 
 website and any of its pages. After editing a file, click on <em>Commit</em> and the CPU's at 
-Github will start running the applications to re-build the whole website. These <em>Updating</em> 
-and <em>pages build and deployment</em> phases can be monitored by clicking on the <em>Actions</em> tab. 
+Github will start running the applications to re-build the whole website in the <em>main</em> branch. </p>
+<p>The <em>Updating</em> and <em>pages build and deployment</em> phases can be monitored by clicking on the <em>Actions</em> tab. 
 The website re-build will take about 3 to 5 minutes before a refresh of a web-browser will 
 display the updated website.</p>
 <p>In some cases it is easier to write a document on a PC in reStructuredText <em>.rst</em> or 
@@ -157,57 +158,117 @@ The four folders are:</p>
 <span class="w">                </span><span class="n">used</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">Nikola</span><span class="w"> </span><span class="n">every</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">built</span><span class="o">.</span><span class="w"> </span>
 </pre></div>
 
-<p><strong>Tree diagram of the <em>src</em> branch directory and its sub-directories and files.</strong> - 2025-02-17</p>
-<p>All files have an &lt;-- explanation comment. All directories have no comment.</p>
-<!--the line-height is reduced slightly so vertical lines do not have spaaces-->
-<p style="line-height: 0.99em; font-family: monospace, monospace;">
-src &lt;-- Dir Source Code top level branch directory. <br> 
-│ <br> 
-├── .github/workflows <br> 
-│   └── main.yml &lt;-- Yaml. Runs Nikola to re-build the website. <br>
-│ <br> 
-├── files <br> 
-│   ├── assets/css <br> 
-│   │   └── custom.css &lt;-- For adding additional CSS. E.g. logo size. <br> 
-│   │ <br>
-│   └── files <br> 
-│       └── test.pdf &lt;-- Used by development to test Demo's downloads <br> 
-│ <br> 
-├── images <br> 
-│   ├── favicon-16x16.png &lt;-- Icons to insert in the web-browser tab <br> 
-│   ├── favicon-32x32.png &lt;-- <br> 
-│   └── jd-logo.svg &lt;-- A .svg file that contains the logo. <br> 
-│ <br>
-├── pages <br> 
-│   │ <br> 
-│   ├── about-jeremy.rst <br> 
-│   │ <br> 
-│   ├── legal-introduction.rst <br> 
-│   ├── legal-cm-contempt.rst &lt;-- Write-up file on Craig Murray. <br> 
-│   ├── legal-pcj-writeup.rst &lt;-- Write-up file on PCJ. <br> 
-│   ├── legal-worden-writeup.rst &lt;-- Write-up file on Dr. Robert Worden. <br>
-│   │ <br>  
-│   ├── streisand-introduction.rst <br> 
-│   ├── streisand-aaa-winstanley.rst &lt;-- Write-up file <br> 
-│   ├── streisand-other-govt.rst &lt;-- Write-up file <br> 
-│   ├── streisand-palestine-congress-notes.rst &lt;-- Write-up file <br> 
-│   ├── streisand-palistine-congress.rst &lt;-- Write-up file <br> 
-│   ├── streisand-social-media.rst &lt;-- Write-up file <br> 
-│   ├── streisand-terrorism.rst &lt;-- Write-up file <br> 
-│   ├── streisand-uk-police.rst &lt;-- Write-up file <br>  
-│   │ <br> 
-│   ├── index.rst &lt;-- Write-up file. The Welcome or Home page. <br> 
-│   │ <br> 
-│   └── readme-src <br> 
-│       └── README.md  &lt;-- The file you are now reading. <br>
-│ <br>
-├── .gitignore &lt;-- Commands for Git. Don't touch. <br> 
-└── conf.py &lt;-- The python program that Nikola runs. It contains many constants that you modify. <br></p>
+<p><strong>Tree diagram of the <em>src</em> branch directory and its sub-directories and files.</strong> - 2025-03-06 </p>
+<!--the line-height is reduced slightly so vertical lines do not have spaces-->
+<p style="line-height: 0.99em; font-family: monospace, monospace;"> 
+  src <br>
+  . <br>
+  │ <br>
+  ├── .github <br> 
+  │   └── workflows <br> 
+  │       └── main.yml <br> 
+  │ <br> 
+  ├── files <br> 
+  │   └── assets <br> 
+  │       └── css <br> 
+  │           └── custom.css <br> 
+  │ <br> 
+  ├── images <br> 
+  │   ├── background.jpg <br> 
+  │   ├── clinton_obama.jpg <br> 
+  │   ├── HamPUG_hidetitle_about.png <br> 
+  │   ├── HamPUG_hidetitle_index.png <br> 
+  │   ├── HamPUG_initial_about_page.png <br> 
+  │   ├── HamPUG_initial_index_page.png <br> 
+  │   ├── hampug_lawrence_2018_03_12.jpg <br> 
+  │   ├── hampug_lawrence_2018_03_12.png <br> 
+  │   ├── logo.svg <br> 
+  │   ├── ms4g02-map.png <br> 
+  │   ├── nikola_demo_website.png <br> 
+  │   ├── nikola_quiet_website.png <br> 
+  │   ├── pug_100x74.png <br> 
+  │   ├── pug_138x102.png <br> 
+  │   ├── pug_24x24.png <br> 
+  │   ├── pug_50x37.png <br> 
+  │   ├── pug_50x50.ico <br> 
+  │   ├── pug_50x50.png <br> 
+  │   ├── pythonanywhere_hello_world.png <br> 
+  │   ├── python-logo-generic.svg <br> 
+  │   ├── python-logo-master-v3-TM.png <br> 
+  │   ├── python-logo.png <br> 
+  │   └── website <br> 
+  │       ├── ws10.png <br> 
+  │       ├── ws11.png <br> 
+  │       ├── ws12.png <br> 
+  │       ├── ws13.png <br> 
+  │       ├── ws1.png <br> 
+  │       ├── ws2.png <br> 
+  │       ├── ws3.png <br> 
+  │       ├── ws4.png <br> 
+  │       ├── ws5.png <br> 
+  │       ├── ws6.png <br> 
+  │       ├── ws7.png <br> 
+  │       ├── ws8.png <br> 
+  │       └── ws9.png <br> 
+  │ <br> 
+  ├── pages <br> 
+  │   ├── about-us.meta <br> 
+  │   ├── about-us.rst <br> 
+  │   ├── history.md <br> 
+  │   ├── history.meta <br> 
+  │   ├── index.md <br> 
+  │   ├── index.meta <br> 
+  │   ├── map.md <br> 
+  │   ├── map.meta <br> 
+  │   ├── meeting <br> 
+  │   │   ├── meeting_overview.md <br> 
+  │   │   └── meeting_overview.meta <br> 
+  │   ├── meetup.md <br> 
+  │   ├── meetup.meta <br> 
+  │   ├── nikola_basics.meta <br> 
+  │   ├── nikola_basics.rst <br> 
+  │   ├── pythonanywhere.meta <br> 
+  │   ├── pythonanywhere.rst <br> 
+  │   ├── readme-src <br> 
+  │   │   ├── README.md <br> 
+  │   │   └── README.meta <br> 
+  │   ├── repository <br> 
+  │   │   ├── general_code_examples.md <br> 
+  │   │   ├── general_code_examples.meta <br> 
+  │   │   ├── ncea_code_examples.md <br> 
+  │   │   ├── ncea_code_examples.meta <br> 
+  │   │   ├── repository_overview.md <br> 
+  │   │   └── repository_overview.meta <br> 
+  │   ├── rest_basics.meta <br> 
+  │   ├── rest_basics.rst <br> 
+  │   ├── rest_directive.meta <br> 
+  │   ├── rest_directive.rst <br> 
+  │   ├── rest_editor.meta <br> 
+  │   ├── rest_editor.rst <br> 
+  │   ├── step1.meta <br> 
+  │   ├── step1.rst <br> 
+  │   ├── step2.meta <br> 
+  │   ├── step2.rst <br> 
+  │   ├── step3.meta <br> 
+  │   ├── step3.rst <br> 
+  │   ├── step4.meta <br> 
+  │   ├── step4.rst <br> 
+  │   ├── step5.meta <br> 
+  │   ├── step5.rst <br> 
+  │   ├── step6.meta <br> 
+  │   ├── step6.rst <br> 
+  │   ├── steps.meta <br> 
+  │   ├── steps.rst <br> 
+  │   ├── website-creation.meta <br> 
+  │   └── website-creation.rst <br> 
+  │ <br> 
+  ├── .gitignore <br> 
+  └── conf.py <br></p>
 
-<p>Most directories have a README.rst file that contains a brief explanation of what is in that
-directory. These README.rst files are omitted in the above tree diagram to make it 
-easier to comprehend the diagram. Although the README files are passed to the "main"
-branch their contents are not normally displayed by the website.</p>
+<p>Most directories can have a README.rst or README.md file that contains a brief explanation of what 
+is in that directory. </p>
+<p>Although the README files are passed to the "main" branch as .html files, their contents are not 
+normally displayed by the website.</p>
 <h3>Metadata Template for .rst files</h3>
 <p>All <em>reStructuredText .rst</em> filenames should only use <strong>a to z</strong>, <strong>0-9</strong> and a literal dash <strong>-</strong>.</p>
 <p>This is what the <em>slug</em> metadata expects.</p>
@@ -236,48 +297,48 @@ however a bug seems to cause it to not incorporate at least the last line of met
 <p>This is what the <em>slug</em> metadata expects.</p>
 <p>When creating a new .md file copy and paste the template below:</p>
 <div class="code"><pre class="code literal-block"><span class="nl">title</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">My</span><span class="w"> </span><span class="n">Title</span>
-<span class="nl">slug</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">without</span><span class="w"> </span><span class="p">.</span><span class="n">rst</span><span class="w"> </span><span class="n">extension</span><span class="p">.</span>
-<span class="nl">date</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="mi">2025</span><span class="mo">-02</span><span class="mi">-15</span>
+<span class="nl">slug</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">without</span><span class="w"> </span><span class="p">.</span><span class="n">rst</span><span class="w"> </span><span class="n">extension</span><span class="p">.</span>
+<span class="nc">date</span><span class="err">:</span><span class="w"> </span><span class="o">*</span><span class="mi">2025</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">15</span>
 <span class="nl">tags</span><span class="p">:</span><span class="w"> </span>
 <span class="nl">category</span><span class="p">:</span><span class="w"> </span>
 <span class="nl">link</span><span class="p">:</span><span class="w"> </span>
-<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">Write</span><span class="w"> </span><span class="n">description</span><span class="w"> </span>
-<span class="nl">type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span>
-<span class="nl">hidetitle</span><span class="p">:</span><span class="w"> </span><span class="nb">true</span>
+<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="k">Write</span><span class="w"> </span><span class="n">description</span><span class="w"> </span>
+<span class="nl">type</span><span class="p">:</span><span class="w"> </span><span class="nc">text</span>
+<span class="nl">hidetitle</span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
 
-<span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="kt">id</span><span class="o">=</span><span class="s">"Top"</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="ss">"Top"</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
 
-<span class="n">Write</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Paste</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="n">here</span><span class="p">...</span>
+<span class="k">Write</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">Paste</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="n">here</span><span class="p">...</span>
 
 
 <span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
-<span class="p">[</span><span class="n">Goto</span><span class="w"> </span><span class="n">Top</span><span class="p">](</span><span class="err">#</span><span class="n">top</span><span class="p">)</span>
+<span class="o">[</span><span class="n">Top</span><span class="o">]</span><span class="p">(</span><span class="n">#top</span><span class="p">)</span>
 </pre></div>
 
 <p>When using Github to display a markdown .md file, the metadata can be presented as a table at the 
 top of the displayed content if three hyphens are placed above and below the metadata. In which
 case this is the .md template:</p>
-<div class="code"><pre class="code literal-block"><span class="o">---</span>
+<div class="code"><pre class="code literal-block"><span class="c1">---</span>
 <span class="nl">title</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">My</span><span class="w"> </span><span class="n">Title</span>
-<span class="nl">slug</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">without</span><span class="w"> </span><span class="p">.</span><span class="n">rst</span><span class="w"> </span><span class="n">extension</span><span class="p">.</span>
-<span class="nl">date</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="mi">2025</span><span class="mo">-02</span><span class="mi">-15</span>
+<span class="nl">slug</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">without</span><span class="w"> </span><span class="p">.</span><span class="n">rst</span><span class="w"> </span><span class="n">extension</span><span class="p">.</span>
+<span class="nc">date</span><span class="err">:</span><span class="w"> </span><span class="o">*</span><span class="mi">2025</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">15</span>
 <span class="nl">tags</span><span class="p">:</span><span class="w"> </span>
 <span class="nl">category</span><span class="p">:</span><span class="w"> </span>
 <span class="nl">link</span><span class="p">:</span><span class="w"> </span>
-<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="n">Write</span><span class="w"> </span><span class="n">description</span><span class="w"> </span>
-<span class="nl">type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span>
-<span class="nl">hidetitle</span><span class="p">:</span><span class="w"> </span><span class="nb">true</span>
-<span class="o">---</span>
+<span class="nl">description</span><span class="p">:</span><span class="w"> </span><span class="o">*</span><span class="k">Write</span><span class="w"> </span><span class="n">description</span><span class="w"> </span>
+<span class="nl">type</span><span class="p">:</span><span class="w"> </span><span class="nc">text</span>
+<span class="nl">hidetitle</span><span class="p">:</span><span class="w"> </span><span class="k">true</span>
+<span class="c1">---</span>
 
-<span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="kt">id</span><span class="o">=</span><span class="s">"Top"</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="ss">"Top"</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
 
-<span class="n">Write</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Paste</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="n">here</span><span class="p">...</span>
+<span class="k">Write</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">Paste</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="n">here</span><span class="p">...</span>
 
 <span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
-<span class="p">[</span><span class="n">Goto</span><span class="w"> </span><span class="n">Top</span><span class="p">](</span><span class="err">#</span><span class="n">top</span><span class="p">)</span>
+<span class="o">[</span><span class="n">Top</span><span class="o">]</span><span class="p">(</span><span class="n">#top</span><span class="p">)</span>
 </pre></div>
 
-<p><a href="#top">Goto Top</a></p>
+<p><a href="#top">Top</a></p>
     </div>
     
 
