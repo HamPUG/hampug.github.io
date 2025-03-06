@@ -1,0 +1,16 @@
+# Yaml file for any Github commit on src, it will run Nikola and update the website. 
+# .github/workflows/main.yml
+# 2025-03-06 actions/checkout at v4, nikola-actoin at v8
+on: [push]
+
+jobs:
+  nikola_build:
+    runs-on: ubuntu-latest
+    name: 'Deploy Nikola to GitHub Pages'
+    steps:
+    - name: Check out
+      uses: actions/checkout@v4
+    - name: Build and Deploy Nikola
+      uses: getnikola/nikola-action@v8
+      with:
+        dry_run: false
