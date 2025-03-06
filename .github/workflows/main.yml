@@ -1,6 +1,8 @@
 # Yaml file for any Github commit on src, it will run Nikola and update the website. 
 # .github/workflows/main.yml
 # 2025-03-06 actions/checkout at v4, nikola-actoin at v8
+# Needs: Settings --> Actions --> General --> Workflow Permissions. Check Read and write permissions 
+
 on: [push]
 
 jobs:
