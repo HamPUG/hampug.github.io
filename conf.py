@@ -158,11 +158,12 @@ NAVIGATION_LINKS = {
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
+# 2025-03-07 Ian. Implement Peter's drop down menus ideas.
 NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: (
         ('/index.html', '<strong>Home</strong>'), 
-        ('/map/', 'Map'),
-        ('/meetup/', 'Meetup'),
+        #('/map/', 'Map'),
+        #('/meetup/', 'Meetup'),
         (
             (
                 ("/repository/repository_overview/", "Overview"),
@@ -188,7 +189,7 @@ NAVIGATION_ALT_LINKS = {
             ),
             'Meetings'    
         ),        
-        ('/history/', 'History'),     
+        #('/history/', 'History'),     
         # ("/index.html", "Home"),
         ("/website-creation/", "<strong>Website Creation</strong>"),
         (
@@ -203,12 +204,28 @@ NAVIGATION_ALT_LINKS = {
             ),
             'Steps'
         ),
-        ("/rest_editor/", "reST Editor"),
-        ("/rest_basics/", "reST Basics"),
-        ("/rest_directive/", "reST Directive"),
+        #("/rest_editor/", "reST Editor"),
+        #("/rest_basics/", "reST Basics"),
+        #("/rest_directive/", "reST Directive"),
+        (
+            (
+                ("/rest_editor/", "reST Editor"),
+                ("/rest_basics/", "reST Basics"),
+                ("/rest_directive/", "reST Directive"),
+            ),
+            'reST'
+        ),                
         ("/nikola_basics/", "Nikola Basics"),
         ("/pythonanywhere/", "Python Anywhere"),
-        ("/about-us/", "About Us"),
+        #("/about-us/", "About Us"),
+        (
+            (
+                ("/about-us/", "About Us"),        
+                ('/map/', 'Map'),
+                ('/history/', 'History'),
+            ),
+            'About'
+        ),        
     ),
 }
 

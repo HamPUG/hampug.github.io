@@ -39,7 +39,7 @@ The output from Nikola was uploaded to hampug.pythonanywhere.com
 
 In March 2025, the two Nikola websites that were located at hampug.pythonanywhere were combined and moved to [hampug.github.io](https://hampug.github.io). The source code of this website may be viewed at [github.com/hampug.github.io](https://github.com/hampug.github.io).
 
-Technical information on this [website](/readme-src/readme/).
+Technical information on this [website](/readme/).
 
 
 

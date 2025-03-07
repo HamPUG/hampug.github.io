@@ -5,8 +5,51 @@
     height: 50px;
 }    
 
+/*****************************************************************************/
 
-/* #386e7b is a dark green colour RGB(56, 110, 123) */
+/*Move Navigation bar theme that's desired to the bottom.*/
+
+/*****************************************************************************/
+/* Yellow theme*/
+/* #ffff00 is a bright yellow colour RGB(255, 255, 0 */
+.navbar {
+  background-color: #aaaa00 !important; 
+}
+
+/* Default colour of the text on the navigation bar - dark yellow
+Increase the font-size of nav buttons - 2025-03-06 Leave font-size */
+.nav-link, .dropdown-item {
+    color: #ffff00 !important;
+    background-color: #aaaa00 !important;
+    /*font-size: 100%; */
+}
+
+/* Colour of the text on the navigation bar when hover and drop-down */
+.nav-link:hover, .dropdown-item:hover {
+    color: white !important;
+}
+/*****************************************************************************/
+/* Blue theme */
+/* #386e7b is a bright yellow colour RGB(255, 255, 0 */
+.navbar {
+  background-color: #0000aa !important; 
+}
+
+/* Default colour of the text on the navigation bar - dark yellow
+Increase the font-size of nav buttons - 2025-03-06 Leave font-size */
+.nav-link, .dropdown-item {
+    color: #ccccff !important;
+    background-color: #0000aa !important;
+    /*font-size: 100%; */
+}
+
+/* Colour of the text on the navigation bar when hover and drop-down */
+.nav-link:hover, .dropdown-item:hover {
+    color: white !important;
+}
+
+/*****************************************************************************/
+/* Teal theme #386e7b is a dark green colour RGB(56, 110, 123) */
 .navbar {
   background-color: #386e7b !important; 
 }
@@ -24,3 +67,6 @@ Increase the font-size of nav buttons - 2025-03-06 Leave font-size */
 .nav-link:hover, .dropdown-item:hover {
     color: white !important;
 }
+
+/*****************************************************************************/
+

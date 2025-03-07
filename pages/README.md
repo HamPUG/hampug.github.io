@@ -111,10 +111,9 @@ conf.py    <--- This python configuration file performs the loading of constants
   │&nbsp;&nbsp;&nbsp;├── nikola_basics.meta <br> 
   │&nbsp;&nbsp;&nbsp;├── nikola_basics.rst <br> 
   │&nbsp;&nbsp;&nbsp;├── pythonanywhere.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── pythonanywhere.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── readme-src <br> 
-  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── README.md <br> 
-  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── README.meta <br> 
+  │&nbsp;&nbsp;&nbsp;├── pythonanywhere.rst <br>  
+  │&nbsp;&nbsp;&nbsp;├── README.md <br> 
+  │&nbsp;&nbsp;&nbsp;├── README.meta <br> 
   │&nbsp;&nbsp;&nbsp;├── repository <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── general_code_examples.md <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── general_code_examples.meta <br> 
@@ -149,7 +148,7 @@ conf.py    <--- This python configuration file performs the loading of constants
   └── conf.py <br> 
   </p> 
   
-  Most directories can have a README.rst or README.md file that contains a brief explanation of what 
+Most directories can have a README.rst or README.md file that contains a brief explanation of what 
 is in that directory. 
 
 Although the README files are passed to the "main" branch as .html files, their contents are not 
@@ -196,7 +195,7 @@ When creating a new .md file copy and paste the template below:
 
 ```
 title: *My Title
-slug: *name of file without .rst extension.
+slug: *name of file without .md extension.
 date: *2025-02-15
 tags: 
 category: 
@@ -219,7 +218,7 @@ case this is the .md template:
 ```
 ---
 title: *My Title
-slug: *name of file without .rst extension.
+slug: *name of file without .md extension.
 date: *2025-02-15
 tags: 
 category: 
