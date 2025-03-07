@@ -158,7 +158,7 @@ NAVIGATION_LINKS = {
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
-# 2025-03-07 Ian. Implement Peter's drop down menus ideas.
+# 2025-03-07 Ian. Implement Peter's drop down menus ideas. Created folders. E.g. /steps/
 NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: (
         ('/index.html', '<strong>Home</strong>'), 
@@ -194,13 +194,13 @@ NAVIGATION_ALT_LINKS = {
         ("/website-creation/", "<strong>Website Creation</strong>"),
         (
             (
-                ('/steps/', 'Overview of Steps'),
-                ('/step1/', '1 PythonAnywhere Account'),
-                ('/step2/', '2 Nikola Installation'),
-                ('/step3/', '3 Creating a Website'),
-                ('/step4/', '4 Website Tailoring'),
-                ('/step5/', '5 ReST Editor'),
-                ('/step6/', '6 Deploying to PythonAnywhere'),
+                ('/steps/steps/', 'Overview of Steps'),
+                ('/steps/step1/', '1 PythonAnywhere Account'),
+                ('/steps/step2/', '2 Nikola Installation'),
+                ('/steps/step3/', '3 Creating a Website'),
+                ('/steps/step4/', '4 Website Tailoring'),
+                ('/steps/step5/', '5 ReST Editor'),
+                ('/steps/step6/', '6 Deploying to PythonAnywhere'),
             ),
             'Steps'
         ),
@@ -209,20 +209,20 @@ NAVIGATION_ALT_LINKS = {
         #("/rest_directive/", "reST Directive"),
         (
             (
-                ("/rest_editor/", "reST Editor"),
-                ("/rest_basics/", "reST Basics"),
-                ("/rest_directive/", "reST Directive"),
+                ("/rest/rest_editor/", "reST Editor"),
+                ("/rest/rest_basics/", "reST Basics"),
+                ("/rest/rest_directive/", "reST Directive"),
             ),
             'reST'
         ),                
         ("/nikola_basics/", "Nikola Basics"),
-        ("/pythonanywhere/", "Python Anywhere"),
+        ("/pythonanywhere/", "PythonAnywhere"),
         #("/about-us/", "About Us"),
         (
             (
-                ("/about-us/", "About Us"),        
-                ('/map/', 'Map'),
-                ('/history/', 'History'),
+                ("/about/about-us/", "About Us"),        
+                ('/about/map/', 'Map'),
+                ('/about/history/', 'History'),
             ),
             'About'
         ),        

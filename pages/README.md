@@ -40,7 +40,7 @@ conf.py    <--- This python configuration file performs the loading of constants
                 used by Nikola every time the website is re-built. 
 ```
 
-**Tree diagram of the *src* branch directory and its sub-directories and files.** - 2025-03-06 
+**Tree diagram of the *src* branch directory and its sub-directories and files.** - 2025-03-07 
 
   <!--the line-height is reduced slightly so vertical lines do not have spaces-->  
   <p style="line-height: 0.99em; font-family: monospace, monospace;"> 
@@ -95,17 +95,21 @@ conf.py    <--- This python configuration file performs the loading of constants
   │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ws9.png <br> 
   │ <br> 
   ├── pages <br> 
-  │&nbsp;&nbsp;&nbsp;├── about-us.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── about-us.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── history.md <br> 
-  │&nbsp;&nbsp;&nbsp;├── history.meta <br> 
+  │&nbsp;&nbsp;&nbsp;├── about <br>
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── about-us.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── about-us.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── history.md <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── history.meta <br>
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── map.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── map.md <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br>
   │&nbsp;&nbsp;&nbsp;├── index.md <br> 
   │&nbsp;&nbsp;&nbsp;├── index.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── map.md <br> 
-  │&nbsp;&nbsp;&nbsp;├── map.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── meeting <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br> 
+  │&nbsp;&nbsp;&nbsp;├── meeting <br>   
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── meeting_overview.md <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── meeting_overview.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br>  
   │&nbsp;&nbsp;&nbsp;├── meetup.md <br> 
   │&nbsp;&nbsp;&nbsp;├── meetup.meta <br> 
   │&nbsp;&nbsp;&nbsp;├── nikola_basics.meta <br> 
@@ -114,6 +118,7 @@ conf.py    <--- This python configuration file performs the loading of constants
   │&nbsp;&nbsp;&nbsp;├── pythonanywhere.rst <br>  
   │&nbsp;&nbsp;&nbsp;├── README.md <br> 
   │&nbsp;&nbsp;&nbsp;├── README.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br>   
   │&nbsp;&nbsp;&nbsp;├── repository <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── general_code_examples.md <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── general_code_examples.meta <br> 
@@ -121,44 +126,49 @@ conf.py    <--- This python configuration file performs the loading of constants
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── ncea_code_examples.meta <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── repository_overview.md <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── repository_overview.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_basics.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_basics.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_directive.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_directive.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_editor.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── rest_editor.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step1.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step1.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step2.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step2.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step3.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step3.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step4.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step4.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step5.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step5.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── step6.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── step6.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── steps.meta <br> 
-  │&nbsp;&nbsp;&nbsp;├── steps.rst <br> 
-  │&nbsp;&nbsp;&nbsp;├── website-creation.meta <br> 
-  │&nbsp;&nbsp;&nbsp;└── website-creation.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br>  
+  │&nbsp;&nbsp;&nbsp;├── rest <br>
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_basics.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_basics.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_directive.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_directive.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_editor.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── rest_editor.rst <br>
+  │&nbsp;&nbsp;&nbsp;│ <br> 
+  │&nbsp;&nbsp;&nbsp;└── steps <br>  
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step1.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step1.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step2.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step2.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step3.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step3.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step4.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step4.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step5.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step5.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step6.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step6.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── steps.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── steps.rst <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── website-creation.meta <br> 
+  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── website-creation.rst <br> 
   │ <br> 
   ├── .gitignore <br> 
   └── conf.py <br> 
   </p> 
   
-Most directories can have a README.rst or README.md file that contains a brief explanation of what 
-is in that directory. 
+Directories in Github can have a README.rst or README.md file that contains a 
+brief explanation of the purpose of the directory. 
 
-Although the README files are passed to the "main" branch as .html files, their contents are not 
-normally displayed by the website.
+Although the README files are passed to the "main" branch as .html files, 
+their contents are not normally displayed by the website.
 
 
 Metadata Template for .rst files
 --------------------------------
 
-All *reStructuredText .rst* filenames should only use **a to z**, **0-9** and a literal dash **-**.
+All *reStructuredText .rst* filenames should only use **a to z**, **0-9** and 
+a literal dash **-**.
 
 This is what the *slug* metadata expects.
 
@@ -181,13 +191,15 @@ Write or Paste your document here...
 `[Goto Top] <#top>`_
 
 ```
-Github will display the .rst metadata as a table using three hyphens before and after the metadata,
-however a bug seems to cause it to not incorporate at least the last line of metadata.
+Github will display the .rst metadata as a table using three hyphens before and 
+after the metadata, however a bug seems to cause it to not incorporate at least 
+the last line of metadata.
 
 Metadata Template for .md files
 -------------------------------
 
-All *markdown .md* filenames should only use **a to z**, **0-9** and a literal dash **-**.
+All *markdown .md* filenames should only use **a to z**, **0-9** and a literal 
+dash **-**.
 
 This is what the *slug* metadata expects.
 
@@ -212,9 +224,9 @@ Write or Paste your document here...
 <br><hr>
 [Top](#top)
 ```
-When using Github to display a markdown .md file, the metadata can be presented as a table at the 
-top of the displayed content if three hyphens are placed above and below the metadata. In which
-case this is the .md template:
+When using Github to display a markdown .md file, the metadata can be presented 
+as a table at the top of the displayed content if three hyphens are placed 
+above and below the metadata. In which case this is the .md template:
 ```
 ---
 title: *My Title

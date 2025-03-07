@@ -7,8 +7,8 @@ Nikola defaults to using reStructuredText (reST) for creating web-pages. Please 
 - `reST Basics`_: Getting started with creating a web-page.
 - `reST Directives`_: Commands available in reST
 
-.. _reST Basics: /rest_basics
-.. _reST Editor: /rest_editor
-.. _reST Directives: /rest_directive
+.. _reST Basics: /rest/rest_basics
+.. _reST Editor: /rest/rest_editor
+.. _reST Directives: /rest/rest_directive
 
 Nikola webpages may be created in other ways than reST, for example using Markdown or directly writing html. It is recommended that you write the webpages in reST as there is likely to be less of a problem with regard to plugins.

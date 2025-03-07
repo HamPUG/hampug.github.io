@@ -1,16 +1,26 @@
-
 ## History
 
-<!--Add http to announce Status of HamPUG. Ian 2025-03-06: Used background-colour red, and Warning gives red border-->
+<!--Add http to announce Status of HamPUG. Ian 2025-03-07: Used background-colour red, and Warning gives red border-->
 <div class="warning" style='padding:0.1em; background-color:red; color:white; border-radius: 10px;'> 
-<span>
-<h2 style='margin-top:1em; text-align:center'>
-<b>Status of the Hamilton Python Users Group</b></h2>
-<p style='margin-left:1em;'>
-The Hamilton Python Users Group operated monthly meetings for 10 years from February 2014 to September 2023. We no longer have monthly meetings.<br>
-This <i>Nikola</i> generated website has been kept as an historical record of HamPUG. We haved a repository on Github for our Python code and presentation slides, etc. Use <i>Repository</i> and <i>Meetings</i> tabs for links to this information. 
-</span></div>
-
+    <span>
+        <h2 style='margin-top:1em; text-align:center'>
+            <b>
+            Status of the Hamilton Python Users Group
+            </b>
+        </h2>
+        <p style='margin-left:1em;'>
+            The Hamilton Python Users Group operated monthly meetings for 10 years 
+            from February 2014 to September 2023. We no longer have monthly meetings.
+        <br>
+            This <i>Nikola</i> generated website has been kept as an historical 
+            record of HamPUG. We haved a repository on Github for our Python code 
+            and presentation slides, etc. Use 
+            <a href="/repository/repository_overview">Repository</a> and 
+            <a href="/meeting/meeting_overview">Meetings</a> 
+            tabs for links to this information.
+        </p>     
+    </span>
+</div>
 
 Some Hamilton based Python enthusiasts used to regularly travel to Auckland to attend the
 meetings of the Auckland Python Users Group. They put forward the idea of having
