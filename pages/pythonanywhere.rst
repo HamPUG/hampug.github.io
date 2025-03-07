@@ -21,8 +21,8 @@ Other services provided with `PythonAnywhere` accounts are:
 
 Most services are provided for free with a beginners account. See their website for `more details`_.
 
-.. _PythonAnywhere Account: /step1/
-.. _Deploying to PythonAnywhere: /step6/
+.. _PythonAnywhere Account: /steps/step1/
+.. _Deploying to PythonAnywhere: /steps/step6/
 .. _uWSGI: https://uwsgi-docs.readthedocs.io/en/latest/
 .. _Nginx: https://www.nginx.com/
 .. _PythonAnywhere: https://www.pythonanywhere.com/
