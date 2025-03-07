@@ -135,23 +135,24 @@ conf.py    <--- This python configuration file performs the loading of constants
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── rest_editor.meta <br> 
   │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── rest_editor.rst <br>
   │&nbsp;&nbsp;&nbsp;│ <br> 
-  │&nbsp;&nbsp;&nbsp;└── steps <br>  
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step1.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step1.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step2.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step2.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step3.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step3.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step4.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step4.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step5.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step5.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step6.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── step6.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── steps.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── steps.rst <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── website-creation.meta <br> 
-  │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── website-creation.rst <br> 
+  │&nbsp;&nbsp;&nbsp;├── steps <br>  
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step1.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step1.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step2.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step2.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step3.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step3.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step4.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step4.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step5.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step5.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step6.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── step6.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── steps.meta <br> 
+  │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── steps.rst <br> 
+  │&nbsp;&nbsp;&nbsp;│ <br> 
+  │&nbsp;&nbsp;&nbsp;├── website-creation.meta <br> 
+  │&nbsp;&nbsp;&nbsp;└── website-creation.rst <br> 
   │ <br> 
   ├── .gitignore <br> 
   └── conf.py <br> 
