@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>step1 | HamPUG</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha256-cLMYWYYutHkt+KpNqjg7NVkYSQ+E2VbrXsEvOqU7mL0=" crossorigin="anonymous">
+<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="http://hampug.github.io/steps/step1/">
+<link rel="icon" href="../../images/pug_24x24.png" sizes="24x24">
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta name="author" content="Hamilton Python Users Group">
+<meta property="og:site_name" content="HamPUG">
+<meta property="og:title" content="step1">
+<meta property="og:url" content="http://hampug.github.io/steps/step1/">
+<meta property="og:description" content="1. Open an Account at PythonAnywhere
+
+Introduction
+If you don't have an account at pythonanywhere.com then connect to https://www.pythonanywhere.com/pricing/ and at this stage you might prefer to sele">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-05-01T16:57:58+12:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../../">
+            <img src="../../images/logo.svg" alt="HamPUG" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto"></ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+<a href="../../index.html" class="nav-link"><strong>Home</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repository</a>
+            <div class="dropdown-menu">
+                    <a href="../../repository/repository_overview/" class="dropdown-item">Overview</a>
+                    <a href="../../repository/ncea_code_examples/" class="dropdown-item">NCEA Code Examples</a>
+                    <a href="../../repository/general_code_examples/" class="dropdown-item">General Code Examples</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Meetings</a>
+            <div class="dropdown-menu">
+                    <a href="../../meeting/meeting_overview/" class="dropdown-item">Overview</a>
+                    <a href="https://github.com/HamPUG/meetings#readme" class="dropdown-item">Summary of Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2014#2014-meetings" class="dropdown-item">2014 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2015#2015-meetings" class="dropdown-item">2015 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2016#2016-meetings" class="dropdown-item">2016 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2017#2017-meetings" class="dropdown-item">2017 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2018#2018-meetings" class="dropdown-item">2018 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2019#2019-meetings" class="dropdown-item">2019 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2020#2020-meetings" class="dropdown-item">2020 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2021#2021-meetings" class="dropdown-item">2021 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2022#2022-meetings" class="dropdown-item">2022 Meetings</a>
+                    <a href="https://github.com/HamPUG/meetings/tree/master/2023#2023-meetings" class="dropdown-item">2023 Meetings</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../../website-creation/" class="nav-link"><strong>Website Creation</strong></a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Steps</a>
+            <div class="dropdown-menu">
+                    <a href="../steps/" class="dropdown-item">Overview of Steps</a>
+                    <a href="." class="dropdown-item active">1 PythonAnywhere Account <span class="sr-only">(active)</span></a>
+                    <a href="../step2/" class="dropdown-item">2 Nikola Installation</a>
+                    <a href="../step3/" class="dropdown-item">3 Creating a Website</a>
+                    <a href="../step4/" class="dropdown-item">4 Website Tailoring</a>
+                    <a href="../step5/" class="dropdown-item">5 ReST Editor</a>
+                    <a href="../step6/" class="dropdown-item">6 Deploying to PythonAnywhere</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">reST</a>
+            <div class="dropdown-menu">
+                    <a href="../../rest/rest_editor/" class="dropdown-item">reST Editor</a>
+                    <a href="../../rest/rest_basics/" class="dropdown-item">reST Basics</a>
+                    <a href="../../rest/rest_directive/" class="dropdown-item">reST Directive</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../../nikola_basics/" class="nav-link">Nikola Basics</a>
+                </li>
+<li class="nav-item">
+<a href="../../pythonanywhere/" class="nav-link">PythonAnywhere</a>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu">
+                    <a href="../../about/about-us/" class="dropdown-item">About Us</a>
+                    <a href="../../about/map/" class="dropdown-item">Map</a>
+                    <a href="../../about/history/" class="dropdown-item">History</a>
+            </div>
+
+                
+                
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <section id="open-an-account-at-pythonanywhere"><span id="top"></span><h2>1. Open an Account at PythonAnywhere</h2>
+<section id="introduction"><h3>Introduction</h3>
+<p>If you don't have an account at pythonanywhere.com then connect to <a class="reference external" href="https://www.pythonanywhere.com/pricing/">https://www.pythonanywhere.com/pricing/</a> and at this stage you might prefer to select <em>Create a Beginner Account</em> which is free.</p>
+<p>In creating a Beginner account you are prompted to supply a <em>Username</em>. Note that when you create a web-site your Username will be part of your internet URL. Therefore you may wish to pick a Username that relates to the intended content of your web-site. For example if you plan to create a web-site about <em>flowers</em> then provide the Username of <em>flowers</em> and your future website URL will be <code class="docutils literal"><span class="pre">http://flowers.pythonanywhere.com</span></code></p>
+<p>In the documentation below &lt;username&gt; will be used to refer to the Username that you selected when you created the account. In code examples taken from this site the Username will be <cite>hampug1</cite>.</p>
+<p>Upon logging into your account you will notice that the main options to select from are: <strong>Dashboard, Consoles, Files, Web, Tasks, Databases</strong>.</p>
+<p>You may initially wish to have a look around. Right-click on <strong>Console</strong> select <em>Open a new tab</em> and launch a console. Also right-click on <strong>Files</strong> and select <em>Open a new tab</em> to have a GUI that displays all your files. Using the Console you can make used of <em>ls</em> and <em>cd</em> commands to take a look around at what files and folders are supplied with your account. Alternatively use the Files GUI browser page to look around.</p>
+<p>From your console, using ls and cd bash commands you should find you have a top directory <code class="docutils literal"><span class="pre">https://www.pythonanywhere.com/user/&lt;username&gt;/files/</span></code> which includes the folders:</p>
+<ul class="simple">
+<li><p><code class="docutils literal">/home/</code></p></li>
+<li><p><code class="docutils literal">/tmp/</code></p></li>
+<li><p><code class="docutils literal">/var/</code></p></li>
+</ul>
+<p>Off <code class="docutils literal">/var/</code> folder you will see a <code class="docutils literal">/www/</code> folder. At this stage it will probably be an empty directory. This will later be used for you web-site.</p>
+<p>Off your <code class="docutils literal">/home/</code> folder you should have a folder &lt;username&gt;. i.e. Whatever you provided as the Username when you created the account.</p>
+<p>If you were to use the PythonAnywhere wizard to create a django, web2py, flask or bottle web-site, then a wsgi.py file will be placed into /var/www/. The file will have a name like, <code class="docutils literal">&lt;username&gt;_pythonanywhere_com_wsgi.py</code>. This file effectively points to where you will create your python framework web-site. For example, off: <code class="docutils literal"><span class="pre">/home/&lt;username&gt;/&lt;my_website&gt;/</span></code></p>
+</section><section id="create-a-manual-wsgi-based-web-site"><h3>Create a manual WSGI based web-site</h3>
+<p>To aid with your understanding, it may be worthwhile to first create a web-site using the pythonanywhere web-site wizard, before creating a static web-site.</p>
+<p>From the list of options, Dashboard, Consoles, Files, Web, Tasks, Databases, Right-click on <strong>Web</strong> and <em>Open a new tab</em>. In the new browser window there is now the option to <em>Add a new web app</em>. Click on this to start the wizard. When provided with the choices of frameworks (django, web2py, flask, bottle and manual) click on <strong>manually</strong> create a web-site.</p>
+<p>In another tab on your browser enter the URL <code class="docutils literal"><span class="pre">http://&lt;username&gt;.pythonanywhere.com</span></code>, where &lt;username&gt; is the name you supplied when creating your account. Your web-site should now be displaying:</p>
+<img alt="/images/pythonanywhere_hello_world.png" src="../../images/pythonanywhere_hello_world.png"><p>If you go back to your pythonanywhere <strong>Files</strong> or <strong>Console</strong> browser tabs, you should see that a file has been created in <code class="docutils literal">/var/www/</code> which is <code class="docutils literal">&lt;username&gt;_pythonanywhere_com_wsgi.py</code>. Double click on this file to open the <em>web server gateway interface</em> file and review its contents. The lines of python code in this file that are executed are:</p>
+<div class="code"><pre class="code python"><a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-1" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-1" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-1"></a><span class="n">HELLO_WORLD</span> <span class="o">=</span> <span class="s2">"""&lt;html&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-2" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-2" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-2"></a><span class="s2">&lt;head&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-3" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-3" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-3"></a><span class="s2">    &lt;title&gt;PythonAnywhere hosted web application&lt;/title&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-4" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-4" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-4"></a><span class="s2">&lt;/head&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-5" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-5" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-5"></a><span class="s2">&lt;body&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-6" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-6" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-6"></a><span class="s2">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-7" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-7" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-7"></a><span class="s2">&lt;p&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-8" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-8" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-8"></a><span class="s2">    This is the default welcome page for a</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-9" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-9" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-9"></a><span class="s2">    &lt;a href="https://www.pythonanywhere.com/"&gt;PythonAnywhere&lt;/a&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-10" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-10" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-10"></a><span class="s2">    hosted web application.</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-11" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-11" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-11"></a><span class="s2">&lt;/p&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-12" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-12" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-12"></a><span class="s2">&lt;p&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-13" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-13" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-13"></a><span class="s2">    Find out more about how to configure your own web application</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-14" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-14" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-14"></a><span class="s2">    by visiting the &lt;a href="https://www.pythonanywhere.com/web_app_setup/"&gt;web app setup&lt;/a&gt; page</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-15" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-15" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-15"></a><span class="s2">&lt;/p&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-16" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-16" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-16"></a><span class="s2">&lt;/body&gt;</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-17" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-17" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-17"></a><span class="s2">&lt;/html&gt;"""</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-18" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-18" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-18"></a>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-19" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-19" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-19"></a><span class="k">def</span><span class="w"> </span><span class="nf">application</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-20" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-20" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-20"></a>    <span class="k">if</span> <span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'PATH_INFO'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'/'</span><span class="p">:</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-21" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-21" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-21"></a>        <span class="n">status</span> <span class="o">=</span> <span class="s1">'200 OK'</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-22" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-22" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-22"></a>        <span class="n">content</span> <span class="o">=</span> <span class="n">HELLO_WORLD</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-23" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-23" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-23"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-24" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-24" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-24"></a>        <span class="n">status</span> <span class="o">=</span> <span class="s1">'404 NOT FOUND'</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-25" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-25" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-25"></a>        <span class="n">content</span> <span class="o">=</span> <span class="s1">'Page not found.'</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-26" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-26" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-26"></a>    <span class="n">response_headers</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="s1">'text/html'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Content-Length'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)))]</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-27" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-27" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-27"></a>    <span class="n">start_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">)</span>
+<a id="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-28" name="rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-28" href="#rest_code_b0ec58959cae4c2f8c5fcf55f21f3850-28"></a>    <span class="k">yield</span> <span class="n">content</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf8'</span><span class="p">)</span>
+</pre></div>
+<p>This provides the html that is served up as the home page of your web-site. The following is also provided, but is commented out awaiting your action:</p>
+<div class="code"><pre class="code python"><a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-1" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-1" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-1"></a><span class="c1"># +++++++++++ CUSTOM WSGI +++++++++++</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-2" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-2" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-2"></a><span class="c1"># If you have a WSGI file that you want to serve using PythonAnywhere, perhaps</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-3" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-3" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-3"></a><span class="c1"># in your home directory under version control, then use something like this:</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-4" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-4" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-4"></a><span class="c1">#</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-5" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-5" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-5"></a><span class="c1">#import sys</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-6" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-6" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-6"></a><span class="c1">#</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-7" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-7" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-7"></a><span class="c1">#path = '/home/hampug1/path/to/my/app</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-8" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-8" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-8"></a><span class="c1">#if path not in sys.path:</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-9" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-9" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-9"></a><span class="c1">#    sys.path.append(path)</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-10" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-10" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-10"></a><span class="c1">#</span>
+<a id="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-11" name="rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-11" href="#rest_code_1a625dfd2d424a6b806fbd8aae1b79a6-11"></a><span class="c1">#from my_wsgi_file import application  # noqa</span>
+</pre></div>
+<p>Thus if I were to create a folder called <cite>website</cite> off my <cite>home/hampug1/</cite> folder and into it I place a WSGI.py file called <em>launch.py</em> which includes the function <em>application</em>, then I would uncomment and edit the above as follows:</p>
+<div class="code"><pre class="code python"><a id="rest_code_460c1c40aab14d2983e4db6f1faeea6f-1" name="rest_code_460c1c40aab14d2983e4db6f1faeea6f-1" href="#rest_code_460c1c40aab14d2983e4db6f1faeea6f-1"></a><span class="n">path</span> <span class="o">=</span> <span class="s1">'/home/hampug1/website/'</span>
+<a id="rest_code_460c1c40aab14d2983e4db6f1faeea6f-2" name="rest_code_460c1c40aab14d2983e4db6f1faeea6f-2" href="#rest_code_460c1c40aab14d2983e4db6f1faeea6f-2"></a><span class="k">if</span> <span class="n">path</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+<a id="rest_code_460c1c40aab14d2983e4db6f1faeea6f-3" name="rest_code_460c1c40aab14d2983e4db6f1faeea6f-3" href="#rest_code_460c1c40aab14d2983e4db6f1faeea6f-3"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<a id="rest_code_460c1c40aab14d2983e4db6f1faeea6f-4" name="rest_code_460c1c40aab14d2983e4db6f1faeea6f-4" href="#rest_code_460c1c40aab14d2983e4db6f1faeea6f-4"></a><span class="c1">#</span>
+<a id="rest_code_460c1c40aab14d2983e4db6f1faeea6f-5" name="rest_code_460c1c40aab14d2983e4db6f1faeea6f-5" href="#rest_code_460c1c40aab14d2983e4db6f1faeea6f-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">launch</span><span class="w"> </span><span class="kn">import</span> <span class="n">application</span>  <span class="c1"># noqa</span>
+</pre></div>
+<p>Note regarding <em># noqa</em>: A lint or linter is a program that supports verifying code quality. The # noqa at the end of the line stands for <em>No Quality Assurance</em> and is to warn the linter not to raise any warning. For python see <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
+<p>Additional Information: By adding into my launch.py file as I build the <em>content</em> of the home page:</p>
+<div class="code"><pre class="code python"><a id="rest_code_f23e400b786f47cea4bbd628ceaa843c-1" name="rest_code_f23e400b786f47cea4bbd628ceaa843c-1" href="#rest_code_f23e400b786f47cea4bbd628ceaa843c-1"></a><span class="n">content</span> <span class="o">+=</span> <span class="s2">"&lt;/p&gt;&lt;p&gt;Length of environ dictionary:</span><span class="si">{}</span><span class="s2">&lt;/p&gt;"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">environ</span><span class="p">))</span>
+<a id="rest_code_f23e400b786f47cea4bbd628ceaa843c-2" name="rest_code_f23e400b786f47cea4bbd628ceaa843c-2" href="#rest_code_f23e400b786f47cea4bbd628ceaa843c-2"></a><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">environ</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="rest_code_f23e400b786f47cea4bbd628ceaa843c-3" name="rest_code_f23e400b786f47cea4bbd628ceaa843c-3" href="#rest_code_f23e400b786f47cea4bbd628ceaa843c-3"></a>    <span class="n">content</span> <span class="o">+=</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"&lt;/p&gt;"</span>
+</pre></div>
+<p>My home page displays the following breakdown of <em>environ</em>:</p>
+<pre class="literal-block">/var/www/static/
+Length of environ dictionary:34
+QUERY_STRING:
+REQUEST_METHOD:GET
+CONTENT_TYPE:
+CONTENT_LENGTH:
+REQUEST_URI:/
+PATH_INFO:/
+DOCUMENT_ROOT:/usr/local/openresty/nginx/html
+SERVER_PROTOCOL:HTTP/1.1
+REMOTE_ADDR:10.0.0.162
+REMOTE_PORT:50514
+SERVER_PORT:80
+SERVER_NAME:hampug1.pythonanywhere.com
+SCRIPT_NAME:
+HTTP_HOST:hampug1.pythonanywhere.com
+HTTP_X_REAL_IP:121.99.140.160
+HTTP_X_FORWARDED_FOR:121.99.140.160
+HTTP_CONNECTION:close
+HTTP_USER_AGENT:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0
+HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+HTTP_ACCEPT_LANGUAGE:en,en-US;q=0.5
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_COOKIE:_ga=GA1.2.978166663.1556102146; _gid=GA1.2.573815141.1556255488; session_id_hampug=121.99.140.160-92da0afe-da9d-4e2d-9ecf-b56c6e06ade0
+HTTP_UPGRADE_INSECURE_REQUESTS:1
+HTTP_CACHE_CONTROL:max-age=0
+wsgi.input:
+wsgi.file_wrapper:
+wsgi.version:(1, 0)
+wsgi.errors:
+wsgi.run_once:False
+wsgi.multithread:False
+wsgi.multiprocess:False
+wsgi.url_scheme:http
+uwsgi.version:b'2.0.17.1'
+uwsgi.node:b'glenn-liveweb8'</pre>
+<p>In summary, this how a python framework creates a web-site on PythonAnywhere. However our aim is a bit different in that we use a python based static web-site generator, Nikola, to build a static site that is hosted on PythonAnywhere.</p>
+</section><section id="create-a-static-web-site-as-a-demonstration"><h3>Create a Static web-site as a Demonstration</h3>
+<p>As mentioned previously PythonAnywhere use Nginx. By default Nginx looks for a static web-site before looking for a python file for a WSGI web-site. Nginx expects a static web-site to have a home page of <em>index.html</em>. Thus the path and file for where Nginx expects to find the static web-site home page is: <code class="docutils literal">/var/www/static/index.html</code></p>
+<p>You need to use a console or files tab on you browser to create a static folder. For example:</p>
+<div class="code"><pre class="code bash"><a id="rest_code_d127b2833b244307b9cd621d8db999ca-1" name="rest_code_d127b2833b244307b9cd621d8db999ca-1" href="#rest_code_d127b2833b244307b9cd621d8db999ca-1"></a>/<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-2" name="rest_code_d127b2833b244307b9cd621d8db999ca-2" href="#rest_code_d127b2833b244307b9cd621d8db999ca-2"></a>/<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>var
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-3" name="rest_code_d127b2833b244307b9cd621d8db999ca-3" href="#rest_code_d127b2833b244307b9cd621d8db999ca-3"></a>/var<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>www
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-4" name="rest_code_d127b2833b244307b9cd621d8db999ca-4" href="#rest_code_d127b2833b244307b9cd621d8db999ca-4"></a>/var/www<span class="w"> </span>$<span class="w"> </span>mkdir<span class="w"> </span>static
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-5" name="rest_code_d127b2833b244307b9cd621d8db999ca-5" href="#rest_code_d127b2833b244307b9cd621d8db999ca-5"></a>/var/www<span class="w"> </span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>static
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-6" name="rest_code_d127b2833b244307b9cd621d8db999ca-6" href="#rest_code_d127b2833b244307b9cd621d8db999ca-6"></a>/var/www/static<span class="w"> </span>$<span class="w"> </span>touch<span class="w"> </span>index.html
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-7" name="rest_code_d127b2833b244307b9cd621d8db999ca-7" href="#rest_code_d127b2833b244307b9cd621d8db999ca-7"></a>/var/www/static<span class="w"> </span>$<span class="w"> </span>ls<span class="w"> </span>-l
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-8" name="rest_code_d127b2833b244307b9cd621d8db999ca-8" href="#rest_code_d127b2833b244307b9cd621d8db999ca-8"></a>
+<a id="rest_code_d127b2833b244307b9cd621d8db999ca-9" name="rest_code_d127b2833b244307b9cd621d8db999ca-9" href="#rest_code_d127b2833b244307b9cd621d8db999ca-9"></a>-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>hampug1<span class="w"> </span>registered_users<span class="w">     </span><span class="m">0</span><span class="w"> </span>Apr<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">23</span>:49<span class="w"> </span>index.html
+</pre></div>
+<p>If you use the <cite>Files</cite> browser tab and locate the new index.html file, you can paste into it a test home page like this:</p>
+<div class="code"><pre class="code html"><a id="rest_code_8acce741d6654e7c81d7e6060e1245da-1" name="rest_code_8acce741d6654e7c81d7e6060e1245da-1" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-2" name="rest_code_8acce741d6654e7c81d7e6060e1245da-2" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-3" name="rest_code_8acce741d6654e7c81d7e6060e1245da-3" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-3"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-4" name="rest_code_8acce741d6654e7c81d7e6060e1245da-4" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>PythonAnywhere static web-site<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-5" name="rest_code_8acce741d6654e7c81d7e6060e1245da-5" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-5"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-6" name="rest_code_8acce741d6654e7c81d7e6060e1245da-6" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-6"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-7" name="rest_code_8acce741d6654e7c81d7e6060e1245da-7" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-8" name="rest_code_8acce741d6654e7c81d7e6060e1245da-8" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-8"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-9" name="rest_code_8acce741d6654e7c81d7e6060e1245da-9" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-9"></a>      This is the default index.html page.
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-10" name="rest_code_8acce741d6654e7c81d7e6060e1245da-10" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-10"></a>    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-11" name="rest_code_8acce741d6654e7c81d7e6060e1245da-11" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-11"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="rest_code_8acce741d6654e7c81d7e6060e1245da-12" name="rest_code_8acce741d6654e7c81d7e6060e1245da-12" href="#rest_code_8acce741d6654e7c81d7e6060e1245da-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>"""
+</pre></div>
+<p>You now need to click on the PythonAnywhere <strong>Web</strong> option and then click on <cite>Reload hampug1.pythonanywhere.com</cite>. After this open a browser tab and enter <a class="reference external" href="http://hampug1.pythonanywhere.com/">http://hampug1.pythonanywhere.com/</a> and it will display your static web-site home page.</p>
+<p>Summary: Now that you know that you are able to create a static web-site on PythonAnywhere its time to create web-pages using reStructuredText and use Nikola to make the static web-site.</p>
+<p><a class="reference external" href="#top">[Top]</a></p>
+</section></section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            © 2025 - Hamilton Python Users Group - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License BY-NC-SA" style="float: right; margin: 0px 0px 5px 5px; border-width:0;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha256-ULQV01VS9LCI2ePpLsmka+W0mawFpEA0rtxnezUj4A4=" crossorigin="anonymous"></script><script src="../../assets/js/all.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
