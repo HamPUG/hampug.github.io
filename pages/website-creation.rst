@@ -12,7 +12,7 @@ Website Creation
 Introduction to reStructuredText, Nikola and PythonAnywhere
 -----------------------------------------------------------
 
-This web-site http://hampug1.pythonanywhere.com has been created by the `Hamilton Python Users Group`_ *HamPUG* to aid in learning how to create `reStructuredText`_ markup language web-pages for use by the `Nikola`_ static web-site generator and then using `PythonAnywhere`_ to host the web-site.
+This web-site https://hampug1.pythonanywhere.com has been created by the `Hamilton Python Users Group`_ *HamPUG* to aid in learning how to create `reStructuredText`_ markup language web-pages for use by the `Nikola`_ static web-site generator and then using `PythonAnywhere`_ to host the web-site.
 
 .. _reStructuredText: https://en.wikipedia.org/wiki/ReStructuredText
 .. _Nikola: https://getnikola.com/
@@ -38,10 +38,10 @@ The following pages are provided on this web-site:
 - PythonAnywhere
     - `PythonAnywhere Introduction`_: Static Website creation at PythonAnywhere
 
-.. _Steps: /steps/
-.. _reST Editor: /rest_editor
-.. _reST Basics: /rest_basics
-.. _reST Directives: /rest_directive
+.. _Steps: /steps/steps/
+.. _reST Editor: /rest/rest_editor
+.. _reST Basics: /rest/rest_basics
+.. _reST Directives: /rest/rest_directive
 .. _Nikola Basics: /nikola_basics
 .. _PythonAnywhere Introduction: /pythonanywhere
 
@@ -61,12 +61,12 @@ Summary of Steps to Website Creation, Build and Deployment
 
 6. `Deploying to PythonAnywhere`_.
 
-.. _Open an account at PythonAnywhere: /steps1/
-.. _Download and Install Nikola: /steps2/
-.. _Creating a Website: /steps3/
-.. _Website Tailoring: /step4/
-.. _Using reST Editor: /step5/
-.. _Deploying to PythonAnywhere: /step6/
+.. _Open an account at PythonAnywhere: /steps/steps1/
+.. _Download and Install Nikola: /steps/steps2/
+.. _Creating a Website: /steps/steps3/
+.. _Website Tailoring: /steps/step4/
+.. _Using reST Editor: /steps/step5/
+.. _Deploying to PythonAnywhere: /steps/step6/
 
 
 Additional Information
