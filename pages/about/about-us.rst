@@ -3,7 +3,7 @@ Hamilton Python Users Group ~ HamPUG
 
 Kei runga tatou i Kirikiriroa i Aotearoa
 
-We are based in Hamilton in New Zealand.
+We are based in Hamilton, New Zealand.
 
 .. raw:: html
  
