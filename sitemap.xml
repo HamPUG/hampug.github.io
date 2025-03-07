@@ -7,106 +7,114 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://hampug.github.io/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/about/about-us/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/about/history/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/about/map/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/archive.html</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/blog/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/categories/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hampug.github.io/galleries/</loc>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://hampug.github.io/listings/</loc>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/meeting/meeting_overview/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/meetup/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/nikola_basics/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/pythonanywhere/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/readme/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/repository/general_code_examples/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/repository/ncea_code_examples/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/repository/repository_overview/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/rest/rest_basics/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/rest/rest_directive/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/rest/rest_editor/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step1/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step2/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step3/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step4/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step5/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/step6/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/steps/steps/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
  <url>
   <loc>http://hampug.github.io/website-creation/</loc>
-  <lastmod>2025-03-07T03:54:00Z</lastmod>
+  <lastmod>2025-03-07T03:44:00Z</lastmod>
  </url>
 </urlset>
