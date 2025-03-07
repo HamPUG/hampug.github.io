@@ -61,9 +61,9 @@ Summary of Steps to Website Creation, Build and Deployment
 
 6. `Deploying to PythonAnywhere`_.
 
-.. _Open an account at PythonAnywhere: /steps/steps1/
-.. _Download and Install Nikola: /steps/steps2/
-.. _Creating a Website: /steps/steps3/
+.. _Open an account at PythonAnywhere: /steps/step1/
+.. _Download and Install Nikola: /steps/step2/
+.. _Creating a Website: /steps/step3/
 .. _Website Tailoring: /steps/step4/
 .. _Using reST Editor: /steps/step5/
 .. _Deploying to PythonAnywhere: /steps/step6/
